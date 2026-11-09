@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Peta Siklus Ekonomi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #E8EFF4;
+            --ink: #13273B;
+            --mute: #5B6E80;
+            --card: #F7FAFC;
+            --line: #9BB0C2;
+            --ac: #4A3FD1;
+            font-family: "Bricolage Grotesque", system-ui, sans-serif
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.5
+        }
+
+        .wrap {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 20px 20px 40px
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            align-items: center;
+            justify-content: space-between
+        }
+
+        h1 {
+            font-size: clamp(24px, 4vw, 36px);
+            font-weight: 800;
+            letter-spacing: -.02em;
+            margin: 0
+        }
+
+        h2 {
+            font-size: 15px;
+            color: var(--mute);
+            font-weight: 600;
+            margin: 26px 0 10px
+        }
+
+        button {
+            font: inherit;
+            color: inherit
+        }
+
+        .btn {
+            border: 1px solid var(--line);
+            background: var(--card);
+            border-radius: 10px;
+            padding: 7px 14px;
+            cursor: pointer
+        }
+
+        .btn:hover {
+            border-color: var(--ac)
+        }
+
+        input {
+            font: inherit;
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 14px;
+            border: 1px solid var(--line);
+            background: #fff;
+            color: var(--ink);
+            margin-top: 18px
+        }
+
+        input:focus {
+            outline: 2px solid var(--ac);
+            border-color: transparent
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 12px
+        }
+
+        .card {
+            all: unset;
+            box-sizing: border-box;
+            cursor: pointer;
+            display: block;
+            background: var(--card);
+            border-radius: 16px;
+            padding: 14px 16px;
+            box-shadow: 0 1px 0 var(--line), inset 0 0 0 1px #fff
+        }
+
+        .card:hover,
+        .card:focus-visible {
+            box-shadow: 0 0 0 2px var(--ac)
+        }
+
+        .card b {
+            display: block;
+            margin: 6px 0 2px
+        }
+
+        .card p {
+            margin: 0;
+            font-size: 13.5px;
+            color: var(--mute);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden
+        }
+
+        .tag {
+            display: inline-block;
+            font: 12px/1.6 inherit;
+            padding: 0 10px;
+            border-radius: 99px;
+            background: #E3EBF2;
+            margin: 0 4px 4px 0;
+            border: 0
+        }
+
+        .tag.t {
+            background: var(--ink);
+            color: #fff
+        }
+
+        .tag.dr {
+            background: #EDEFF2;
+            color: #6B7785;
+            border: 1px dashed #9AA6B2
+        }
+
+        .tag.ok {
+            background: #D5F2E6;
+            color: #0B7A62
+        }
+
+        .st-berlangsung {
+            background: #FFE0DD;
+            color: #9D2B32
+        }
+
+        .st-baru_terjadi {
+            background: #FFEFCF;
+            color: #8A5A06
+        }
+
+        .st-mereda {
+            background: #E3EBF2
+        }
+
+        button.tag {
+            cursor: pointer
+        }
+
+        button.tag:hover {
+            background: #cfdbe6
+        }
+
+        .bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+            align-items: center;
+            margin: 16px 0 12px;
+            font-size: 14px;
+            color: var(--mute)
+        }
+
+        button.lk {
+            all: unset;
+            cursor: pointer;
+            color: var(--ac);
+            border-bottom: 1px solid transparent
+        }
+
+        button.lk:hover {
+            border-color: var(--ac)
+        }
+
+        .bar b {
+            color: var(--ink)
+        }
+
+        .phase {
+            display: flex;
+            gap: 6px;
+            margin-left: auto
+        }
+
+        .phase span {
+            padding: 2px 12px;
+            border-radius: 99px;
+            border: 1px solid var(--line);
+            font-size: 13px
+        }
+
+        .phase .on {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink)
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 350px;
+            gap: 20px;
+            align-items: start
+        }
+
+        .stage {
+            position: relative;
+            border-radius: 24px;
+            padding: 34px 24px;
+            min-height: 500px;
+            background: radial-gradient(circle at 50% 45%, #fff 0, #F1F6FA 55%, #DCE7EF 100%);
+            box-shadow: inset 0 0 0 1px #fff, 0 1px 0 var(--line);
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 54px;
+            align-items: center
+        }
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            gap: 22px;
+            align-items: center;
+            position: relative;
+            z-index: 1
+        }
+
+        .cap {
+            font-size: 13px;
+            color: var(--mute);
+            text-align: center;
+            max-width: 150px;
+            margin: 0
+        }
+
+        #links {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none
+        }
+
+        #links path {
+            fill: none;
+            stroke: var(--line);
+            stroke-width: 1.6
+        }
+
+        #links path.fb {
+            stroke: var(--ac);
+            stroke-dasharray: 6 5
+        }
+
+        #links text {
+            font-size: 12px;
+            fill: var(--mute);
+            paint-order: stroke;
+            stroke: #F1F6FA;
+            stroke-width: 5px;
+            text-anchor: middle
+        }
+
+        .bub {
+            --t1: #e3ebf1;
+            --t2: #a9bccb;
+            --t3: rgba(70, 95, 120, .38);
+            --t4: rgba(70, 95, 120, .45);
+            position: relative;
+            width: var(--s);
+            height: var(--s);
+            border-radius: 50%;
+            border: 0;
+            padding: 16px;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            font: 600 13px/1.25 inherit;
+            font-family: inherit;
+            color: var(--ink);
+            overflow: hidden;
+            background: radial-gradient(circle at 50% 58%, var(--t1), var(--t2));
+            box-shadow: inset 0 -12px 24px var(--t3), inset 0 0 0 1.5px rgba(255, 255, 255, .75), 0 18px 32px -14px var(--t4);
+            animation: float 7s ease-in-out var(--d, 0s) infinite;
+            transition: transform .25s
+        }
+
+        .bub::before {
+            content: "";
+            position: absolute;
+            top: 9%;
+            left: 15%;
+            width: 42%;
+            height: 26%;
+            border-radius: 50%;
+            background: linear-gradient(160deg, rgba(255, 255, 255, .95), rgba(255, 255, 255, 0));
+            transform: rotate(-24deg)
+        }
+
+        .bub::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: conic-gradient(from 200deg, rgba(255, 120, 200, .16), rgba(120, 200, 255, .2), rgba(150, 255, 200, .16), rgba(255, 230, 120, .16), rgba(255, 120, 200, .16));
+            mix-blend-mode: soft-light;
+            pointer-events: none
+        }
+
+        .bub span {
+            position: relative;
+            z-index: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 5;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            hyphens: auto
+        }
+
+        .bub:hover,
+        .bub:focus-visible {
+            transform: scale(1.06);
+            outline: none;
+            box-shadow: inset 0 -12px 24px var(--t3), inset 0 0 0 2.5px var(--ac), 0 18px 32px -14px var(--t4)
+        }
+
+        .pos {
+            --t1: #d5f6ea;
+            --t2: #6fd1b3;
+            --t3: rgba(10, 125, 100, .38);
+            --t4: rgba(18, 163, 138, .6)
+        }
+
+        .neg {
+            --t1: #ffe0dd;
+            --t2: #f19a97;
+            --t3: rgba(190, 55, 60, .36);
+            --t4: rgba(228, 87, 95, .6)
+        }
+
+        .mix {
+            --t1: #ffefcf;
+            --t2: #f0c36f;
+            --t3: rgba(176, 115, 10, .34);
+            --t4: rgba(224, 160, 30, .55)
+        }
+
+        .me {
+            cursor: default;
+            animation: none;
+            font-size: 16px;
+            font-weight: 800;
+            box-shadow: inset 0 -14px 28px var(--t3), inset 0 0 0 1.5px rgba(255, 255, 255, .8), 0 0 0 10px rgba(74, 63, 209, .1), 0 0 0 22px rgba(74, 63, 209, .06), 0 24px 40px -14px var(--t4)
+        }
+
+        .me:hover {
+            transform: none
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-7px)
+            }
+        }
+
+        @media(prefers-reduced-motion:reduce) {
+            .bub {
+                animation: none
+            }
+        }
+
+        .panel {
+            background: var(--card);
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 1px 0 var(--line), inset 0 0 0 1px #fff;
+            position: sticky;
+            top: 16px;
+            max-height: calc(100vh - 32px);
+            overflow: auto
+        }
+
+        .panel h2 {
+            font-size: 21px;
+            color: var(--ink);
+            line-height: 1.15;
+            margin: 0 0 8px
+        }
+
+        .panel h3 {
+            font-size: 14px;
+            margin: 18px 0 6px;
+            color: var(--mute);
+            font-weight: 600
+        }
+
+        .panel p {
+            margin: 0 0 8px;
+            font-size: 14px
+        }
+
+        .imp {
+            border-top: 1px solid #DCE5EC;
+            padding: 9px 0;
+            font-size: 14px
+        }
+
+        .imp small,
+        .lv small {
+            display: block;
+            color: var(--mute);
+            font-size: 12.5px
+        }
+
+        .up {
+            color: #0B7A62
+        }
+
+        .dn {
+            color: #B8343B
+        }
+
+        .md {
+            color: #936207
+        }
+
+        .lock {
+            filter: blur(5px);
+            user-select: none;
+            pointer-events: none
+        }
+
+        .go {
+            all: unset;
+            cursor: pointer;
+            display: block;
+            padding: 8px 0;
+            border-top: 1px solid #DCE5EC;
+            font-size: 14px
+        }
+
+        .go:hover {
+            color: var(--ac)
+        }
+
+        .def,
+        .lv {
+            font-size: 13px;
+            background: #E8EEF8;
+            border-radius: 10px;
+            padding: 8px 10px;
+            margin-top: 8px
+        }
+
+        .lv {
+            background: #FFF6E4
+        }
+
+        .note {
+            font-size: 12px;
+            color: var(--mute);
+            margin-top: 14px
+        }
+
+        .ld {
+            position: fixed;
+            inset: 0;
+            display: grid;
+            place-content: center;
+            justify-items: center;
+            gap: 14px;
+            background: rgba(232, 239, 244, .82);
+            z-index: 9
+        }
+
+        .ld[hidden] {
+            display: none
+        }
+
+        .tile {
+            padding: 22px;
+            border-radius: 20px;
+            background: #7E97AB
+        }
+
+        .ld p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--ink)
+        }
+
+        .loader {
+            width: 40px;
+            aspect-ratio: 1;
+            background: radial-gradient(farthest-side, #000 90%, #0000) 50%/8px 8px no-repeat, conic-gradient(from -90deg at 15px 15px, #0000 90deg, #fff 0) 0 0/25px 25px;
+            animation: l7 1s infinite
+        }
+
+        @keyframes l7 {
+            0% {
+                background-position: 50%, 0 0
+            }
+
+            50% {
+                background-position: 50%, 25px 0
+            }
+
+            100% {
+                background-position: 50%, 25px 25px
+            }
+        }
+
+        @media(max-width:900px) {
+            .main {
+                grid-template-columns: 1fr
+            }
+
+            .panel {
+                position: static;
+                max-height: none
+            }
+
+            .stage {
+                grid-template-columns: 1fr;
+                gap: 26px;
+                padding: 26px 12px
+            }
+
+            #links {
+                display: none
+            }
+
+            .phase {
+                margin-left: 0
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ld" id="ld" role="status" aria-live="polite">
+        <div class="tile">
+            <div class="loader"></div>
+        </div>
+        <p id="ldm">Memuat data…</p>
+    </div>
+    <div class="wrap">
+        <header>
+            <h1>Peta siklus ekonomi</h1>
+            <div><button class="btn" id="hm">Beranda</button> <button class="btn" id="rf">Muat ulang data</button></div>
+        </header>
+        <div id="app"></div>
+    </div>
+    <script>
+        const DEMO = {
+            scenarios: [{ id: 'SC01', judul: 'Contoh skenario', node_pembuka: 'N003', jenis: 'berjalan' }],
+            nodes: [{ id: 'N002', judul: 'Pasokan minyak terganggu', skala_dampak: '4', deskripsi: 'Data contoh.', akses: 'free' }, { id: 'N003', judul: 'Harga minyak naik', skala_dampak: '4', deskripsi: 'Data contoh.', fase_siklus: 'Puncak', istilah_kunci: 'HPP', akses: 'free' }, { id: 'N006', judul: 'HPP manufaktur naik', skala_dampak: '3', deskripsi: 'Data contoh.', akses: 'free' }],
+            edges: [{ dari_node: 'N002', ke_node: 'N003', jeda_waktu: '1-4 minggu', keyakinan: 'tinggi', tipe_edge: 'causal' }, { dari_node: 'N003', ke_node: 'N006', jeda_waktu: '1-3 bulan', keyakinan: 'tinggi', tipe_edge: 'causal' }],
+            impacts: [{ node_id: 'N003', target_tipe: 'sektor', target_id: 'S01', arah: 'positif', saluran: 'pendapatan', horizon: '1-6 bulan', alasan: 'Harga jual naik.', status: 'draft' }],
+            sectors: [{ id: 'S01', nama_sektor: 'Migas hulu', deskripsi: 'Produsen minyak dan gas.' }], stocks: [{ ticker: 'MEDC', nama: 'Medco Energi', sektor_id: 'S01', eksposur: 'Produsen migas' }],
+            glossary: [{ istilah: 'HPP', definisi: 'Harga pokok produksi.' }], factors: [{ id: 'harga_komoditas', label: 'Harga komoditas' }],
+            stock_profile: [{ ticker: 'MEDC', faktor: 'harga_komoditas', besar: 'besar', keterangan: 'Pendapatan bergantung harga minyak.', keyakinan: 'tinggi', status: 'draft' }],
+            live_status: [{ id: 'L01', node_id: 'N003', status: 'berlangsung', ringkasan: 'Data contoh.', indikator_pantau: 'Harga Brent', diperbarui: '2026-11-09', akses: 'free' }]
+        };
+
+        const $ = s => document.querySelector(s), E = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        const FASE = ['Ekspansi', 'Puncak', 'Kontraksi', 'Pemulihan'], CL = { positif: 'up', negatif: 'dn', campuran: 'md' }, ST = { berlangsung: 'Berlangsung', baru_terjadi: 'Baru terjadi', mereda: 'Mereda' };
+        const DISC = 'Konten edukasi, bukan rekomendasi beli atau jual saham.';
+        let D, trail = [], busyN = 0;
+        const busy = (d, m) => { busyN += d; if (m) $('#ldm').textContent = m; $('#ld').hidden = busyN <= 0 };
+        async function load(msg, fresh) { busy(1, msg); try { const r = await fetch('data.json', fresh ? { cache: 'reload' } : {}); if (!r.ok) throw new Error('HTTP ' + r.status); return await r.json() } finally { busy(-1) } }
+        const fail = e => { $('#app').innerHTML = '<p class="note">Data gagal dimuat: ' + E(e && e.message) + '</p>' };
+        const boot = e => location.protocol === 'file:' ? init(DEMO) : fail(e);
+        load('Memuat data…').then(init).catch(boot);
+        $('#rf').onclick = () => load('Memperbarui data…', true).then(init).catch(fail);
+        $('#hm').onclick = () => { trail = []; view() };
+
+        function init(d) {
+            D = d; for (const k of ['scenarios', 'nodes', 'edges', 'impacts', 'sectors', 'stocks', 'glossary', 'factors', 'stock_profile', 'live_status']) D[k] = D[k] || [];
+            D.live = D.live_status; D.nm = Object.fromEntries(D.nodes.map(n => [n.id, n])); D.sm = Object.fromEntries(D.sectors.map(s => [s.id, s])); D.tm = Object.fromEntries(D.stocks.map(s => [s.ticker, s])); D.fm = Object.fromEntries(D.factors.map(f => [f.id, f])); trail = []; view()
+        }
+        const view = () => trail.length ? graph() : home();
+        function go(c, d) { const i = trail.findIndex(x => x.t === c.t && x.id === c.id); trail = i < 0 ? [...trail, { ...c, d }] : trail.slice(0, i + 1); view(); scrollTo(0, 0) }
+
+        const tn = a => { if (!a.length) return ''; const p = a.includes('positif'), n = a.includes('negatif'), m = a.includes('campuran'); return (p && n) || m ? 'mix' : p ? 'pos' : n ? 'neg' : '' };
+        const nTone = id => tn(D.impacts.filter(i => i.node_id === id).map(i => i.arah));
+        const sTone = id => tn(D.impacts.filter(i => i.target_tipe === 'sektor' && i.target_id === id).map(i => i.arah));
+        const dr = r => r.status === 'verified' ? '<span class="tag ok">Terverifikasi</span>' : '<span class="tag dr">Draft</span>';
+        const lab = c => c.t === 'n' ? D.nm[c.id].judul : c.t === 's' ? D.sm[c.id].nama_sektor : c.id + (D.tm[c.id] ? ' · ' + D.tm[c.id].nama : '');
+        const bt = (t, id, d, txt, cls = 'lk') => `<button class="${cls}" data-t="${t}" data-id="${E(id)}" data-d="${d}">${E(txt)}</button>`;
+
+        function home() {
+            const live = D.live.filter(l => D.nm[l.node_id]);
+            $('#app').innerHTML = `<input id="q" placeholder="Cari saham, sektor, atau kejadian… (contoh: BBCA, properti, harga minyak)" aria-label="Cari"><div id="res" class="grid" style="margin-top:12px"></div>
+ <h2>Jika ini terjadi: kejadian yang sedang dipantau</h2><div class="grid">${live.length ? live.map(l => `<button class="card" data-t="n" data-id="${E(l.node_id)}" data-d="R"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span>${l.akses === 'premium' ? '<span class="tag">Premium</span>' : ''}<b>${E(D.nm[l.node_id].judul)}</b><p class="${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}</p></button>`).join('') : '<p class="note">Belum ada kejadian yang dipantau.</p>'}</div>
+ <h2>Skenario belajar</h2><div class="grid">${D.scenarios.map(s => `<button class="card" data-t="n" data-id="${E(s.node_pembuka)}" data-d="R"><span class="tag">${E(s.jenis || 'skenario')}</span><b>${E(s.judul)}</b><p>${E(s.ringkasan)}</p></button>`).join('')}</div><p class="note">${DISC}</p>`;
+            const q = $('#q'), run = () => {
+                const v = q.value.trim().toLowerCase(); let r = [];
+                if (!v) r = D.stocks.slice(0, 8).map(s => ({ t: 'k', id: s.ticker, l: s.ticker + ' · ' + s.nama, k: 'Saham' }));
+                else {
+                    r = [...D.stocks.filter(s => (s.ticker + s.nama).toLowerCase().includes(v)).map(s => ({ t: 'k', id: s.ticker, l: s.ticker + ' · ' + s.nama, k: 'Saham' })),
+                    ...D.sectors.filter(s => s.nama_sektor.toLowerCase().includes(v)).map(s => ({ t: 's', id: s.id, l: s.nama_sektor, k: 'Sektor' })),
+                    ...D.nodes.filter(n => n.judul.toLowerCase().includes(v)).map(n => ({ t: 'n', id: n.id, l: n.judul, k: 'Kejadian' }))].slice(0, 12)
+                }
+                $('#res').innerHTML = r.length ? r.map(x => `<button class="card" data-t="${x.t}" data-id="${E(x.id)}" data-d="R"><span class="tag">${x.k}</span><b>${E(x.l)}</b></button>`).join('') : '<p class="note">Tidak ada hasil.</p>'
+            };
+            q.oninput = run; run()
+        }
+
+        function sides(c) {
+            const N = id => ({ t: 'n', id, l: D.nm[id].judul, s: +D.nm[id].skala_dampak || 2, k: nTone(id) }), S = id => ({ t: 's', id, l: D.sm[id].nama_sektor, s: 2, k: sTone(id) }), uniq = a => [...new Set(a)];
+            if (c.t === 'n') {
+                const imp = D.impacts.filter(i => i.node_id === c.id);
+                return {
+                    L: D.edges.filter(e => e.ke_node === c.id && D.nm[e.dari_node]).map(e => ({ ...N(e.dari_node), e })),
+                    R: [...D.edges.filter(e => e.dari_node === c.id && D.nm[e.ke_node]).map(e => ({ ...N(e.ke_node), e })),
+                    ...uniq(imp.filter(i => i.target_tipe === 'sektor').map(i => i.target_id)).filter(x => D.sm[x]).map(S),
+                    ...imp.filter(i => i.target_tipe === 'saham' && D.tm[i.target_id]).map(i => ({ t: 'k', id: i.target_id, l: i.target_id, s: 1, k: tn([i.arah]) }))]
+                }
+            }
+            if (c.t === 's') return {
+                L: uniq(D.impacts.filter(i => i.target_tipe === 'sektor' && i.target_id === c.id).map(i => i.node_id)).filter(x => D.nm[x]).map(N),
+                R: D.stocks.filter(s => s.sektor_id === c.id).map(s => ({ t: 'k', id: s.ticker, l: s.ticker, s: 1, k: '' }))
+            };
+            const st = D.tm[c.id] || {};
+            return { L: [...(D.sm[st.sektor_id] ? [S(st.sektor_id)] : []), ...uniq(D.impacts.filter(i => i.target_tipe === 'saham' && i.target_id === c.id).map(i => i.node_id)).filter(x => D.nm[x]).map(N)], R: [] }
+        }
+
+        function graph() {
+            const c = trail[trail.length - 1], { L, R } = sides(c), n = c.t === 'n' ? D.nm[c.id] : null, lim = a => a.slice(0, 7);
+            const it = (x, s, i) => `<button class="bub ${x.k}" style="--s:${84 + x.s * 14}px;--d:${(i * .8).toFixed(1)}s" data-i="${s}${i}" data-t="${x.t}" data-id="${E(x.id)}" data-d="${s}" title="${E(x.l)}"><span>${E(x.l)}</span></button>`;
+            const col = (a, s, e) => a.length ? lim(a).map((x, i) => it(x, s, i)).join('') + (a.length > 7 ? `<p class="cap">+${a.length - 7} lainnya di panel</p>` : '') : `<p class="cap">${e}</p>`;
+            const tone = c.t === 'n' ? nTone(c.id) : c.t === 's' ? sTone(c.id) : '';
+            $('#app').innerHTML = `<div class="bar"><div>${trail.map((x, i) => i === trail.length - 1 ? `<b>${E(lab(x))}</b>` : `<button class="lk" data-ix="${i}">${E(lab(x))}</button> › `).join('')}</div>${n ? `<div class="phase">${FASE.map(f => `<span class="${f === n.fase_siklus ? 'on' : ''}">${f}</span>`).join('')}</div>` : ''}</div>
+ <div class="main"><div class="stage" id="stage"><svg id="links"></svg><div class="col">${col(L, 'L', c.t === 'k' ? 'Ujung bawah: saham.' : 'Titik awal rantai ini.')}</div>
+ <div class="col"><div class="bub me ${tone}" style="--s:220px"><span>${E(lab(c))}</span></div></div><div class="col">${col(R, 'R', 'Ujung rantai. Belum ada efek lanjutan.')}</div></div><aside class="panel" id="panel"></aside></div>`;
+            $('#panel').innerHTML = panel(c, R);
+            requestAnimationFrame(() => links(L, R))
+        }
+
+        function links(L, R) {
+            const st = $('#stage'), svg = $('#links'); if (!svg || getComputedStyle(svg).display === 'none') return;
+            const B = st.getBoundingClientRect(), me = st.querySelector('.me'), pt = b => { const r = b.getBoundingClientRect(); return { x: r.left - B.left + r.width / 2, y: r.top - B.top + r.height / 2, r: r.width / 2 } };
+            let h = '<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#6F8599" stroke-width="1.6"/></marker></defs>';
+            const dw = (a, b, e) => {
+                if (!a || !b) return; const p = pt(a), q = pt(b), dx = q.x - p.x, dy = q.y - p.y, l = Math.hypot(dx, dy) || 1, ux = dx / l, uy = dy / l, sx = p.x + ux * p.r, sy = p.y + uy * p.r, ex = q.x - ux * (q.r + 6), ey = q.y - uy * (q.r + 6), m = (ex - sx) / 2;
+                h += `<path class="${e && e.tipe_edge === 'feedback' ? 'fb' : ''}" d="M${sx},${sy}C${sx + m},${sy} ${ex - m},${ey} ${ex},${ey}" marker-end="url(#ar)"/>`;
+                if (e && e.jeda_waktu) h += `<text x="${(sx + ex) / 2}" y="${(sy + ey) / 2 - 6}">${E((e.tipe_edge === 'feedback' ? 'loop: ' : '') + e.jeda_waktu)}</text>`
+            };
+            const el = k => st.querySelector(`[data-i="${k}"]`);
+            L.slice(0, 7).forEach((x, i) => dw(el('L' + i), me, x.e)); R.slice(0, 7).forEach((x, i) => dw(me, el('R' + i), x.e));
+            svg.setAttribute('viewBox', `0 0 ${B.width} ${B.height}`); svg.innerHTML = h
+        }
+        addEventListener('resize', () => { if (D && trail.length) graph() });
+
+        const tgt = i => i.target_tipe === 'saham' ? bt('k', i.target_id, 'R', i.target_id) : bt('s', i.target_id, 'R', (D.sm[i.target_id] || {}).nama_sektor || i.target_id);
+        const row = (lbl, i) => `<div class="imp"><b>${lbl}</b> <span class="${CL[i.arah] || ''}">${E(i.arah)}</span> ${dr(i)}<small>Lewat ${E(i.saluran)}, ${E(i.horizon)}. ${E(i.alasan)}</small></div>`;
+        function panel(c, R) {
+            if (c.t === 'n') {
+                const n = D.nm[c.id], imp = D.impacts.filter(i => i.node_id === c.id), prem = n.akses === 'premium', eff = D.edges.filter(e => e.dari_node === c.id && D.nm[e.ke_node]),
+                terms = (n.istilah_kunci || '').split(',').map(s => s.trim()).filter(Boolean), lv = D.live.filter(l => l.node_id === c.id);
+                return `<h2>${E(n.judul)}</h2>${n.fase_siklus ? `<span class="tag t">${E(n.fase_siklus)}</span>` : ''}${n.kategori ? `<span class="tag">${E(n.kategori)}</span>` : ''}<span class="tag">Skala dampak ${E(n.skala_dampak || '-')}/5</span>
+  <p style="margin-top:10px">${E(n.deskripsi)}</p>${n.contoh_historis ? `<p><small>Contoh: ${E(n.contoh_historis)}</small></p>` : ''}
+  ${lv.map(l => { const u = (l.sumber || '').split(' | ')[0]; return `<div class="lv"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span><span class="${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}<small>Pantau: ${E(l.indikator_pantau)}. Diperbarui ${E(l.diperbarui)}.${u.startsWith('http') ? ` <a href="${E(u)}" target="_blank" rel="noopener">Sumber</a>` : ''}</small></span></div>` }).join('')}
+  ${terms.length ? `<h3>Istilah</h3>${terms.map(t => `<button class="tag" data-term="${E(t)}">${E(t)}</button>`).join('')}<div id="def"></div>` : ''}
+  <h3>Saham dan sektor terpapar</h3>${prem ? '<p><small>Konten premium. Berlangganan untuk melihat detail ini.</small></p>' : ''}<div class="${prem ? 'lock' : ''}">${imp.length ? imp.map(i => row(tgt(i), i)).join('') : '<p><small>Belum ada pemetaan.</small></p>'}</div>
+  <h3>Kemungkinan berikutnya</h3>${eff.length ? eff.map(e => `<button class="go" data-t="n" data-id="${E(e.ke_node)}" data-d="R">${E(D.nm[e.ke_node].judul)}<small> · keyakinan ${E(e.keyakinan)}, jeda ${E(e.jeda_waktu)}</small></button>`).join('') : '<p><small>Tidak ada lanjutan tercatat.</small></p>'}<p class="note">${imp.some(i => i.status !== 'verified') ? 'Sebagian data sedang diverifikasi. ' : ''}${DISC}</p>`
+            }
+            if (c.t === 's') {
+                const s = D.sm[c.id], imp = D.impacts.filter(i => i.target_tipe === 'sektor' && i.target_id === c.id && D.nm[i.node_id]);
+                return `<h2>${E(s.nama_sektor)}</h2><p>${E(s.deskripsi)}</p>${s.sensitivitas_umum ? `<p><small>Sensitif terhadap: ${E(s.sensitivitas_umum)}</small></p>` : ''}
+  <h3>Saham di sektor ini</h3>${D.stocks.filter(x => x.sektor_id === c.id).map(x => bt('k', x.ticker, 'R', x.ticker, 'tag')).join('') || '<p><small>Belum ada.</small></p>'}
+  <h3>Faktor yang memengaruhi</h3>${imp.map(i => row(bt('n', i.node_id, 'L', D.nm[i.node_id].judul), i)).join('') || '<p><small>Belum ada pemetaan.</small></p>'}<p class="note">${imp.some(i => i.status !== 'verified') ? 'Sebagian data sedang diverifikasi. ' : ''}${DISC}</p>`
+            }
+            const s = D.tm[c.id] || { ticker: c.id, nama: '' }, pf = D.stock_profile.filter(p => p.ticker === c.id),
+                imp = D.impacts.filter(i => ((i.target_tipe === 'sektor' && i.target_id === s.sektor_id) || (i.target_tipe === 'saham' && i.target_id === c.id)) && D.nm[i.node_id]);
+            return `<h2>${E(s.ticker)}</h2><p>${E(s.nama)}</p>${D.sm[s.sektor_id] ? `<p><small>Sektor: </small>${bt('s', s.sektor_id, 'L', D.sm[s.sektor_id].nama_sektor)}</p>` : ''}${s.eksposur ? `<p><small>${E(s.eksposur)}</small></p>` : ''}
+ <h3>Ciri eksposur</h3>${pf.map(p => `<div class="imp"><b>${E((D.fm[p.faktor] || {}).label || p.faktor)}</b> <span class="tag">${E(p.besar)}</span> ${dr(p)}<small>${E(p.keterangan)} Keyakinan ${E(p.keyakinan)}.</small></div>`).join('') || '<p><small>Belum ada profil.</small></p>'}
+ <h3>Faktor yang memengaruhi</h3>${imp.map(i => row(bt('n', i.node_id, 'L', D.nm[i.node_id].judul), i)).join('') || '<p><small>Belum ada pemetaan.</small></p>'}
+ <p class="note">${pf.concat(imp).some(r => r.status !== 'verified') ? 'Sebagian data sedang diverifikasi. ' : ''}Ditampilkan efek positif dan negatif tanpa skor. ${DISC}</p>`
+        }
+
+        document.addEventListener('click', e => {
+            const ix = e.target.closest('[data-ix]'); if (ix) { trail = trail.slice(0, +ix.dataset.ix + 1); view(); return }
+            const tm = e.target.closest('[data-term]'); if (tm) { const g = D.glossary.find(x => x.istilah.toLowerCase() === tm.dataset.term.toLowerCase()); $('#def').innerHTML = `<div class="def"><b>${E(tm.dataset.term)}</b>: ${E(g ? g.definisi : 'Definisi belum ditambahkan.')}</div>`; return }
+            const b = e.target.closest('[data-t]'); if (b && !b.classList.contains('me')) go({ t: b.dataset.t, id: b.dataset.id }, b.dataset.d || 'R')
+        });
+    </script>
+</body>
+
+</html>
