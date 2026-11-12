@@ -535,6 +535,273 @@
             }
         }
 
+        .tabs {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            margin: 14px 0 0;
+            padding-bottom: 4px;
+            scrollbar-width: none
+        }
+
+        .tabs button,
+        .chip {
+            flex: none;
+            border: 1px solid var(--line);
+            background: var(--card);
+            border-radius: 99px;
+            padding: 9px 16px;
+            min-height: 40px;
+            cursor: pointer
+        }
+
+        .tabs .on,
+        .chip.on {
+            background: var(--ink);
+            color: #fff;
+            border-color: var(--ink)
+        }
+
+        .chips {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            margin: 12px 0;
+            padding-bottom: 4px;
+            scrollbar-width: none
+        }
+
+        .bd {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 0 var(--line), inset 0 0 0 1px #fff
+        }
+
+        .bd h3 {
+            margin: 8px 0 4px;
+            font-size: 17px
+        }
+
+        .bd p {
+            margin: 0 0 6px;
+            font-size: 14px
+        }
+
+        .mu {
+            color: var(--mute);
+            font-size: 13px !important
+        }
+
+        .tw {
+            overflow-x: auto;
+            border-radius: 16px;
+            background: var(--card);
+            box-shadow: 0 1px 0 var(--line)
+        }
+
+        .ct {
+            border-collapse: separate;
+            border-spacing: 0;
+            min-width: 100%;
+            font-size: 13px
+        }
+
+        .ct th,
+        .ct td {
+            padding: 10px 6px;
+            text-align: center;
+            border-bottom: 1px solid #DCE5EC;
+            min-width: 78px;
+            font-weight: 600
+        }
+
+        .ct th:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 1;
+            background: var(--card);
+            text-align: left;
+            min-width: 124px;
+            border-right: 1px solid #DCE5EC
+        }
+
+        .cell {
+            all: unset;
+            cursor: pointer;
+            display: grid;
+            justify-items: center;
+            gap: 3px;
+            padding: 6px 10px;
+            border-radius: 10px;
+            font-weight: 400
+        }
+
+        .cell:hover,
+        .cell:focus-visible {
+            background: #E3EBF2
+        }
+
+        .dot {
+            display: block;
+            border-radius: 50%;
+            background: var(--ink)
+        }
+
+        .s3 {
+            width: 18px;
+            height: 18px
+        }
+
+        .s2 {
+            width: 12px;
+            height: 12px
+        }
+
+        .s1 {
+            width: 7px;
+            height: 7px
+        }
+
+        .cell.dr .dot,
+        .dot.dr {
+            background: transparent;
+            border: 2px dashed var(--ink)
+        }
+
+        .na {
+            color: #9AA6B2
+        }
+
+        .legend .dot {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 4px 0 12px
+        }
+
+        .cn {
+            margin: 0 0 0 14px;
+            padding: 8px 0 8px 18px;
+            border-left: 3px dotted var(--line)
+        }
+
+        .cn b {
+            font-size: 12.5px;
+            color: var(--ac);
+            text-transform: uppercase;
+            letter-spacing: .05em
+        }
+
+        .cn p {
+            margin: 2px 0;
+            font-size: 14.5px
+        }
+
+        .cn small {
+            color: var(--mute);
+            font-size: 12.5px
+        }
+
+        .st {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 12px 16px;
+            border-left: 6px solid var(--line);
+            box-shadow: 0 1px 0 var(--line), inset 0 0 0 1px #fff
+        }
+
+        .st.pos {
+            border-left-color: #6fd1b3
+        }
+
+        .st.neg {
+            border-left-color: #f19a97
+        }
+
+        .st.mix {
+            border-left-color: #f0c36f
+        }
+
+        .st .k {
+            display: block;
+            font-size: 11.5px;
+            letter-spacing: .06em;
+            color: var(--mute)
+        }
+
+        .st b {
+            font-size: 17px
+        }
+
+        .st p {
+            margin: 4px 0;
+            font-size: 13.5px;
+            color: var(--mute)
+        }
+
+        .tag.tp {
+            background: #D5F2E6;
+            color: #0B7A62
+        }
+
+        .tag.tn {
+            background: #FFE0DD;
+            color: #9D2B32
+        }
+
+        .tag.tm {
+            background: #FFEFCF;
+            color: #8A5A06
+        }
+
+        .lanes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+            gap: 12px;
+            margin: 12px 0
+        }
+
+        .ln h3 {
+            margin: 0;
+            font-size: 16px
+        }
+
+        .ln .q {
+            color: var(--mute);
+            font-size: 13px;
+            margin: 0 0 6px
+        }
+
+        .it {
+            border-top: 1px solid #DCE5EC;
+            padding: 8px 0;
+            font-size: 14px
+        }
+
+        .it small {
+            display: block;
+            color: var(--mute);
+            font-size: 12.5px
+        }
+
+        .ar {
+            font-weight: 800;
+            margin-right: 6px
+        }
+
+        .ar.u {
+            color: #0B7A62
+        }
+
+        .ar.d {
+            color: #B8343B
+        }
+
+        .ar.m {
+            color: #936207
+        }
+
         @media(max-width:900px) {
             .main {
                 grid-template-columns: 1fr
@@ -572,8 +839,10 @@
     <div class="wrap">
         <header>
             <h1>Peta siklus ekonomi</h1>
-            <div><button class="btn" id="hm">Beranda</button> <button class="btn" id="rf">Muat ulang data</button></div>
+            <div><button class="btn" id="rf">Muat ulang data</button></div>
         </header>
+        <nav class="tabs" id="tabs"><button data-m="home">Beranda</button><button data-m="board">Papan
+                kejadian</button><button data-m="cmp">Bandingkan saham</button></nav>
         <div id="app"></div>
     </div>
     <script>
@@ -598,14 +867,18 @@
         const boot = e => location.protocol === 'file:' ? init(DEMO) : fail(e);
         load('Memuat data…').then(init).catch(boot);
         $('#rf').onclick = () => load('Memperbarui data…', true).then(init).catch(fail);
-        $('#hm').onclick = () => { trail = []; view() };
+        $('#tabs').onclick = e => { const b = e.target.closest('[data-m]'); if (!b) return; mode = b.dataset.m; trail = []; chainId = stockId = null; hist = []; view() };
 
         function init(d) {
             D = d; for (const k of ['scenarios', 'nodes', 'edges', 'impacts', 'sectors', 'stocks', 'glossary', 'factors', 'stock_profile', 'live_status']) D[k] = D[k] || [];
-            D.live = D.live_status; D.nm = Object.fromEntries(D.nodes.map(n => [n.id, n])); D.sm = Object.fromEntries(D.sectors.map(s => [s.id, s])); D.tm = Object.fromEntries(D.stocks.map(s => [s.ticker, s])); D.fm = Object.fromEntries(D.factors.map(f => [f.id, f])); trail = []; view()
+            D.live = D.live_status; D.nm = Object.fromEntries(D.nodes.map(n => [n.id, n])); D.sm = Object.fromEntries(D.sectors.map(s => [s.id, s])); D.tm = Object.fromEntries(D.stocks.map(s => [s.ticker, s])); D.fm = Object.fromEntries(D.factors.map(f => [f.id, f])); trail = []; chainId = stockId = null; hist = []; view()
         }
-        const view = () => trail.length ? graph() : home();
-        function go(c, d) { const i = trail.findIndex(x => x.t === c.t && x.id === c.id); trail = i < 0 ? [...trail, { ...c, d }] : trail.slice(0, i + 1); view(); scrollTo(0, 0) }
+        const view = () => { trail.length ? graph() : stockId ? stockCard() : chainId ? chain() : mode === 'board' ? board() : mode === 'cmp' ? cmp() : home(); document.querySelectorAll('#tabs [data-m]').forEach(b => b.classList.toggle('on', b.dataset.m === mode && !trail.length && !chainId && !stockId)) };
+        function go(c, d) {
+            if (!trail.length && !c.map && c.t !== 's') { snap(); chainId = c.t === 'n' ? c.id : null; stockId = c.t === 'k' ? c.id : null; forced = []; view(); scrollTo(0, 0); return }
+            if (!trail.length) snap();
+            chainId = stockId = null; const i = trail.findIndex(x => x.t === c.t && x.id === c.id); trail = i < 0 ? [...trail, { ...c, d }] : trail.slice(0, i + 1); view(); scrollTo(0, 0)
+        }
 
         const tn = a => { if (!a.length) return ''; const p = a.includes('positif'), n = a.includes('negatif'), m = a.includes('campuran'); return (p && n) || m ? 'mix' : p ? 'pos' : n ? 'neg' : '' };
         const nTone = id => tn(D.impacts.filter(i => i.node_id === id).map(i => i.arah));
@@ -614,11 +887,21 @@
         const lab = c => c.t === 'n' ? D.nm[c.id].judul : c.t === 's' ? D.sm[c.id].nama_sektor : c.id + (D.tm[c.id] ? ' · ' + D.tm[c.id].nama : '');
         const bt = (t, id, d, txt, cls = 'lk') => `<button class="${cls}" data-t="${t}" data-id="${E(id)}" data-d="${d}">${E(txt)}</button>`;
 
+        const SB = { utang: 'Siklus utang', internal: 'Tatanan internal', eksternal: 'Tatanan eksternal', inovasi: 'Inovasi', alam: 'Peristiwa alam' };
+        const sbChips = () => {
+            const ks = [...new Set(D.scenarios.map(x => x.siklus_besar).filter(Boolean))]; if (!ks.length) return '';
+            return `<div class="chips"><button class="chip ${sf === 'all' ? 'on' : ''}" data-sf="all">Semua</button>${ks.map(k => `<button class="chip ${sf === k ? 'on' : ''}" data-sf="${E(k)}">${E(SB[k] || k)}</button>`).join('')}</div>`
+        };
+        function scGrid() {
+            const L = D.scenarios.filter(x => sf === 'all' || x.siklus_besar === sf);
+            $('#scg').innerHTML = L.length ? L.map(x => `<button class="card" data-t="n" data-id="${E(x.node_pembuka)}" data-d="R"><span class="tag">${E(x.jenis || 'skenario')}</span>${x.siklus_besar ? `<span class="tag t">${E(SB[x.siklus_besar] || x.siklus_besar)}</span>` : ''}<b>${E(x.judul)}</b><p>${E(x.ringkasan)}</p></button>`).join('') : '<p class="note">Tidak ada skenario pada filter ini.</p>'
+        }
         function home() {
             const live = D.live.filter(l => D.nm[l.node_id]);
             $('#app').innerHTML = `<input id="q" placeholder="Cari saham, sektor, atau kejadian… (contoh: BBCA, properti, harga minyak)" aria-label="Cari"><div id="res" class="grid" style="margin-top:12px"></div>
  <h2>Jika ini terjadi: kejadian yang sedang dipantau</h2><div class="grid">${live.length ? live.map(l => `<button class="card" data-t="n" data-id="${E(l.node_id)}" data-d="R"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span>${l.akses === 'premium' ? '<span class="tag">Premium</span>' : ''}<b>${E(D.nm[l.node_id].judul)}</b><p class="${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}</p></button>`).join('') : '<p class="note">Belum ada kejadian yang dipantau.</p>'}</div>
- <h2>Skenario belajar</h2><div class="grid">${D.scenarios.map(s => `<button class="card" data-t="n" data-id="${E(s.node_pembuka)}" data-d="R"><span class="tag">${E(s.jenis || 'skenario')}</span><b>${E(s.judul)}</b><p>${E(s.ringkasan)}</p></button>`).join('')}</div><p class="note">${DISC}</p>`;
+ <h2>Skenario belajar</h2>${sbChips()}<div class="grid" id="scg"></div><p class="note">${DISC}</p>`;
+            scGrid();
             const q = $('#q'), run = () => {
                 const v = q.value.trim().toLowerCase(); let r = [];
                 if (!v) r = D.stocks.slice(0, 8).map(s => ({ t: 'k', id: s.ticker, l: s.ticker + ' · ' + s.nama, k: 'Saham' }));
@@ -656,7 +939,7 @@
             const it = (x, s, i) => `<button class="bub ${x.k}" style="--s:${84 + x.s * 14}px;--d:${(i * .8).toFixed(1)}s" data-i="${s}${i}" data-t="${x.t}" data-id="${E(x.id)}" data-d="${s}" title="${E(x.l)}"><span>${E(x.l)}</span></button>`;
             const col = (a, s, e) => a.length ? lim(a).map((x, i) => it(x, s, i)).join('') + (a.length > 7 ? `<p class="cap">+${a.length - 7} lainnya di panel</p>` : '') : `<p class="cap">${e}</p>`;
             const tone = c.t === 'n' ? nTone(c.id) : c.t === 's' ? sTone(c.id) : '';
-            $('#app').innerHTML = `<div class="bar"><div>${trail.map((x, i) => i === trail.length - 1 ? `<b>${E(lab(x))}</b>` : `<button class="lk" data-ix="${i}">${E(lab(x))}</button> › `).join('')}</div>${n ? `<div class="phase">${FASE.map(f => `<span class="${f === n.fase_siklus ? 'on' : ''}">${f}</span>`).join('')}</div>` : ''}</div>
+            $('#app').innerHTML = `<div class="bar">${bk()}<div>${trail.map((x, i) => i === trail.length - 1 ? `<b>${E(lab(x))}</b>` : `<button class="lk" data-ix="${i}">${E(lab(x))}</button> › `).join('')}</div>${n ? `<div class="phase">${FASE.map(f => `<span class="${f === n.fase_siklus ? 'on' : ''}">${f}</span>`).join('')}</div>` : ''}</div>
  <div class="main"><div class="stage" id="stage"><svg id="links"></svg><div class="col">${col(L, 'L', c.t === 'k' ? 'Ujung bawah: saham.' : 'Titik awal rantai ini.')}</div>
  <div class="col"><div class="bub me ${tone}" style="--s:220px"><span>${E(lab(c))}</span></div></div><div class="col">${col(R, 'R', 'Ujung rantai. Belum ada efek lanjutan.')}</div></div><aside class="panel" id="panel"></aside></div>`;
             $('#panel').innerHTML = panel(c, R);
@@ -684,7 +967,7 @@
             if (c.t === 'n') {
                 const n = D.nm[c.id], imp = D.impacts.filter(i => i.node_id === c.id), prem = n.akses === 'premium', eff = D.edges.filter(e => e.dari_node === c.id && D.nm[e.ke_node]),
                 terms = (n.istilah_kunci || '').split(',').map(s => s.trim()).filter(Boolean), lv = D.live.filter(l => l.node_id === c.id);
-                return `<h2>${E(n.judul)}</h2>${n.fase_siklus ? `<span class="tag t">${E(n.fase_siklus)}</span>` : ''}${n.kategori ? `<span class="tag">${E(n.kategori)}</span>` : ''}<span class="tag">Skala dampak ${E(n.skala_dampak || '-')}/5</span>
+                return `<p><button class="btn" data-chain="1" data-id="${E(c.id)}">Baca sebagai alur</button></p><h2>${E(n.judul)}</h2>${n.fase_siklus ? `<span class="tag t">${E(n.fase_siklus)}</span>` : ''}${n.kategori ? `<span class="tag">${E(n.kategori)}</span>` : ''}<span class="tag">Skala dampak ${E(n.skala_dampak || '-')}/5</span>
   <p style="margin-top:10px">${E(n.deskripsi)}</p>${n.contoh_historis ? `<p><small>Contoh: ${E(n.contoh_historis)}</small></p>` : ''}
   ${lv.map(l => { const u = (l.sumber || '').split(' | ')[0]; return `<div class="lv"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span><span class="${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}<small>Pantau: ${E(l.indikator_pantau)}. Diperbarui ${E(l.diperbarui)}.${u.startsWith('http') ? ` <a href="${E(u)}" target="_blank" rel="noopener">Sumber</a>` : ''}</small></span></div>` }).join('')}
   ${terms.length ? `<h3>Istilah</h3>${terms.map(t => `<button class="tag" data-term="${E(t)}">${E(t)}</button>`).join('')}<div id="def"></div>` : ''}
@@ -699,16 +982,111 @@
             }
             const s = D.tm[c.id] || { ticker: c.id, nama: '' }, pf = D.stock_profile.filter(p => p.ticker === c.id),
                 imp = D.impacts.filter(i => ((i.target_tipe === 'sektor' && i.target_id === s.sektor_id) || (i.target_tipe === 'saham' && i.target_id === c.id)) && D.nm[i.node_id]);
-            return `<h2>${E(s.ticker)}</h2><p>${E(s.nama)}</p>${D.sm[s.sektor_id] ? `<p><small>Sektor: </small>${bt('s', s.sektor_id, 'L', D.sm[s.sektor_id].nama_sektor)}</p>` : ''}${s.eksposur ? `<p><small>${E(s.eksposur)}</small></p>` : ''}
+            return `<p><button class="btn" data-card="1" data-id="${E(c.id)}">Lihat kartu saham</button></p><h2>${E(s.ticker)}</h2><p>${E(s.nama)}</p>${D.sm[s.sektor_id] ? `<p><small>Sektor: </small>${bt('s', s.sektor_id, 'L', D.sm[s.sektor_id].nama_sektor)}</p>` : ''}${s.eksposur ? `<p><small>${E(s.eksposur)}</small></p>` : ''}
  <h3>Ciri eksposur</h3>${pf.map(p => `<div class="imp"><b>${E((D.fm[p.faktor] || {}).label || p.faktor)}</b> <span class="tag">${E(p.besar)}</span> ${dr(p)}<small>${E(p.keterangan)} Keyakinan ${E(p.keyakinan)}.</small></div>`).join('') || '<p><small>Belum ada profil.</small></p>'}
  <h3>Faktor yang memengaruhi</h3>${imp.map(i => row(bt('n', i.node_id, 'L', D.nm[i.node_id].judul), i)).join('') || '<p><small>Belum ada pemetaan.</small></p>'}
  <p class="note">${pf.concat(imp).some(r => r.status !== 'verified') ? 'Sebagian data sedang diverifikasi. ' : ''}Ditampilkan efek positif dan negatif tanpa skor. ${DISC}</p>`
         }
 
+        let sf = 'all', mode = 'home', bf = 'all', cg = null, cf = null, cc = null, chainId = null, stockId = null, forced = [], hist = [], curP = [];
+        const FS = { berlangsung: 0, baru_terjadi: 1, mereda: 2 }, SZ = { besar: 3, sedang: 2, kecil: 1 };
+        function board() {
+            const L = D.live.filter(l => D.nm[l.node_id] && (bf === 'all' || l.status === bf)).sort((a, b) => (FS[a.status] ?? 3) - (FS[b.status] ?? 3) || String(b.diperbarui).localeCompare(String(a.diperbarui)));
+            $('#app').innerHTML = `<h2>Papan kejadian</h2><div class="chips">${[['all', 'Semua'], ['berlangsung', 'Berlangsung'], ['baru_terjadi', 'Baru terjadi'], ['mereda', 'Mereda']].map(([k, t]) => `<button class="chip ${bf === k ? 'on' : ''}" data-bf="${k}">${t}</button>`).join('')}</div>` +
+                (L.length ? L.map(l => {
+                    const n = D.nm[l.node_id], pr = l.akses === 'premium', u = (l.sumber || '').split(' | ')[0], nx = D.edges.filter(e => e.dari_node === l.node_id && D.nm[e.ke_node]).slice(0, 2);
+                    return `<article class="bd"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span>${pr ? '<span class="tag">Premium</span>' : ''}<span class="tag">Diperbarui ${E(l.diperbarui)}</span><h3>${E(n.judul)}</h3><p class="${pr ? 'lock' : ''}">${E(l.ringkasan)}</p><p class="mu">Pantau: ${E(l.indikator_pantau)}</p>${nx.length ? `<p class="mu">Kemungkinan berikutnya: ${nx.map(e => E(D.nm[e.ke_node].judul) + ' (' + E(e.jeda_waktu) + ')').join('; ')}</p>` : ''}<div>${bt('n', l.node_id, 'R', 'Lihat rantai', 'btn')} ${/^http/.test(u) ? `<a href="${E(u)}" target="_blank" rel="noopener">Sumber</a>` : ''}</div></article>`
+                }).join('') : '<p class="note">Tidak ada kejadian pada filter ini.</p>') + `<p class="note">${DISC}</p>`
+        }
+
+        function cmp() {
+            const pm = {}; D.stock_profile.forEach(p => { if (D.tm[p.ticker]) (pm[p.ticker] = pm[p.ticker] || {})[p.faktor] = p });
+            const gs = D.sectors.map(s => ({ s, t: D.stocks.filter(x => x.sektor_id === s.id && pm[x.ticker]).map(x => x.ticker) })).filter(g => g.t.length > 1);
+            if (!gs.length) { $('#app').innerHTML = '<p class="note">Belum cukup data profil saham untuk dibandingkan.</p>'; return }
+            if (!gs.find(g => g.s.id === cg)) cg = gs[0].s.id;
+            const g = gs.find(x => x.s.id === cg), fc = {}; g.t.forEach(t => Object.keys(pm[t]).forEach(f => fc[f] = (fc[f] || 0) + 1));
+            const rows = Object.keys(fc).sort((a, b) => fc[b] - fc[a]), fl = f => (D.fm[f] || {}).label || f;
+            $('#app').innerHTML = `<h2>Bandingkan saham sejenis</h2><div class="chips">${gs.map(x => `<button class="chip ${x.s.id === cg ? 'on' : ''}" data-cg="${E(x.s.id)}">${E(x.s.nama_sektor)}</button>`).join('')}</div>
+ <div class="tw"><table class="ct"><thead><tr><th></th>${g.t.map(t => `<th>${bt('k', t, 'R', t)}</th>`).join('')}</tr></thead><tbody>${rows.map(f => `<tr><th>${'<button class="lk" data-cf="' + E(f) + '">' + E(fl(f)) + '</button>'}</th>${g.t.map(t => { const p = pm[t][f]; return p ? `<td><button class="cell ${p.status === 'verified' ? '' : 'dr'}" data-cell="${E(t)}|${E(f)}" aria-label="${E(t + ' ' + fl(f) + ' ' + p.besar)}"><i class="dot s${SZ[p.besar] || 2}"></i><span>${E(p.besar)}</span></button></td>` : '<td class="na">–</td>' }).join('')}</tr>`).join('')}</tbody></table></div>
+ <p class="mu legend"><i class="dot s3"></i>Besar<i class="dot s2"></i>Sedang<i class="dot s1"></i>Kecil<i class="dot s2 dr"></i>Draft</p>
+ <div class="bd" id="cd">${cdet()}</div><p class="note">Ukuran titik menunjukkan besar eksposur terhadap faktor, bukan prediksi atau penilaian kualitas saham. ${DISC}</p>`
+        }
+
+        function cdet() {
+            if (cc) {
+                const [t, f] = cc.split('|'), p = D.stock_profile.find(x => x.ticker === t && x.faktor === f); if (!p) return '';
+                return `<b>${E(t)} · ${E((D.fm[f] || {}).label || f)}</b> <span class="tag">${E(p.besar)}</span>${dr(p)}<p>${E(p.keterangan)}</p><p class="mu">Keyakinan ${E(p.keyakinan)}.${/^http/.test(p.sumber) ? ` <a href="${E(p.sumber)}" target="_blank" rel="noopener">Sumber</a>` : ''}</p>`
+            }
+            if (cf) {
+                const fx = D.fm[cf] || {}, r = D.stock_profile.filter(x => x.faktor === cf && D.tm[x.ticker]).sort((a, b) => (SZ[b.besar] || 0) - (SZ[a.besar] || 0));
+                return `<b>${E(fx.label || cf)}</b><p>${E(fx.penjelasan || '')}</p><p class="mu">Saham dengan faktor ini, dari yang terbesar:</p>${r.map(x => `<div class="imp">${bt('k', x.ticker, 'R', x.ticker)} <span class="tag">${E(x.besar)}</span>${dr(x)}<small>${E(D.tm[x.ticker].nama)}</small></div>`).join('')}`
+            }
+            return '<p class="mu">Ketuk sel untuk melihat alasannya, atau ketuk nama faktor untuk melihat semua saham yang terkena.</p>'
+        }
+
+        const snap = () => { hist.push({ mode, chainId, stockId, trail: trail.slice(), forced: forced.slice() }); if (hist.length > 30) hist.shift() };
+        const bk = () => hist.length ? '<button class="btn" data-back="1">← Kembali</button>' : '';
+        const fl = f => (D.fm[f] || {}).label || f, KY = { tinggi: 3, sedang: 2, rendah: 1 }, TC = { pos: 'tp', neg: 'tn', mix: 'tm' };
+        const nextOf = id => D.edges.filter(e => e.dari_node === id && e.tipe_edge !== 'feedback' && D.nm[e.ke_node]).sort((a, b) => (KY[b.keyakinan] || 0) - (KY[a.keyakinan] || 0));
+        function buildPath(start, fo) {
+            const p = [{ id: start }], seen = new Set([start]);
+            while (p.length < 9) {
+                const o = nextOf(p[p.length - 1].id).filter(e => !seen.has(e.ke_node)); if (!o.length) break;
+                const k = o.find(e => e.ke_node === fo[p.length]) || o[0]; p.push({ id: k.ke_node, e: k, alt: o.filter(x => x !== k) }); seen.add(k.ke_node)
+            }
+            return p
+        }
+        function chain() {
+            if (!D.nm[chainId]) { chainId = null; return home() }
+            const P = curP = buildPath(chainId, forced), W = ['maka', 'sehingga', 'akibatnya', 'lalu', 'kemudian', 'pada akhirnya', 'dan akhirnya', 'berikutnya'], liv = new Set(D.live.filter(l => l.status !== 'mereda').map(l => l.node_id));
+            const rs = D.scenarios.filter(x => x.node_pembuka === chainId || (D.scenario_nodes || []).some(y => y.scenario_id === x.id && y.node_id === chainId));
+            let h = `${bk()}<h2>Alur sebab-akibat</h2><p class="mu">Dibaca dari atas ke bawah. Ketuk judul untuk memulai alur dari titik itu.</p>${rs.length ? `<p class="mu">Bagian dari skenario: ${rs.map(x => `<button class="tag" data-t="n" data-id="${E(x.node_pembuka)}" data-d="R">${E(x.judul)}${x.siklus_besar ? ' · ' + E(SB[x.siklus_besar] || x.siklus_besar) : ''}</button>`).join(' ')}</p>` : ''}`;
+            P.forEach((x, i) => {
+                const n = D.nm[x.id];
+                if (i) { const e = x.e; h += `<div class="cn"><b>${W[Math.min(i - 1, W.length - 1)]}</b>${e.arah_dampak === 'negatif' ? ' <span class="tag">arah berlawanan</span>' : ''}<p>${E(e.mekanisme)}</p><small>Jeda ${E(e.jeda_waktu)} · keyakinan ${E(e.keyakinan)}</small></div>` }
+                const nx = P[i + 1];
+                h += `<div class="st ${nTone(x.id)}"><span class="k">${i ? 'LANGKAH ' + (i + 1) : 'KARENA'}</span>${bt('n', x.id, 'R', n.judul)}${n.fase_siklus ? ` <span class="tag t">${E(n.fase_siklus)}</span>` : ''}${liv.has(x.id) ? ' <span class="tag st-berlangsung">Sedang berlangsung</span>' : ''}<p>${E(n.deskripsi)}</p>${nx && nx.alt.length ? `<p class="mu">Kemungkinan lain setelah ini: ${nx.alt.map(o => `<button class="tag" data-fork="${i + 1}|${E(o.ke_node)}">${E(D.nm[o.ke_node].judul)}</button>`).join(' ')}</p>` : ''}</div>`
+            });
+            const last = P[P.length - 1].id, fb = D.edges.filter(e => e.dari_node === last && e.tipe_edge === 'feedback' && D.nm[e.ke_node]);
+            if (fb.length) h += `<p class="mu">↺ Lingkaran umpan balik: ${fb.map(e => E(e.mekanisme)).join(' ')}</p>`;
+            const ids = P.map(x => x.id), ag = {}; D.impacts.filter(i => ids.includes(i.node_id)).forEach(i => { const k = i.target_tipe + '|' + i.target_id; (ag[k] = ag[k] || []).push(i.arah) });
+            const ch = Object.entries(ag).slice(0, 16).map(([k, a]) => { const [t, id] = k.split('|'), l = t === 'saham' ? id : (D.sm[id] || {}).nama_sektor; return l ? bt(t === 'saham' ? 'k' : 's', id, 'R', l, 'tag ' + (TC[tn(a)] || '')) : '' }).join(' ');
+            h += `<h2>Sektor dan saham yang terpapar di alur ini</h2><p class="mu">Hijau menguntungkan, merah menekan, kuning campuran. Pemetaan masih berstatus draft.</p><div>${ch || '<p class="mu">Belum ada pemetaan.</p>'}</div><p><button class="btn" data-t="n" data-id="${E(chainId)}" data-d="R" data-map="1">Buka di peta bubble</button></p><p class="note">${DISC}</p>`;
+            $('#app').innerHTML = h
+        }
+        const LANES = [['pendapatan', 'Pendapatan', 'Dari mana uang masuk, dan apa yang bisa mengubahnya?', /pendapatan|volume|permintaan/], ['biaya', 'Biaya', 'Apa yang membuat ongkos produksi dan operasional naik atau turun?', /biaya|margin|hpp/], ['utang', 'Utang', 'Seberapa besar beban bunga, kurs, dan pinjaman?', /utang|bunga|kredit|rekapitalisasi/], ['valuasi', 'Valuasi', 'Bagaimana pasar menilai saham ini?', /valuasi/], ['lain', 'Lainnya', '', null]];
+        const FL = { kemasan_plastik: ['biaya'], bahan_baku_impor: ['biaya'], bahan_kimia_petrokimia: ['biaya'], energi_intensif: ['biaya'], tenaga_kerja: ['biaya'], pass_through_terbatas: ['biaya'], pendapatan_usd: ['pendapatan'], harga_komoditas: ['pendapatan'], konsumsi_domestik: ['pendapatan'], belanja_negara: ['pendapatan'], cuaca_musiman: ['pendapatan'], utang_usd: ['utang'], sensitif_bunga: ['utang', 'valuasi'], valuasi_growth: ['valuasi'] };
+        function stockCard() {
+            const s = D.tm[stockId]; if (!s) { stockId = null; return home() }
+            const sec = D.sm[s.sektor_id], liv = new Set(D.live.filter(l => l.status !== 'mereda').map(l => l.node_id)), L = {}, put = (k, x) => (L[k] = L[k] || []).push(x),
+                imp = D.impacts.filter(i => D.nm[i.node_id] && ((i.target_tipe === 'saham' && i.target_id === s.ticker) || (i.target_tipe === 'sektor' && i.target_id === s.sektor_id))), pf = D.stock_profile.filter(p => p.ticker === s.ticker);
+            const JL = j => { const a = String(j || '').toLowerCase().split(/[,|]/).map(x => x.trim()).filter(x => LANES.some(l => l[0] === x)); return a.length ? a : null };
+            pf.forEach(p => (JL(p.jalur) || FL[p.faktor] || ['lain']).forEach(k => put(k, { p })));
+            imp.forEach(i => { const ks = JL(i.jalur) || LANES.filter(l => l[3] && l[3].test(i.saluran || '')).map(l => l[0]); (ks.length ? ks : ['lain']).forEach(k => put(k, { i })) });
+            const it = x => x.p ? `<div class="it"><i class="dot s${SZ[x.p.besar] || 2} ${x.p.status === 'verified' ? '' : 'dr'}" style="display:inline-block;vertical-align:middle;margin-right:8px"></i><b>${E(fl(x.p.faktor))}</b> <span class="tag">Eksposur ${E(x.p.besar)}</span>${dr(x.p)}<small>${E(x.p.keterangan)}</small></div>`
+                : `<div class="it"><span class="ar ${x.i.arah === 'positif' ? 'u' : x.i.arah === 'negatif' ? 'd' : 'm'}">${x.i.arah === 'positif' ? '▲' : x.i.arah === 'negatif' ? '▼' : '◆'}</span>${bt('n', x.i.node_id, 'R', D.nm[x.i.node_id].judul)} ${liv.has(x.i.node_id) ? '<span class="tag st-berlangsung">Sedang berlangsung</span>' : ''}${dr(x.i)}<small class="${D.nm[x.i.node_id].akses === 'premium' ? 'lock' : ''}">${x.i.arah === 'positif' ? 'Menguntungkan' : x.i.arah === 'negatif' ? 'Menekan' : 'Campuran'}. ${E(x.i.alasan)} (${E(x.i.horizon)})</small></div>`;
+            const peers = D.stocks.filter(x => x.sektor_id === s.sektor_id && x.ticker !== s.ticker);
+            $('#app').innerHTML = `${bk()}<h2>${E(s.ticker)} <small class="mu">${E(s.nama)}</small></h2><p class="mu">${sec ? bt('s', sec.id, 'R', sec.nama_sektor) : ''}${s.eksposur ? ' · ' + E(s.eksposur) : ''}</p>
+ <p class="mu legend">▲ menguntungkan · ▼ menekan · ◆ campuran · titik atau tanda "Draft" = belum diverifikasi</p>
+ <div class="lanes">${LANES.filter(l => l[0] !== 'lain' || (L.lain || []).length).map(l => `<section class="bd ln"><h3>${l[1]}</h3>${l[2] ? `<p class="q">${l[2]}</p>` : ''}${(L[l[0]] || []).map(it).join('') || '<p class="mu">Belum ada faktor tercatat.</p>'}</section>`).join('')}</div>
+ ${peers.length ? `<p class="mu">Saham sejenis: ${peers.map(x => bt('k', x.ticker, 'R', x.ticker, 'tag')).join(' ')} <button class="btn" data-cmpg="${E(s.sektor_id)}">Bandingkan</button></p>` : ''}
+ <p><button class="btn" data-t="k" data-id="${E(s.ticker)}" data-d="R" data-map="1">Lihat di peta bubble</button></p>
+ <p class="note">Menampilkan efek positif dan negatif tanpa skor atau peringkat. ${pf.concat(imp).some(r => r.status !== 'verified') ? 'Sebagian data sedang diverifikasi. ' : ''}${DISC}</p>`
+        }
+
         document.addEventListener('click', e => {
+            const sfb = e.target.closest('[data-sf]'); if (sfb) { sf = sfb.dataset.sf; scGrid(); document.querySelectorAll('[data-sf]').forEach(b => b.classList.toggle('on', b.dataset.sf === sf)); return }
+            const bkb = e.target.closest('[data-back]'); if (bkb) { const h = hist.pop(); if (h) { mode = h.mode; chainId = h.chainId; stockId = h.stockId; trail = h.trail; forced = h.forced; view(); scrollTo(0, 0) } return }
+            const fk = e.target.closest('[data-fork]'); if (fk) { const [i, id] = fk.dataset.fork.split('|'); forced = [...curP.slice(0, +i).map(x => x.id), id]; chain(); return }
+            const chb = e.target.closest('[data-chain]'); if (chb) { snap(); trail = []; chainId = chb.dataset.id; stockId = null; forced = []; view(); scrollTo(0, 0); return }
+            const cdb = e.target.closest('[data-card]'); if (cdb) { snap(); trail = []; stockId = cdb.dataset.id; chainId = null; view(); scrollTo(0, 0); return }
+            const cgb = e.target.closest('[data-cmpg]'); if (cgb) { mode = 'cmp'; cg = cgb.dataset.cmpg; cc = cf = null; trail = []; chainId = stockId = null; hist = []; view(); return }
+            const a1 = e.target.closest('[data-bf]'); if (a1) { bf = a1.dataset.bf; board(); return }
+            const a2 = e.target.closest('[data-cg]'); if (a2) { cg = a2.dataset.cg; cc = cf = null; cmp(); return }
+            const a3 = e.target.closest('[data-cf],[data-cell]'); if (a3) { cf = a3.dataset.cf || null; cc = a3.dataset.cell || null; $('#cd').innerHTML = cdet(); $('#cd').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); return }
             const ix = e.target.closest('[data-ix]'); if (ix) { trail = trail.slice(0, +ix.dataset.ix + 1); view(); return }
             const tm = e.target.closest('[data-term]'); if (tm) { const g = D.glossary.find(x => x.istilah.toLowerCase() === tm.dataset.term.toLowerCase()); $('#def').innerHTML = `<div class="def"><b>${E(tm.dataset.term)}</b>: ${E(g ? g.definisi : 'Definisi belum ditambahkan.')}</div>`; return }
-            const b = e.target.closest('[data-t]'); if (b && !b.classList.contains('me')) go({ t: b.dataset.t, id: b.dataset.id }, b.dataset.d || 'R')
+            const b = e.target.closest('[data-t]'); if (b && !b.classList.contains('me')) go({ t: b.dataset.t, id: b.dataset.id, map: b.dataset.map }, b.dataset.d || 'R')
         });
     </script>
 </body>
