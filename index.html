@@ -966,7 +966,7 @@
         function panel(c, R) {
             if (c.t === 'n') {
                 const n = D.nm[c.id], imp = D.impacts.filter(i => i.node_id === c.id), prem = n.akses === 'premium', eff = D.edges.filter(e => e.dari_node === c.id && D.nm[e.ke_node]),
-                terms = (n.istilah_kunci || '').split(',').map(s => s.trim()).filter(Boolean), lv = D.live.filter(l => l.node_id === c.id);
+                    terms = (n.istilah_kunci || '').split(',').map(s => s.trim()).filter(Boolean), lv = D.live.filter(l => l.node_id === c.id);
                 return `<p><button class="btn" data-chain="1" data-id="${E(c.id)}">Baca sebagai alur</button></p><h2>${E(n.judul)}</h2>${n.fase_siklus ? `<span class="tag t">${E(n.fase_siklus)}</span>` : ''}${n.kategori ? `<span class="tag">${E(n.kategori)}</span>` : ''}<span class="tag">Skala dampak ${E(n.skala_dampak || '-')}/5</span>
   <p style="margin-top:10px">${E(n.deskripsi)}</p>${n.contoh_historis ? `<p><small>Contoh: ${E(n.contoh_historis)}</small></p>` : ''}
   ${lv.map(l => { const u = (l.sumber || '').split(' | ')[0]; return `<div class="lv"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span><span class="${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}<small>Pantau: ${E(l.indikator_pantau)}. Diperbarui ${E(l.diperbarui)}.${u.startsWith('http') ? ` <a href="${E(u)}" target="_blank" rel="noopener">Sumber</a>` : ''}</small></span></div>` }).join('')}
