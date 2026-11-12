@@ -10,7 +10,8 @@
             "tanggal_terbit": "2026-11-05",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "berjalan"
+            "jenis": "berjalan",
+            "siklus_besar": "eksternal"
         },
         {
             "id": "SC02",
@@ -22,7 +23,8 @@
             "tanggal_terbit": "2026-11-05",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "berjalan"
+            "jenis": "berjalan",
+            "siklus_besar": "utang"
         },
         {
             "id": "SC03",
@@ -34,7 +36,8 @@
             "tanggal_terbit": "2026-11-05",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "hipotesis"
+            "jenis": "hipotesis",
+            "siklus_besar": "eksternal"
         },
         {
             "id": "SC04",
@@ -46,7 +49,8 @@
             "tanggal_terbit": "2026-11-05",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "hipotesis"
+            "jenis": "hipotesis",
+            "siklus_besar": "utang"
         },
         {
             "id": "SC05",
@@ -58,7 +62,8 @@
             "tanggal_terbit": "2026-11-05",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "hipotesis"
+            "jenis": "hipotesis",
+            "siklus_besar": "utang"
         },
         {
             "id": "SC06",
@@ -70,7 +75,8 @@
             "tanggal_terbit": "2026-11-05",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "hipotesis"
+            "jenis": "hipotesis",
+            "siklus_besar": "alam"
         },
         {
             "id": "SC07",
@@ -82,7 +88,8 @@
             "tanggal_terbit": "2026-11-05",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "hipotesis"
+            "jenis": "hipotesis",
+            "siklus_besar": "utang"
         },
         {
             "id": "SC08",
@@ -94,7 +101,8 @@
             "tanggal_terbit": "2026-11-06",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "historis"
+            "jenis": "historis",
+            "siklus_besar": "utang"
         },
         {
             "id": "SC09",
@@ -106,7 +114,8 @@
             "tanggal_terbit": "2026-11-06",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "historis"
+            "jenis": "historis",
+            "siklus_besar": "utang"
         },
         {
             "id": "SC10",
@@ -118,7 +127,8 @@
             "tanggal_terbit": "2026-11-06",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "historis"
+            "jenis": "historis",
+            "siklus_besar": "utang"
         },
         {
             "id": "SC11",
@@ -130,7 +140,8 @@
             "tanggal_terbit": "2026-11-06",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "historis"
+            "jenis": "historis",
+            "siklus_besar": "alam"
         },
         {
             "id": "SC12",
@@ -142,7 +153,8 @@
             "tanggal_terbit": "2026-11-06",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "berjalan"
+            "jenis": "berjalan",
+            "siklus_besar": "inovasi"
         },
         {
             "id": "SC13",
@@ -154,7 +166,47 @@
             "tanggal_terbit": "2026-11-10",
             "penulis": "Admin",
             "status": "draft",
-            "jenis": "berjalan"
+            "jenis": "berjalan",
+            "siklus_besar": "eksternal"
+        },
+        {
+            "id": "SC14",
+            "judul": "Siklus utang jangka panjang: dari utang menumpuk ke uang yang tergerus",
+            "ringkasan": "Kerangka Ray Dalio tentang bagaimana utang yang menumpuk mendorong pencetakan uang, inflasi, dan perpindahan ke aset nyata seperti emas.",
+            "node_pembuka": "N118",
+            "level": "Lanjut",
+            "akses": "premium",
+            "tanggal_terbit": "2026-11-12",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "hipotesis",
+            "siklus_besar": "utang"
+        },
+        {
+            "id": "SC15",
+            "judul": "Kesenjangan dan polarisasi: dari kebijakan yang berubah-ubah ke premi risiko",
+            "ringkasan": "Kerangka Ray Dalio tentang bagaimana jurang kekayaan dan polarisasi memengaruhi kebijakan ekonomi, biaya modal, dan aliran dana asing.",
+            "node_pembuka": "N123",
+            "level": "Lanjut",
+            "akses": "premium",
+            "tanggal_terbit": "2026-11-12",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "hipotesis",
+            "siklus_besar": "internal"
+        },
+        {
+            "id": "SC16",
+            "judul": "Persaingan kekuatan besar: dari tarif ke relokasi pabrik dan emas",
+            "ringkasan": "Kerangka Ray Dalio tentang bagaimana persaingan negara besar memicu tarif, pemisahan rantai pasok, dan pergeseran cadangan.",
+            "node_pembuka": "N128",
+            "level": "Lanjut",
+            "akses": "premium",
+            "tanggal_terbit": "2026-11-12",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "hipotesis",
+            "siklus_besar": "eksternal"
         }
     ],
     "scenario_nodes": [
@@ -982,6 +1034,141 @@
             "scenario_id": "SC13",
             "node_id": "N113",
             "urutan": "20"
+        },
+        {
+            "scenario_id": "SC02",
+            "node_id": "N117",
+            "urutan": "12"
+        },
+        {
+            "scenario_id": "SC14",
+            "node_id": "N118",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC14",
+            "node_id": "N119",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC14",
+            "node_id": "N120",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC14",
+            "node_id": "N121",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC14",
+            "node_id": "N061",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC14",
+            "node_id": "N009",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC14",
+            "node_id": "N122",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC14",
+            "node_id": "N012",
+            "urutan": "8"
+        },
+        {
+            "scenario_id": "SC14",
+            "node_id": "N016",
+            "urutan": "9"
+        },
+        {
+            "scenario_id": "SC15",
+            "node_id": "N123",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC15",
+            "node_id": "N124",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC15",
+            "node_id": "N125",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC15",
+            "node_id": "N126",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC15",
+            "node_id": "N013",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC15",
+            "node_id": "N039",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC15",
+            "node_id": "N127",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC15",
+            "node_id": "N041",
+            "urutan": "8"
+        },
+        {
+            "scenario_id": "SC16",
+            "node_id": "N128",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC16",
+            "node_id": "N129",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC16",
+            "node_id": "N050",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC16",
+            "node_id": "N019",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC16",
+            "node_id": "N130",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC16",
+            "node_id": "N131",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC16",
+            "node_id": "N132",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC16",
+            "node_id": "N133",
+            "urutan": "8"
+        },
+        {
+            "scenario_id": "SC16",
+            "node_id": "N061",
+            "urutan": "9"
         }
     ],
     "nodes": [
@@ -1106,7 +1293,7 @@
             "fase_siklus": "Puncak",
             "skala_dampak": "5",
             "contoh_historis": "2021-2022: inflasi AS tertinggi dalam puluhan tahun",
-            "istilah_kunci": "Inflasi",
+            "istilah_kunci": "Inflasi, CPI inti, MoM dan YoY",
             "akses": "free",
             "status": "draft",
             "diperbarui": "2026-11-05"
@@ -1120,7 +1307,7 @@
             "fase_siklus": "Puncak",
             "skala_dampak": "5",
             "contoh_historis": "2022: kenaikan suku bunga agresif oleh The Fed",
-            "istilah_kunci": "Suku bunga acuan",
+            "istilah_kunci": "Suku bunga acuan, Hawkish, Basis poin, CME FedWatch",
             "akses": "free",
             "status": "draft",
             "diperbarui": "2026-11-05"
@@ -2608,6 +2795,244 @@
             "akses": "free",
             "status": "draft",
             "diperbarui": "2026-11-10"
+        },
+        {
+            "id": "N117",
+            "judul": "BI menaikkan insentif lindung nilai (hedging)",
+            "kategori": "Moneter",
+            "tipe": "event",
+            "deskripsi": "BI memberi insentif agar pelaku usaha melindungi nilai kewajiban dolarnya, sehingga permintaan dolar spot berkurang dan tekanan pada rupiah mereda. Ini alat selain suku bunga.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "3",
+            "contoh_historis": "Oktober 2026: BI kembali menaikkan insentif hedging",
+            "istilah_kunci": "Hedging",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N118",
+            "judul": "Utang pemerintah dan swasta menumpuk lebih cepat dari pendapatan",
+            "kategori": "Makro",
+            "tipe": "kondisi",
+            "deskripsi": "Menurut kerangka Dalio, tahap akhir siklus utang jangka panjang ditandai utang yang tumbuh lebih cepat daripada pendapatan untuk membayarnya.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "5",
+            "contoh_historis": "Menjelang krisis 1930-an dan 2008",
+            "istilah_kunci": "Siklus besar, Siklus utang jangka panjang",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N119",
+            "judul": "Beban bunga utang menyerap porsi anggaran yang makin besar",
+            "kategori": "Fiskal",
+            "tipe": "kondisi",
+            "deskripsi": "Pembayaran bunga membesar, sehingga ruang belanja lain menyempit dan pemerintah makin bergantung pada pembiayaan baru.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Beban bunga",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N120",
+            "judul": "Bank sentral membiayai utang dengan menambah uang beredar",
+            "kategori": "Moneter",
+            "tipe": "kondisi",
+            "deskripsi": "Menurut Dalio, untuk meringankan beban utang bank sentral membeli obligasi pemerintah dengan uang baru, yang disebut monetisasi utang.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "1970-an dan 2008-2020: pencetakan uang oleh bank sentral besar",
+            "istilah_kunci": "Monetisasi utang",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N121",
+            "judul": "Nilai uang tergerus dibanding aset riil",
+            "kategori": "Makro",
+            "tipe": "kondisi",
+            "deskripsi": "Saat uang baru bertambah lebih cepat daripada barang dan jasa, daya beli uang turun dan investor mencari aset yang tidak bisa dicetak, seperti emas dan komoditas.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "1970-an: emas dan komoditas naik",
+            "istilah_kunci": "Inflasi",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N122",
+            "judul": "Investor menuntut imbal hasil lebih tinggi untuk memegang utang negara",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Jika pasokan utang negara melimpah dan kepercayaan menurun, pembeli menuntut yield lebih tinggi, sehingga biaya bunga naik.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Yield",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N123",
+            "judul": "Kesenjangan kekayaan dan nilai melebar",
+            "kategori": "Makro",
+            "tipe": "kondisi",
+            "deskripsi": "Menurut Dalio, jurang kekayaan dan perbedaan nilai antar kelompok yang melebar menurunkan kemampuan masyarakat bekerja sama.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "1930-an dan 2010-an: polarisasi di banyak negara",
+            "istilah_kunci": "Kesenjangan kekayaan",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N124",
+            "judul": "Polarisasi politik meningkat",
+            "kategori": "Geopolitik",
+            "tipe": "kondisi",
+            "deskripsi": "Kelompok dengan kepentingan berbeda sulit bersepakat, sehingga kebijakan lebih mudah berubah arah setiap pergantian pemerintahan.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N125",
+            "judul": "Kebijakan ekonomi lebih sering berubah arah",
+            "kategori": "Fiskal",
+            "tipe": "kondisi",
+            "deskripsi": "Proteksionisme, subsidi, kontrol harga, atau perubahan aturan investasi menjadi lebih sering sebagai respons tekanan politik.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "Proteksionisme",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N126",
+            "judul": "Ketidakpastian kebijakan membuat investor menuntut premi risiko",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Investor menambah premi untuk risiko aturan yang berubah, sehingga biaya modal naik dan sebagian dana menunggu atau keluar.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "Premi risiko",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N127",
+            "judul": "Belanja subsidi dan transfer sosial naik",
+            "kategori": "Fiskal",
+            "tipe": "kondisi",
+            "deskripsi": "Pemerintah menambah bantuan untuk meredam tekanan sosial, yang menaikkan belanja dan defisit.",
+            "fase_siklus": "Ekspansi",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N128",
+            "judul": "Persaingan kekuatan besar menajam",
+            "kategori": "Geopolitik",
+            "tipe": "kondisi",
+            "deskripsi": "Menurut Dalio, saat kekuatan baru mengejar kekuatan lama di ekonomi, teknologi, dan militer, gesekan dagang dan keamanan meningkat.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "5",
+            "contoh_historis": "Persaingan ekonomi dan teknologi AS-China sejak 2018",
+            "istilah_kunci": "Mata uang cadangan",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N129",
+            "judul": "Tarif dan pembatasan teknologi antar blok",
+            "kategori": "Geopolitik",
+            "tipe": "event",
+            "deskripsi": "Negara memakai tarif, kontrol ekspor, dan sanksi sebagai alat tekanan.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "Sejak 2018: tarif dan pembatasan teknologi",
+            "istilah_kunci": "Proteksionisme",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N130",
+            "judul": "Rantai pasok dipecah dan dipindah ke beberapa negara",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Perusahaan memindahkan sebagian produksi dari satu negara ke beberapa negara sekutu atau dekat untuk mengurangi risiko.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Rantai pasok",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N131",
+            "judul": "Relokasi pabrik ke Asia Tenggara meningkat",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Sebagian pabrik pindah ke negara seperti Indonesia, Vietnam, dan Malaysia, yang menambah permintaan kawasan industri dan tenaga kerja.",
+            "fase_siklus": "Ekspansi",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N132",
+            "judul": "Sanksi keuangan dan upaya mengurangi ketergantungan pada dolar",
+            "kategori": "Moneter",
+            "tipe": "kondisi",
+            "deskripsi": "Sanksi yang memakai sistem pembayaran dolar mendorong sebagian negara mencari alternatif pembayaran dan menyimpan cadangan di aset lain.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "3",
+            "contoh_historis": "2022: pembekuan cadangan devisa Rusia",
+            "istilah_kunci": "Mata uang cadangan",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N133",
+            "judul": "Bank sentral menambah cadangan emas",
+            "kategori": "Moneter",
+            "tipe": "kondisi",
+            "deskripsi": "Bank sentral membeli emas sebagai cadangan yang tidak bergantung pada negara lain.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "3",
+            "contoh_historis": "Sejak 2022: pembelian emas oleh bank sentral meningkat",
+            "istilah_kunci": "Hedging",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-12"
         }
     ],
     "edges": [
@@ -4535,6 +4960,292 @@
             "tipe_edge": "causal",
             "mekanisme": "Botol dan tube kemasan produk perawatan ikut naik.",
             "sumber": ""
+        },
+        {
+            "id": "E176",
+            "dari_node": "N014",
+            "ke_node": "N117",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-3 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Rupiah yang tertekan mendorong BI memperkuat alat di luar suku bunga, seperti insentif lindung nilai.",
+            "sumber": "https://snips.stockbit.com/snips-terbaru/-bi-rate-dipertahankan-di-575-insentif-hedging-kembali-naik"
+        },
+        {
+            "id": "E177",
+            "dari_node": "N117",
+            "ke_node": "N014",
+            "arah_dampak": "negatif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "0-6 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pelaku usaha yang melindungi nilai kewajiban dolarnya mengurangi permintaan dolar spot, sehingga menahan pelemahan rupiah.",
+            "sumber": ""
+        },
+        {
+            "id": "E178",
+            "dari_node": "N118",
+            "ke_node": "N119",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "1-10 tahun",
+            "tipe_edge": "causal",
+            "mekanisme": "Utang yang makin besar berarti bunga yang harus dibayar makin besar.",
+            "sumber": "Dalio, Principles for Dealing with the Changing World Order (2021)"
+        },
+        {
+            "id": "E179",
+            "dari_node": "N119",
+            "ke_node": "N120",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "1-10 tahun",
+            "tipe_edge": "causal",
+            "mekanisme": "Menurut Dalio, bank sentral cenderung meringankan beban bunga lewat pembelian obligasi dan uang baru.",
+            "sumber": "Dalio, Principles for Dealing with the Changing World Order (2021)"
+        },
+        {
+            "id": "E180",
+            "dari_node": "N120",
+            "ke_node": "N121",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "1-10 tahun",
+            "tipe_edge": "causal",
+            "mekanisme": "Uang yang bertambah lebih cepat daripada barang dan jasa menurunkan nilainya.",
+            "sumber": "Dalio, Principles for Dealing with the Changing World Order (2021)"
+        },
+        {
+            "id": "E181",
+            "dari_node": "N121",
+            "ke_node": "N061",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Investor mencari penyimpan nilai selain uang, termasuk emas.",
+            "sumber": "Dalio, Principles for Dealing with the Changing World Order (2021)"
+        },
+        {
+            "id": "E182",
+            "dari_node": "N121",
+            "ke_node": "N009",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Nilai uang yang turun muncul sebagai kenaikan harga.",
+            "sumber": ""
+        },
+        {
+            "id": "E183",
+            "dari_node": "N119",
+            "ke_node": "N122",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "1-5 tahun",
+            "tipe_edge": "causal",
+            "mekanisme": "Penerbitan utang baru yang besar menambah pasokan obligasi.",
+            "sumber": ""
+        },
+        {
+            "id": "E184",
+            "dari_node": "N122",
+            "ke_node": "N012",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "0-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Yield obligasi AS menjadi patokan global, sehingga tuntutan imbal hasil yang naik terlihat di sana.",
+            "sumber": ""
+        },
+        {
+            "id": "E185",
+            "dari_node": "N122",
+            "ke_node": "N016",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Yield menjadi acuan bunga kredit dan KPR.",
+            "sumber": ""
+        },
+        {
+            "id": "E186",
+            "dari_node": "N122",
+            "ke_node": "N119",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "feedback",
+            "mekanisme": "Yield yang naik menambah beban bunga dan memperburuk siklus.",
+            "sumber": "Dalio, Principles for Dealing with the Changing World Order (2021)"
+        },
+        {
+            "id": "E187",
+            "dari_node": "N123",
+            "ke_node": "N124",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "1-10 tahun",
+            "tipe_edge": "causal",
+            "mekanisme": "Jurang kekayaan yang melebar mempertajam perbedaan kepentingan antar kelompok.",
+            "sumber": "Dalio, Principles for Dealing with the Changing World Order (2021)"
+        },
+        {
+            "id": "E188",
+            "dari_node": "N124",
+            "ke_node": "N125",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "1-5 tahun",
+            "tipe_edge": "causal",
+            "mekanisme": "Sulit bersepakat membuat kebijakan lebih mudah berganti arah.",
+            "sumber": ""
+        },
+        {
+            "id": "E189",
+            "dari_node": "N125",
+            "ke_node": "N126",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Investor meminta tambahan imbal hasil untuk risiko aturan yang berubah.",
+            "sumber": ""
+        },
+        {
+            "id": "E190",
+            "dari_node": "N126",
+            "ke_node": "N013",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Premi risiko yang naik membuat dana asing keluar atau menunda masuk.",
+            "sumber": ""
+        },
+        {
+            "id": "E191",
+            "dari_node": "N123",
+            "ke_node": "N127",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Tekanan sosial mendorong pemerintah menambah bantuan.",
+            "sumber": ""
+        },
+        {
+            "id": "E192",
+            "dari_node": "N127",
+            "ke_node": "N041",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Belanja naik lebih cepat dari penerimaan, defisit melebar.",
+            "sumber": ""
+        },
+        {
+            "id": "E193",
+            "dari_node": "N126",
+            "ke_node": "N039",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Premi risiko ikut masuk ke yield obligasi negara.",
+            "sumber": ""
+        },
+        {
+            "id": "E194",
+            "dari_node": "N128",
+            "ke_node": "N129",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "0-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Persaingan ekonomi dan teknologi mendorong tarif dan pembatasan sebagai alat tekanan.",
+            "sumber": "Dalio, Principles for Dealing with the Changing World Order (2021)"
+        },
+        {
+            "id": "E195",
+            "dari_node": "N129",
+            "ke_node": "N130",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Perusahaan memisahkan produksi untuk mengurangi risiko tarif dan pembatasan.",
+            "sumber": ""
+        },
+        {
+            "id": "E196",
+            "dari_node": "N130",
+            "ke_node": "N131",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "1-4 tahun",
+            "tipe_edge": "causal",
+            "mekanisme": "Sebagian produksi pindah ke negara yang dianggap netral atau dekat.",
+            "sumber": ""
+        },
+        {
+            "id": "E197",
+            "dari_node": "N129",
+            "ke_node": "N019",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "6-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pembatasan dagang dan teknologi bisa menekan pertumbuhan China.",
+            "sumber": ""
+        },
+        {
+            "id": "E198",
+            "dari_node": "N129",
+            "ke_node": "N050",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-18 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Tarif dan pembatasan menekan perdagangan, permintaan ekspor global turun.",
+            "sumber": ""
+        },
+        {
+            "id": "E199",
+            "dari_node": "N128",
+            "ke_node": "N132",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Persaingan mendorong penggunaan sanksi keuangan.",
+            "sumber": "Dalio, Principles for Dealing with the Changing World Order (2021)"
+        },
+        {
+            "id": "E200",
+            "dari_node": "N132",
+            "ke_node": "N133",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Negara yang khawatir terkena sanksi menyimpan lebih banyak cadangan di emas.",
+            "sumber": ""
+        },
+        {
+            "id": "E201",
+            "dari_node": "N133",
+            "ke_node": "N061",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pembelian bank sentral menambah permintaan emas dan mendukung harganya.",
+            "sumber": ""
         }
     ],
     "sectors": [
@@ -4675,6 +5386,12 @@
             "nama_sektor": "Perawatan pribadi dan rumah tangga",
             "deskripsi": "Sampo, sabun, kosmetik, dan produk rumah tangga.",
             "sensitivitas_umum": "Bahan kimia petrokimia, turunan sawit, kurs, daya beli"
+        },
+        {
+            "id": "S24",
+            "nama_sektor": "Kawasan industri",
+            "deskripsi": "Pengembang kawasan industri dan pergudangan.",
+            "sensitivitas_umum": "Relokasi pabrik, investasi manufaktur, suku bunga"
         }
     ],
     "stocks": [
@@ -5031,6 +5748,30 @@
             "nama": "Ultrajaya Milk Industry",
             "sektor_id": "S04",
             "eksposur": "Susu dan teh kemasan karton"
+        },
+        {
+            "ticker": "KIJA",
+            "nama": "Kawasan Industri Jababeka",
+            "sektor_id": "S24",
+            "eksposur": "Pengembang kawasan industri"
+        },
+        {
+            "ticker": "SSIA",
+            "nama": "Surya Semesta Internusa",
+            "sektor_id": "S24",
+            "eksposur": "Kawasan industri dan konstruksi"
+        },
+        {
+            "ticker": "BEST",
+            "nama": "Bekasi Fajar Industrial Estate",
+            "sektor_id": "S24",
+            "eksposur": "Pengembang kawasan industri"
+        },
+        {
+            "ticker": "DMAS",
+            "nama": "Puradelta Lestari",
+            "sektor_id": "S24",
+            "eksposur": "Pengembang kawasan industri"
         }
     ],
     "impacts": [
@@ -6503,6 +7244,81 @@
             "sumber": "belum ada",
             "diverifikasi_oleh": "",
             "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I100",
+            "node_id": "N117",
+            "target_tipe": "sektor",
+            "target_id": "S10",
+            "arah": "positif",
+            "saluran": "utang",
+            "horizon": "0-6 bulan",
+            "alasan": "Emiten berutang dolar bisa melindungi nilai kewajibannya dengan biaya lebih ringan.",
+            "keyakinan": "rendah",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I101",
+            "node_id": "N131",
+            "target_tipe": "sektor",
+            "target_id": "S24",
+            "arah": "positif",
+            "saluran": "pendapatan",
+            "horizon": "12-48 bulan",
+            "alasan": "Relokasi pabrik menambah permintaan lahan dan gudang kawasan industri.",
+            "keyakinan": "rendah",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I102",
+            "node_id": "N133",
+            "target_tipe": "sektor",
+            "target_id": "S16",
+            "arah": "positif",
+            "saluran": "pendapatan",
+            "horizon": "6-36 bulan",
+            "alasan": "Permintaan emas dari bank sentral mendukung harga jual emas.",
+            "keyakinan": "rendah",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I103",
+            "node_id": "N126",
+            "target_tipe": "sektor",
+            "target_id": "S08",
+            "arah": "negatif",
+            "saluran": "valuasi",
+            "horizon": "0-12 bulan",
+            "alasan": "Premi risiko naik menekan valuasi saham besar yang banyak dimiliki asing.",
+            "keyakinan": "rendah",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I104",
+            "node_id": "N122",
+            "target_tipe": "sektor",
+            "target_id": "S07",
+            "arah": "negatif",
+            "saluran": "utang dan permintaan",
+            "horizon": "3-12 bulan",
+            "alasan": "Yield naik mendorong bunga KPR dan utang pengembang.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
         }
     ],
     "glossary": [],
@@ -7079,12 +7895,12 @@
         {
             "id": "L03",
             "node_id": "N003",
-            "status": "berlangsung",
+            "status": "mereda",
             "tanggal_mulai": "2026-02-28",
-            "ringkasan": "Brent ditutup USD117,64 per barel pada 30 Oktober, level penyelesaian tertinggi sejak akhir April, dan naik 13,6 persen sepanjang Oktober. Per 2 November turun ke sekitar USD111 setelah reli.",
-            "indikator_pantau": "Harga Brent dan WTI, kabar Selat Hormuz, keputusan OPEC+",
-            "sumber": "https://www.kabarbursa.com/market-hari-ini/harga-minyak-dunia-berbalik-turun-brent-ke-usd11168-usai-reli-oktober",
-            "diperbarui": "2026-11-09",
+            "ringkasan": "Brent turun ke sekitar USD92 per barel pada 11 November, dari USD117,64 pada 30 Oktober, setelah Trump menyatakan serangan baru ke Iran sangat kecil kemungkinannya selama perundingan berjalan. JPMorgan menilai pasokan global telah melampaui permintaan. Pasar masih memantau keamanan pelayaran di Selat Hormuz.",
+            "indikator_pantau": "Harga Brent dan WTI, perundingan AS-Iran, status Selat Hormuz",
+            "sumber": "https://www.jawapos.com/ekonomi/2611110039/harga-minyak-brent-dan-wti-naik-tipis-berikut-sentimen-penggeraknya?page=all | https://investasi.kontan.co.id/news/harga-minyak-dunia-melemah-di-tengah-sinyal-redanya-konflik-as-iran | https://www.antaranews.com/berita/5845367/harga-minyak-anjlok-usai-trump-sebut-serangan-baru-ke-iran-tak-mungkin",
+            "diperbarui": "2026-11-12",
             "akses": "free"
         },
         {
@@ -7092,10 +7908,10 @@
             "node_id": "N009",
             "status": "berlangsung",
             "tanggal_mulai": "2026-05-01",
-            "ringkasan": "Inflasi AS September 3,7 persen tahunan, lebih dari satu poin persentase di atas target The Fed. Inflasi RI Oktober 3,23 persen tahunan (0,22 persen bulanan), didorong pangan dan transportasi.",
-            "indikator_pantau": "Rilis inflasi AS bulan berikutnya dan inflasi BPS November",
-            "sumber": "https://abc11.com/story/federal-reserve-set-issue-interest-rate-decision-midterm-elections-loom/19989110/ | https://www.antaranews.com/berita/5825975/inflasi-tahunan-oktober-2026-capai-323-persen-pangan-jadi-pendorong",
-            "diperbarui": "2026-11-09",
+            "ringkasan": "CPI AS Oktober 2026 naik 0,4 persen bulanan dan inflasi inti 0,3 persen bulanan, di atas perkiraan konsensus 0,3 dan 0,2 persen. September: 0,6 persen bulanan (inti 0,3). Angka tahunan Oktober tidak dipublikasikan karena data pembanding hilang akibat penutupan pemerintah AS pada Oktober 2025. Inflasi RI Oktober 3,23 persen tahunan.",
+            "indikator_pantau": "Rilis CPI AS November, inflasi BPS November",
+            "sumber": "https://www.bls.gov/news.release/cpi.nr0.htm | https://www.antaranews.com/berita/5825975/inflasi-tahunan-oktober-2026-capai-323-persen-pangan-jadi-pendorong",
+            "diperbarui": "2026-11-12",
             "akses": "free"
         },
         {
@@ -7103,10 +7919,10 @@
             "node_id": "N010",
             "status": "berlangsung",
             "tanggal_mulai": "2026-09-16",
-            "ringkasan": "The Fed menaikkan bunga 25 bps pada September, menahannya di 3,75-4,00 persen pada 28 Oktober dengan dua anggota menginginkan kenaikan. Pasar memperkirakan peluang kenaikan Desember sekitar 80 persen.",
-            "indikator_pantau": "Rapat FOMC 8-9 Desember 2026, data inflasi AS",
-            "sumber": "https://investinglive.com/central-banks/recap-fed-holds-at-3-75-4-in-10-2-vote-as-cook-dissents-for-a-hike-december-move-in-focus/ | https://www.geo.tv/latest/688773-1-fed-keeps-rates-unchanged-as-strong-growth-and-stubborn-inflation-complicate-outlook",
-            "diperbarui": "2026-11-09",
+            "ringkasan": "Setelah CPI yang panas, peluang The Fed menaikkan bunga pada Desember naik ke 85 persen dari 76 persen (CME FedWatch), termasuk peluang kenaikan 50 bps sebesar 13 persen dari 0 persen. Gubernur Waller menilai kenaikan Desember diperlukan, dan Presiden The Fed Dallas Logan menyebut masih perlu dua kenaikan lagi. Goldman Sachs memproyeksikan +25 bps pada Desember dan +25 bps pada Maret 2027, ke kisaran 4,25-4,5 persen. Bunga saat ini 3,75-4,00 persen.",
+            "indikator_pantau": "Rapat FOMC 8-9 Desember 2026, CPI AS November, CME FedWatch",
+            "sumber": "https://www.reuters.com/business/media-telecom/global-markets-global-markets-2026-11-11/ | https://www.cmegroup.com/markets/interest-rates/cme-fedwatch-tool | https://investinglive.com/central-banks/recap-fed-holds-at-3-75-4-in-10-2-vote-as-cook-dissents-for-a-hike-december-move-in-focus/",
+            "diperbarui": "2026-11-12",
             "akses": "free"
         },
         {
@@ -7114,10 +7930,10 @@
             "node_id": "N014",
             "status": "berlangsung",
             "tanggal_mulai": "2026-03-17",
-            "ringkasan": "Rupiah menembus Rp18.100 per dolar AS pada 29 Oktober, setelah berkisar Rp17.800-an pada Agustus.",
-            "indikator_pantau": "Kurs JISDOR, arus dana asing, keputusan BI",
-            "sumber": "https://listrikindonesia.com/detail/21601/rupiah-hari-ini-tertekan-dolar-as-tembus-rp18102 | https://www.jpnn.com/news/kurs-rupiah-hari-ini-melemah-ihsg-dibuka-menguat",
-            "diperbarui": "2026-11-09",
+            "ringkasan": "Rupiah ditutup melemah 0,5 persen ke 18.145 per dolar AS pada 11 November, mendekati rekor terlemah 18.189, di tengah indeks dolar yang naik ke sekitar 102,5.",
+            "indikator_pantau": "Kurs JISDOR, indeks dolar, keputusan BI",
+            "sumber": "Ringkasan pasar 11 November 2026 (belum diverifikasi ke sumber primer)",
+            "diperbarui": "2026-11-12",
             "akses": "free"
         },
         {
@@ -7125,10 +7941,10 @@
             "node_id": "N015",
             "status": "mereda",
             "tanggal_mulai": "2026-05-01",
-            "ringkasan": "BI menaikkan BI Rate kumulatif 100 bps pada Mei-Juni 2026 ke 5,75 persen dan menahannya sejak Juli. Pada 21 Oktober BI menahan BI Rate, menaikkan deposit facility ke 5,00 persen, dan akan menurunkan GWM mulai November.",
+            "ringkasan": "BI menaikkan BI Rate kumulatif 100 bps pada Mei-Juni 2026 ke 5,75 persen dan menahannya sejak Juli. Pada RDG Oktober BI menahan BI Rate, menaikkan deposit facility ke 5,00 persen, dan akan menurunkan GWM mulai November. Konsensus Bloomberg per 11 November memperkirakan BI menaikkan BI Rate 25 bps hingga Maret 2027 ke 6 persen.",
             "indikator_pantau": "RDG BI November 2026 (cek jadwal resmi), kurs rupiah",
-            "sumber": "https://finansial.bisnis.com/read/20261021/11/2014506/bi-rate-ditahan-575-pada-oktober-intip-historis-lengkapnya-sepanjang-2026 | https://pusatdata.kontan.co.id/infografik/284/BI-Rate-Oktober-2026-Tetap-di-Angka-575",
-            "diperbarui": "2026-11-09",
+            "sumber": "https://finansial.bisnis.com/read/20261021/11/2014506/bi-rate-ditahan-575-pada-oktober-intip-historis-lengkapnya-sepanjang-2026 | https://snips.stockbit.com/snips-terbaru/-bi-rate-dipertahankan-di-575-insentif-hedging-kembali-naik",
+            "diperbarui": "2026-11-12",
             "akses": "premium"
         },
         {
@@ -7185,6 +8001,39 @@
             "sumber": "https://insight.kontan.co.id/news/harga-plastik-kian-meroket-menakar-efek-ganda-ke-laba-bersih-cleo-dan-ades | https://www.thestar.com.my/business/business-news/2026/04/10/rising-plastic-prices-pressure-indonesias-bottled-water-industry | https://insight.kontan.co.id/tag/plastik",
             "diperbarui": "2026-11-10",
             "akses": "free"
+        },
+        {
+            "id": "L13",
+            "node_id": "N011",
+            "status": "berlangsung",
+            "tanggal_mulai": "2026-11-10",
+            "ringkasan": "Indeks dolar AS naik 0,6 persen ke 102,2 pada penutupan 10 November dan sekitar 102,5 pada 11 November, didorong ekspektasi kenaikan bunga The Fed pada Desember.",
+            "indikator_pantau": "DXY, data inflasi AS, rapat FOMC Desember",
+            "sumber": "Ringkasan pasar 11 November 2026 (belum diverifikasi ke sumber primer)",
+            "diperbarui": "2026-11-12",
+            "akses": "free"
+        },
+        {
+            "id": "L14",
+            "node_id": "N012",
+            "status": "berlangsung",
+            "tanggal_mulai": "2026-11-10",
+            "ringkasan": "Yield obligasi AS tenor 10 tahun naik 10 bps dan sempat berada di kisaran 5 persen setelah data CPI. S&P 500 turun 0,4 persen, Nasdaq turun 0,7 persen, dan emas turun 2,6 persen ke sekitar USD4.032 per ons.",
+            "indikator_pantau": "Yield UST 10 tahun, harga emas",
+            "sumber": "Ringkasan pasar 11 November 2026 (belum diverifikasi ke sumber primer)",
+            "diperbarui": "2026-11-12",
+            "akses": "free"
+        },
+        {
+            "id": "L15",
+            "node_id": "N117",
+            "status": "berlangsung",
+            "tanggal_mulai": "2026-10-21",
+            "ringkasan": "Dalam RDG Oktober, BI menahan BI Rate di 5,75 persen dan kembali menaikkan insentif lindung nilai (hedging). Dengan The Fed yang lebih hawkish, ada kemungkinan BI perlu respons lebih kuat daripada insentif hedging.",
+            "indikator_pantau": "RDG BI November 2026, kurs rupiah",
+            "sumber": "https://snips.stockbit.com/snips-terbaru/-bi-rate-dipertahankan-di-575-insentif-hedging-kembali-naik | https://finansial.bisnis.com/read/20261021/11/2014506/bi-rate-ditahan-575-pada-oktober-intip-historis-lengkapnya-sepanjang-2026",
+            "diperbarui": "2026-11-12",
+            "akses": "premium"
         }
     ]
 }
