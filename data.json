@@ -207,6 +207,58 @@
             "status": "draft",
             "jenis": "hipotesis",
             "siklus_besar": "eksternal"
+        },
+        {
+            "id": "SC17",
+            "judul": "Siklus ekonomi dan laba: dari ekspansi ke perlambatan",
+            "ringkasan": "Kerangka Howard Marks tentang bagaimana pertumbuhan ekonomi, laba perusahaan, dan respons kebijakan bergantian.",
+            "node_pembuka": "N134",
+            "level": "Pemula",
+            "akses": "free",
+            "tanggal_terbit": "2026-11-13",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "hipotesis",
+            "siklus_besar": "pasar"
+        },
+        {
+            "id": "SC18",
+            "judul": "Pendulum psikologi investor: dari optimisme ke panik dan kembali",
+            "ringkasan": "Kerangka Howard Marks tentang ayunan suasana hati pasar antara serakah dan takut, serta kaitannya dengan harga dan nilai.",
+            "node_pembuka": "N140",
+            "level": "Pemula",
+            "akses": "free",
+            "tanggal_terbit": "2026-11-13",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "hipotesis",
+            "siklus_besar": "pasar"
+        },
+        {
+            "id": "SC19",
+            "judul": "Siklus kredit dan utang bermasalah: dari pinjaman longgar ke gagal bayar",
+            "ringkasan": "Kerangka Howard Marks tentang bagaimana kredit yang longgar menumpuk risiko, lalu ditutup oleh sebuah pemicu dan menciptakan utang bermasalah.",
+            "node_pembuka": "N147",
+            "level": "Menengah",
+            "akses": "premium",
+            "tanggal_terbit": "2026-11-13",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "hipotesis",
+            "siklus_besar": "pasar"
+        },
+        {
+            "id": "SC20",
+            "judul": "Siklus properti: dari harga naik ke pasokan berlebih",
+            "ringkasan": "Kerangka Howard Marks tentang jeda pembangunan properti yang membuat pasokan baru datang terlambat dan memicu kelebihan pasokan.",
+            "node_pembuka": "N154",
+            "level": "Menengah",
+            "akses": "premium",
+            "tanggal_terbit": "2026-11-13",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "hipotesis",
+            "siklus_besar": "pasar"
         }
     ],
     "scenario_nodes": [
@@ -1169,6 +1221,181 @@
             "scenario_id": "SC16",
             "node_id": "N061",
             "urutan": "9"
+        },
+        {
+            "scenario_id": "SC17",
+            "node_id": "N134",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC17",
+            "node_id": "N135",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC17",
+            "node_id": "N136",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC17",
+            "node_id": "N137",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC17",
+            "node_id": "N138",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC17",
+            "node_id": "N018",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC17",
+            "node_id": "N139",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC18",
+            "node_id": "N140",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC18",
+            "node_id": "N141",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC18",
+            "node_id": "N032",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC18",
+            "node_id": "N142",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC18",
+            "node_id": "N143",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC18",
+            "node_id": "N144",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC18",
+            "node_id": "N082",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC18",
+            "node_id": "N145",
+            "urutan": "8"
+        },
+        {
+            "scenario_id": "SC18",
+            "node_id": "N146",
+            "urutan": "9"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N147",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N148",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N016",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N149",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N078",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N150",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N068",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N151",
+            "urutan": "8"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N072",
+            "urutan": "9"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N152",
+            "urutan": "10"
+        },
+        {
+            "scenario_id": "SC19",
+            "node_id": "N153",
+            "urutan": "11"
+        },
+        {
+            "scenario_id": "SC20",
+            "node_id": "N154",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC20",
+            "node_id": "N155",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC20",
+            "node_id": "N156",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC20",
+            "node_id": "N157",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC20",
+            "node_id": "N068",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC20",
+            "node_id": "N158",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC20",
+            "node_id": "N029",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC20",
+            "node_id": "N147",
+            "urutan": "8"
         }
     ],
     "nodes": [
@@ -3033,6 +3260,356 @@
             "akses": "premium",
             "status": "draft",
             "diperbarui": "2026-11-12"
+        },
+        {
+            "id": "N134",
+            "judul": "Pertumbuhan ekonomi melampaui tren",
+            "kategori": "Makro",
+            "tipe": "kondisi",
+            "deskripsi": "Ekonomi tumbuh lebih cepat dari tren jangka panjangnya, biasanya karena belanja dan kredit yang kuat.",
+            "fase_siklus": "Ekspansi",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "Siklus ekonomi",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N135",
+            "judul": "Perusahaan menambah kapasitas dan utang saat optimistis",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Saat penjualan naik, perusahaan menambah pabrik, stok, dan pinjaman, sering kali mendekati puncak siklus.",
+            "fase_siklus": "Ekspansi",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N136",
+            "judul": "Laba naik lebih cepat dari penjualan",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Karena biaya tetap dan bunga tidak ikut naik, kenaikan penjualan yang kecil dapat menaikkan laba jauh lebih besar.",
+            "fase_siklus": "Ekspansi",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Siklus laba, Leverage operasi",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N137",
+            "judul": "Permintaan melambat dan stok menumpuk",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Pertumbuhan penjualan melemah sementara kapasitas dan stok sudah ditambah.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N138",
+            "judul": "Laba turun lebih cepat dari penjualan",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Biaya tetap dan bunga membuat penurunan penjualan memukul laba lebih dalam.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Siklus laba, Leverage operasi",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N139",
+            "judul": "Pemerintah dan bank sentral menahan ayunan siklus",
+            "kategori": "Fiskal",
+            "tipe": "event",
+            "deskripsi": "Bank sentral mengubah bunga dan pemerintah mengubah belanja serta pajak untuk meredam resesi atau menahan pemanasan. Kebijakan ini memperpanjang atau memperpendek fase, tetapi tidak meniadakan siklus.",
+            "fase_siklus": "Pemulihan",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Stimulus fiskal, Pelonggaran moneter",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N140",
+            "judul": "Berita baik dan kenaikan harga menumbuhkan optimisme",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Kenaikan harga yang berlanjut dan kabar baik membuat investor makin percaya diri.",
+            "fase_siklus": "Ekspansi",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "Pendulum psikologi investor",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N141",
+            "judul": "Investor berani mengambil risiko dan menerima imbal hasil rendah",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Saat rasa takut hilang, investor menerima kompensasi risiko yang makin kecil dan membayar valuasi lebih mahal.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Premi risiko",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N142",
+            "judul": "Harga naik jauh melampaui nilai wajar (euforia)",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Aset dibeli karena takut ketinggalan, bukan karena nilai usahanya.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "Akhir 1990-an: gelembung saham teknologi",
+            "istilah_kunci": "Euforia, Nilai wajar",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N143",
+            "judul": "Berita buruk memukul kepercayaan",
+            "kategori": "Pasar",
+            "tipe": "event",
+            "deskripsi": "Kabar buruk atau guncangan mengejutkan membalik suasana hati pasar.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N144",
+            "judul": "Rasa takut mendominasi dan investor menjual tanpa memandang nilai",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Pelaku pasar menjual karena panik atau terpaksa, sehingga harga turun lebih jauh dari penurunan fundamental.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "5",
+            "contoh_historis": "2008 dan Maret 2020: penjualan panik",
+            "istilah_kunci": "Risk-off",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N145",
+            "judul": "Aset berkualitas dijual jauh di bawah nilai wajar",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Saat takut mencapai puncak, harga bisa jauh di bawah nilai jangka panjang. Menurut Marks, peluang terbaik ada di sini, tetapi paling sulit dilakukan.",
+            "fase_siklus": "Pemulihan",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Nilai wajar, Pemosisian siklus",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N146",
+            "judul": "Investor mulai kembali membeli (pendulum berbalik)",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Harga yang rendah dan kabar yang membaik menarik pembeli kembali.",
+            "fase_siklus": "Pemulihan",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N147",
+            "judul": "Kredit mudah didapat dan standar pinjaman melonggar",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Saat pemberi pinjaman optimistis, mereka memberi kredit kepada peminjam yang lebih lemah dengan syarat lebih longgar. Jendela kredit terbuka lebar.",
+            "fase_siklus": "Ekspansi",
+            "skala_dampak": "4",
+            "contoh_historis": "2005-2007: standar kredit longgar sebelum krisis 2008",
+            "istilah_kunci": "Siklus kredit, Jendela kredit",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N148",
+            "judul": "Utang dipakai untuk proyek dan akuisisi berisiko",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Kredit murah mendorong peminjam mengambil proyek yang di masa sulit tidak akan layak.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Leverage",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N149",
+            "judul": "Pemicu: guncangan ekonomi atau kenaikan bunga",
+            "kategori": "Makro",
+            "tipe": "event",
+            "deskripsi": "Perlambatan, kenaikan bunga, atau kejutan lain membuat arus kas peminjam tidak cukup untuk membayar atau refinancing.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "4",
+            "contoh_historis": "2007-2008: krisis kredit AS",
+            "istilah_kunci": "Siklus kredit",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N150",
+            "judul": "Gagal bayar meningkat dan harga utang bermasalah anjlok",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Utang perusahaan yang lemah dijual dengan diskon besar karena banyak pemegang terpaksa menjual.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "4",
+            "contoh_historis": "2008-2009: lonjakan gagal bayar",
+            "istilah_kunci": "Utang bermasalah, Gagal bayar",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N151",
+            "judul": "Pembeli utang bermasalah mendapat peluang",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Investor yang punya dana dan kesabaran membeli utang atau aset perusahaan tertekan dengan diskon, lalu menunggu restrukturisasi atau pemulihan.",
+            "fase_siklus": "Pemulihan",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "Utang bermasalah",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N152",
+            "judul": "Standar pemberian kredit diperketat",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Setelah kerugian, pemberi pinjaman sangat berhati-hati, sehingga kredit sulit meski bagi peminjam yang layak.",
+            "fase_siklus": "Pemulihan",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Jendela kredit",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N153",
+            "judul": "Bertahun-tahun tanpa kerugian membuat pemberi pinjaman lupa risiko",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Ingatan akan kerugian memudar, dan persaingan antar pemberi pinjaman mendorong syarat kembali longgar.",
+            "fase_siklus": "Ekspansi",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N154",
+            "judul": "Harga dan sewa properti naik mendorong pembangunan baru",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Harga naik membuat pengembang dan pemberi pinjaman bersemangat membangun.",
+            "fase_siklus": "Ekspansi",
+            "skala_dampak": "3",
+            "contoh_historis": "2000-an: boom properti AS",
+            "istilah_kunci": "Siklus properti",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N155",
+            "judul": "Proyek yang disetujui saat harga naik baru selesai bertahun-tahun kemudian",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Karena membangun butuh waktu lama, pasokan baru tiba ketika permintaan sudah berubah.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Jeda pasokan",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N156",
+            "judul": "Pasokan berlebih dan tingkat hunian turun",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Bangunan baru bertemu permintaan yang melambat, sehingga sewa dan harga turun.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "4",
+            "contoh_historis": "2007-2010: kelebihan pasokan dan penurunan harga properti AS",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N157",
+            "judul": "Proyek dihentikan dan pengembang kesulitan membayar utang",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Penjualan melambat dan pembiayaan menutup, sehingga proyek tertunda atau dilelang.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "4",
+            "contoh_historis": "",
+            "istilah_kunci": "Gagal bayar",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N158",
+            "judul": "Harga properti turun cukup rendah untuk menarik pembeli baru",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Harga yang jatuh dan pembangunan yang berhenti menyeimbangkan kembali pasokan dan permintaan.",
+            "fase_siklus": "Pemulihan",
+            "skala_dampak": "3",
+            "contoh_historis": "",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-13"
         }
     ],
     "edges": [
@@ -5246,6 +5823,391 @@
             "tipe_edge": "causal",
             "mekanisme": "Pembelian bank sentral menambah permintaan emas dan mendukung harganya.",
             "sumber": ""
+        },
+        {
+            "id": "E202",
+            "dari_node": "N134",
+            "ke_node": "N135",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Optimisme mendorong ekspansi kapasitas dan utang.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Cycle in Profits"
+        },
+        {
+            "id": "E203",
+            "dari_node": "N134",
+            "ke_node": "N136",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "3-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Penjualan naik, laba naik lebih besar karena biaya tetap dan bunga tidak ikut naik.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Cycle in Profits"
+        },
+        {
+            "id": "E204",
+            "dari_node": "N135",
+            "ke_node": "N137",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "12-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Kapasitas baru datang ketika permintaan sudah jenuh.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Economic Cycle"
+        },
+        {
+            "id": "E205",
+            "dari_node": "N137",
+            "ke_node": "N138",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "3-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Penjualan turun, laba turun lebih dalam.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Cycle in Profits"
+        },
+        {
+            "id": "E206",
+            "dari_node": "N138",
+            "ke_node": "N018",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Perusahaan memangkas biaya dan tenaga kerja, belanja rumah tangga turun.",
+            "sumber": ""
+        },
+        {
+            "id": "E207",
+            "dari_node": "N018",
+            "ke_node": "N139",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pelemahan ekonomi memicu respons bank sentral dan pemerintah.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab Government Involvement with the Economic Cycle"
+        },
+        {
+            "id": "E208",
+            "dari_node": "N139",
+            "ke_node": "N134",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-24 bulan",
+            "tipe_edge": "feedback",
+            "mekanisme": "Stimulus mendorong pemulihan dan memulai siklus berikutnya.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab Government Involvement with the Economic Cycle"
+        },
+        {
+            "id": "E209",
+            "dari_node": "N140",
+            "ke_node": "N141",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Keberhasilan yang berulang menurunkan kewaspadaan.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Pendulum of Investor Psychology"
+        },
+        {
+            "id": "E210",
+            "dari_node": "N141",
+            "ke_node": "N032",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "0-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Imbal hasil yang diminta turun, valuasi saham naik.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Cycle in Attitudes Toward Risk"
+        },
+        {
+            "id": "E211",
+            "dari_node": "N032",
+            "ke_node": "N142",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Valuasi yang terus naik melampaui nilai wajar.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Pendulum of Investor Psychology"
+        },
+        {
+            "id": "E212",
+            "dari_node": "N142",
+            "ke_node": "N143",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Harga yang sudah mahal membuat pasar rentan terhadap kabar buruk.",
+            "sumber": ""
+        },
+        {
+            "id": "E213",
+            "dari_node": "N143",
+            "ke_node": "N144",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "0-3 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Kepercayaan hilang, investor menjual.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Pendulum of Investor Psychology"
+        },
+        {
+            "id": "E214",
+            "dari_node": "N144",
+            "ke_node": "N082",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "0-3 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Penjualan massal menurunkan harga saham.",
+            "sumber": ""
+        },
+        {
+            "id": "E215",
+            "dari_node": "N144",
+            "ke_node": "N145",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "1-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Penjualan panik dan terpaksa mendorong harga di bawah nilai.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Pendulum of Investor Psychology"
+        },
+        {
+            "id": "E216",
+            "dari_node": "N145",
+            "ke_node": "N146",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-18 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pembeli yang berorientasi nilai mulai masuk.",
+            "sumber": ""
+        },
+        {
+            "id": "E217",
+            "dari_node": "N146",
+            "ke_node": "N140",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "feedback",
+            "mekanisme": "Harga yang naik lagi menumbuhkan optimisme baru.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Pendulum of Investor Psychology"
+        },
+        {
+            "id": "E218",
+            "dari_node": "N147",
+            "ke_node": "N148",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Kredit mudah mendorong utang untuk proyek berisiko.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Credit Cycle"
+        },
+        {
+            "id": "E219",
+            "dari_node": "N148",
+            "ke_node": "N149",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Utang yang rapuh membuat guncangan kecil pun menjadi pemicu.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Distressed Debt Cycle"
+        },
+        {
+            "id": "E220",
+            "dari_node": "N016",
+            "ke_node": "N149",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Bunga tinggi menyulitkan peminjam membayar atau refinancing.",
+            "sumber": ""
+        },
+        {
+            "id": "E221",
+            "dari_node": "N149",
+            "ke_node": "N078",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "0-3 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pemberi pinjaman menarik diri saat risiko terlihat.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Credit Cycle"
+        },
+        {
+            "id": "E222",
+            "dari_node": "N078",
+            "ke_node": "N150",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "3-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Peminjam tidak bisa refinancing, gagal bayar naik.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Distressed Debt Cycle"
+        },
+        {
+            "id": "E223",
+            "dari_node": "N150",
+            "ke_node": "N068",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Kredit macet menggerus modal bank.",
+            "sumber": ""
+        },
+        {
+            "id": "E224",
+            "dari_node": "N150",
+            "ke_node": "N151",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Harga yang diskon menarik pembeli yang punya dana dan kesabaran.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Distressed Debt Cycle"
+        },
+        {
+            "id": "E225",
+            "dari_node": "N151",
+            "ke_node": "N072",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pembelian dan restrukturisasi membersihkan neraca perusahaan.",
+            "sumber": ""
+        },
+        {
+            "id": "E226",
+            "dari_node": "N068",
+            "ke_node": "N152",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "3-18 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pemberi pinjaman yang rugi memperketat kredit.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Credit Cycle"
+        },
+        {
+            "id": "E227",
+            "dari_node": "N152",
+            "ke_node": "N153",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "24-60 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Waktu berlalu tanpa gagal bayar besar.",
+            "sumber": ""
+        },
+        {
+            "id": "E228",
+            "dari_node": "N153",
+            "ke_node": "N147",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "12-36 bulan",
+            "tipe_edge": "feedback",
+            "mekanisme": "Ingatan yang memudar melonggarkan standar kembali.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Credit Cycle"
+        },
+        {
+            "id": "E229",
+            "dari_node": "N029",
+            "ke_node": "N154",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-18 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Permintaan kredit dan KPR yang naik mendorong harga properti.",
+            "sumber": ""
+        },
+        {
+            "id": "E230",
+            "dari_node": "N147",
+            "ke_node": "N154",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "3-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Kredit longgar membuat proyek mudah dibiayai.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Real Estate Cycle"
+        },
+        {
+            "id": "E231",
+            "dari_node": "N154",
+            "ke_node": "N155",
+            "arah_dampak": "positif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "6-36 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Harga yang naik memicu persetujuan proyek, yang baru jadi bertahun-tahun kemudian.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Real Estate Cycle"
+        },
+        {
+            "id": "E232",
+            "dari_node": "N155",
+            "ke_node": "N156",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "12-48 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pasokan baru tiba saat permintaan sudah melemah.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Real Estate Cycle"
+        },
+        {
+            "id": "E233",
+            "dari_node": "N156",
+            "ke_node": "N157",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Penjualan melambat dan pembiayaan menutup, proyek terhenti.",
+            "sumber": ""
+        },
+        {
+            "id": "E234",
+            "dari_node": "N157",
+            "ke_node": "N068",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pinjaman properti yang macet menggerus modal bank.",
+            "sumber": ""
+        },
+        {
+            "id": "E235",
+            "dari_node": "N157",
+            "ke_node": "N158",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "12-48 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pembangunan berhenti dan harga turun menyeimbangkan kembali pasokan dan permintaan.",
+            "sumber": "Marks, Mastering the Market Cycle (2018), bab The Real Estate Cycle"
+        },
+        {
+            "id": "E236",
+            "dari_node": "N158",
+            "ke_node": "N154",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "12-60 bulan",
+            "tipe_edge": "feedback",
+            "mekanisme": "Harga yang pulih memulai siklus berikutnya.",
+            "sumber": ""
         }
     ],
     "sectors": [
@@ -7314,6 +8276,141 @@
             "saluran": "utang dan permintaan",
             "horizon": "3-12 bulan",
             "alasan": "Yield naik mendorong bunga KPR dan utang pengembang.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I105",
+            "node_id": "N136",
+            "target_tipe": "sektor",
+            "target_id": "S06",
+            "arah": "positif",
+            "saluran": "margin",
+            "horizon": "3-12 bulan",
+            "alasan": "Biaya tetap yang besar membuat laba naik lebih tajam saat penjualan naik.",
+            "keyakinan": "rendah",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I106",
+            "node_id": "N138",
+            "target_tipe": "sektor",
+            "target_id": "S06",
+            "arah": "negatif",
+            "saluran": "margin",
+            "horizon": "3-12 bulan",
+            "alasan": "Biaya tetap yang besar membuat laba turun lebih dalam saat penjualan turun.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I107",
+            "node_id": "N144",
+            "target_tipe": "sektor",
+            "target_id": "S09",
+            "arah": "negatif",
+            "saluran": "valuasi",
+            "horizon": "0-6 bulan",
+            "alasan": "Saham dengan valuasi tinggi turun paling dalam saat pendulum berbalik ke rasa takut.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I108",
+            "node_id": "N147",
+            "target_tipe": "sektor",
+            "target_id": "S08",
+            "arah": "negatif",
+            "saluran": "kredit macet",
+            "horizon": "12-48 bulan",
+            "alasan": "Pinjaman yang diberikan saat standar longgar sering menjadi sumber kredit macet berikutnya.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I109",
+            "node_id": "N147",
+            "target_tipe": "sektor",
+            "target_id": "S07",
+            "arah": "positif",
+            "saluran": "utang dan permintaan",
+            "horizon": "3-24 bulan",
+            "alasan": "Kredit longgar mendorong permintaan dan pembangunan properti.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I110",
+            "node_id": "N154",
+            "target_tipe": "sektor",
+            "target_id": "S07",
+            "arah": "positif",
+            "saluran": "pendapatan",
+            "horizon": "6-36 bulan",
+            "alasan": "Harga dan penjualan properti naik.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I111",
+            "node_id": "N156",
+            "target_tipe": "sektor",
+            "target_id": "S07",
+            "arah": "negatif",
+            "saluran": "pendapatan",
+            "horizon": "12-48 bulan",
+            "alasan": "Pasokan berlebih menekan harga dan sewa.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I112",
+            "node_id": "N157",
+            "target_tipe": "sektor",
+            "target_id": "S07",
+            "arah": "negatif",
+            "saluran": "utang",
+            "horizon": "6-36 bulan",
+            "alasan": "Pengembang berutang tinggi paling rentan saat penjualan melambat.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I113",
+            "node_id": "N152",
+            "target_tipe": "sektor",
+            "target_id": "S07",
+            "arah": "negatif",
+            "saluran": "utang dan permintaan",
+            "horizon": "3-18 bulan",
+            "alasan": "Kredit yang ketat mempersulit pembiayaan proyek dan pembeli.",
             "keyakinan": "sedang",
             "status": "draft",
             "sumber": "belum ada",
