@@ -259,6 +259,45 @@
             "status": "draft",
             "jenis": "hipotesis",
             "siklus_besar": "pasar"
+        },
+        {
+            "id": "SC21",
+            "judul": "Pemilu AS, harga minyak, dan inflasi: dari politik ke harga energi",
+            "ringkasan": "Bagaimana hasil pemilu paruh waktu AS memengaruhi ekspektasi perang, harga minyak, dan inflasi.",
+            "node_pembuka": "N159",
+            "level": "Menengah",
+            "akses": "premium",
+            "tanggal_terbit": "2026-11-16",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "berjalan",
+            "siklus_besar": "internal"
+        },
+        {
+            "id": "SC22",
+            "judul": "Pasar saham RI: MSCI, arus asing, dan berita yang sudah masuk harga",
+            "ringkasan": "Mengapa harga saham bisa naik saat berita buruk keluar, dan mengapa pasar bisa turun saat ekonomi tumbuh.",
+            "node_pembuka": "N103",
+            "level": "Menengah",
+            "akses": "free",
+            "tanggal_terbit": "2026-11-16",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "berjalan",
+            "siklus_besar": "pasar"
+        },
+        {
+            "id": "SC23",
+            "judul": "Daya beli, stimulus kuartal IV, dan hengkangnya migas asing dari SPBU",
+            "ringkasan": "Bagaimana bantuan tunai menopang konsumsi, dan mengapa harga BBM yang diatur membuat margin ritel tipis.",
+            "node_pembuka": "N127",
+            "level": "Menengah",
+            "akses": "premium",
+            "tanggal_terbit": "2026-11-16",
+            "penulis": "Admin",
+            "status": "draft",
+            "jenis": "berjalan",
+            "siklus_besar": "internal"
         }
     ],
     "scenario_nodes": [
@@ -1396,6 +1435,121 @@
             "scenario_id": "SC20",
             "node_id": "N147",
             "urutan": "8"
+        },
+        {
+            "scenario_id": "SC21",
+            "node_id": "N159",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC21",
+            "node_id": "N160",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC21",
+            "node_id": "N161",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC21",
+            "node_id": "N003",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC21",
+            "node_id": "N009",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC21",
+            "node_id": "N012",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC21",
+            "node_id": "N102",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC22",
+            "node_id": "N103",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC22",
+            "node_id": "N162",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC22",
+            "node_id": "N163",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC22",
+            "node_id": "N013",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC22",
+            "node_id": "N164",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC22",
+            "node_id": "N030",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC22",
+            "node_id": "N165",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC22",
+            "node_id": "N146",
+            "urutan": "8"
+        },
+        {
+            "scenario_id": "SC23",
+            "node_id": "N127",
+            "urutan": "1"
+        },
+        {
+            "scenario_id": "SC23",
+            "node_id": "N166",
+            "urutan": "2"
+        },
+        {
+            "scenario_id": "SC23",
+            "node_id": "N030",
+            "urutan": "3"
+        },
+        {
+            "scenario_id": "SC23",
+            "node_id": "N003",
+            "urutan": "4"
+        },
+        {
+            "scenario_id": "SC23",
+            "node_id": "N167",
+            "urutan": "5"
+        },
+        {
+            "scenario_id": "SC23",
+            "node_id": "N168",
+            "urutan": "6"
+        },
+        {
+            "scenario_id": "SC23",
+            "node_id": "N169",
+            "urutan": "7"
+        },
+        {
+            "scenario_id": "SC12",
+            "node_id": "N170",
+            "urutan": "14"
         }
     ],
     "nodes": [
@@ -3610,6 +3764,174 @@
             "akses": "premium",
             "status": "draft",
             "diperbarui": "2026-11-13"
+        },
+        {
+            "id": "N159",
+            "judul": "Pemilu paruh waktu AS: Kongres dikuasai partai di luar Gedung Putih",
+            "kategori": "Geopolitik",
+            "tipe": "event",
+            "deskripsi": "Pada 3 November 2026 Partai Demokrat memenangi DPR dan Senat AS, sehingga presiden menghadapi pengawasan lebih ketat dari Kongres.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "4",
+            "contoh_historis": "3 November 2026: hasil pemilu paruh waktu AS",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N160",
+            "judul": "Pasar menilai kebijakan AS lebih terkendali",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Investor bertaruh bahwa Kongres yang terbelah dapat meredam ayunan kebijakan, termasuk tarif dan keterlibatan dalam perang dengan Iran.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "3",
+            "contoh_historis": "4 November 2026: saham dan obligasi global menguat",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N161",
+            "judul": "Harapan berakhirnya perang AS-Iran menguat",
+            "kategori": "Geopolitik",
+            "tipe": "kondisi",
+            "deskripsi": "Pernyataan bahwa serangan baru sangat kecil kemungkinannya dan harapan perundingan membuat pasar menilai risiko gangguan pasokan minyak menurun.",
+            "fase_siklus": "Pemulihan",
+            "skala_dampak": "4",
+            "contoh_historis": "8-11 November 2026: harapan kesepakatan lewat mediasi Qatar",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N162",
+            "judul": "MSCI mengumumkan hasil review November: delapan saham Indonesia keluar",
+            "kategori": "Pasar",
+            "tipe": "event",
+            "deskripsi": "Hasil review 12 November 2026 mengeluarkan BRPT dan BRMS dari indeks global standar dan beberapa saham lain dari indeks small cap, berlaku setelah penutupan 30 November. Media melaporkan total delapan saham. Pembekuan penambahan saham Indonesia belum dicabut.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "3",
+            "contoh_historis": "Agustus 2026: GOTO dan CPIN dikeluarkan dari indeks global standar",
+            "istilah_kunci": "Rebalancing indeks, Dana pasif",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N163",
+            "judul": "Pasar sudah mengantisipasi hasil review",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Karena hasil dan dampaknya sudah banyak dibahas, harga sebagian besar sudah mencerminkan kemungkinan itu, sehingga reaksi harga pada hari pengumuman kecil atau bahkan positif.",
+            "fase_siklus": "Pemulihan",
+            "skala_dampak": "3",
+            "contoh_historis": "12 November 2026: IHSG menguat 2,2 persen di sesi pertama setelah pengumuman",
+            "istilah_kunci": "Sudah terhitung di harga",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N164",
+            "judul": "Dunia usaha menahan ekspansi (wait and see)",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Meski PDB naik, pelaku usaha menghadapi daya beli yang lemah, biaya produksi naik, dan ketidakpastian iklim investasi, sehingga menunda investasi baru.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "3",
+            "contoh_historis": "November 2026: dunia usaha menunggu kepastian",
+            "istilah_kunci": "Wait and see",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N165",
+            "judul": "Harga saham bergerak berbeda dari pertumbuhan ekonomi",
+            "kategori": "Pasar",
+            "tipe": "kondisi",
+            "deskripsi": "Harga saham bisa turun ketika ekonomi tumbuh, bila arus dana asing, tata kelola pasar, dan valuasi lebih menentukan daripada pertumbuhan.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "4",
+            "contoh_historis": "Oktober 2026: IHSG turun 16,7 persen saat PDB tumbuh di atas 5 persen",
+            "istilah_kunci": "Valuasi",
+            "akses": "free",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N166",
+            "judul": "Daya beli kelompok bawah terjaga sementara",
+            "kategori": "Makro",
+            "tipe": "kondisi",
+            "deskripsi": "Transfer tunai dan beras menambah uang yang bisa dibelanjakan untuk kebutuhan pokok, tetapi sifatnya sementara.",
+            "fase_siklus": "Pemulihan",
+            "skala_dampak": "3",
+            "contoh_historis": "Oktober-Desember 2026: bantuan beras dan subsidi upah",
+            "istilah_kunci": "Daya beli",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N167",
+            "judul": "Margin ritel BBM tertekan saat harga diatur",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Ketika harga eceran BBM diatur dan skala pasar terbatas, kenaikan biaya dan harga minyak sulit diteruskan, sehingga margin tipis.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "3",
+            "contoh_historis": "2026: ritel BBM swasta menghadapi margin tipis",
+            "istilah_kunci": "Harga diatur, Pass-through",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N168",
+            "judul": "Perusahaan migas asing melepas bisnis SPBU di Indonesia",
+            "kategori": "Sektor",
+            "tipe": "event",
+            "deskripsi": "Shell menyelesaikan pengalihan bisnis SPBU ke Sefas Group pada 30 Oktober 2026, dan BP menjual seluruh kepemilikannya di jaringan SPBU kepada AKR Corporindo pada 6 November 2026. Merek tetap dipakai lewat lisensi.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "3",
+            "contoh_historis": "Oktober-November 2026: Shell dan BP melepas SPBU",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N169",
+            "judul": "Pemain domestik mengambil alih jaringan SPBU",
+            "kategori": "Sektor",
+            "tipe": "kondisi",
+            "deskripsi": "Pemilik lokal menguasai penuh jaringan dan menanggung margin tipis, tetapi mendapat skala dan kontrol operasional.",
+            "fase_siklus": "Puncak",
+            "skala_dampak": "2",
+            "contoh_historis": "6 November 2026: AKR Corporindo menguasai penuh jaringan SPBU BP",
+            "istilah_kunci": "",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
+        },
+        {
+            "id": "N170",
+            "judul": "Risiko orang kunci pada pemimpin perusahaan AI",
+            "kategori": "Pasar",
+            "tipe": "event",
+            "deskripsi": "Dewan direksi Nvidia membuka penyelidikan independen atas laporan bahwa CEO menjadi sasaran upaya intelijen asing. Tiongkok menyebut tuduhan itu tidak berdasar, dan dewan menyatakan belum menemukan bukti rahasia dagang atau aset keamanan nasional terganggu.",
+            "fase_siklus": "Kontraksi",
+            "skala_dampak": "3",
+            "contoh_historis": "8-9 November 2026: penyelidikan dan penurunan saham",
+            "istilah_kunci": "Risiko orang kunci",
+            "akses": "premium",
+            "status": "draft",
+            "diperbarui": "2026-11-16"
         }
     ],
     "edges": [
@@ -6208,6 +6530,204 @@
             "tipe_edge": "feedback",
             "mekanisme": "Harga yang pulih memulai siklus berikutnya.",
             "sumber": ""
+        },
+        {
+            "id": "E237",
+            "dari_node": "N159",
+            "ke_node": "N160",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-1 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Kongres yang terbelah dianggap membatasi langkah sepihak presiden.",
+            "sumber": "https://www.nationthailand.com/business/trading-investment/40073120"
+        },
+        {
+            "id": "E238",
+            "dari_node": "N160",
+            "ke_node": "N161",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "0-2 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pasar menduga Gedung Putih lebih condong mengakhiri perang setelah kekalahan di pemilu.",
+            "sumber": ""
+        },
+        {
+            "id": "E239",
+            "dari_node": "N161",
+            "ke_node": "N003",
+            "arah_dampak": "negatif",
+            "keyakinan": "tinggi",
+            "jeda_waktu": "0-1 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Risiko gangguan pasokan menurun, harga minyak turun.",
+            "sumber": "https://www.metrotvnews.com/read/bmRCX301-harga-minyak-brent-turun-0-6-ke-usd97-per-barel"
+        },
+        {
+            "id": "E240",
+            "dari_node": "N160",
+            "ke_node": "N012",
+            "arah_dampak": "negatif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "0-1 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Obligasi AS menguat dan yield turun saat risiko kebijakan dianggap berkurang.",
+            "sumber": "https://www.nationthailand.com/business/trading-investment/40073120"
+        },
+        {
+            "id": "E241",
+            "dari_node": "N159",
+            "ke_node": "N102",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "0-1 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Hasil pemilu diikuti penjualan saham AI, dengan alasan yang masih diperdebatkan, antara lain kekhawatiran pengawasan yang lebih ketat.",
+            "sumber": ""
+        },
+        {
+            "id": "E242",
+            "dari_node": "N162",
+            "ke_node": "N163",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-1 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pengumuman yang sudah ditunggu dan diperkirakan membuat reaksi harga terbatas.",
+            "sumber": "https://economy.okezone.com/read/2026/11/12/278/3253617/hasil-review-msci-diumumkan-bei-sebut-pasar-modal-ri-masih-kuat"
+        },
+        {
+            "id": "E243",
+            "dari_node": "N162",
+            "ke_node": "N013",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-1 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Dana pasif yang mengikuti indeks menjual saham yang keluar pada penutupan 30 November.",
+            "sumber": ""
+        },
+        {
+            "id": "E244",
+            "dari_node": "N013",
+            "ke_node": "N165",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-6 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Arus keluar asing menekan harga saham walau ekonomi tumbuh.",
+            "sumber": ""
+        },
+        {
+            "id": "E245",
+            "dari_node": "N103",
+            "ke_node": "N165",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-6 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Ketidakpastian status pasar membuat investor global menahan atau mengurangi kepemilikan.",
+            "sumber": ""
+        },
+        {
+            "id": "E246",
+            "dari_node": "N164",
+            "ke_node": "N165",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "3-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Investasi yang tertunda menurunkan ekspektasi laba perusahaan.",
+            "sumber": ""
+        },
+        {
+            "id": "E247",
+            "dari_node": "N163",
+            "ke_node": "N146",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "0-6 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Hilangnya ketidakpastian membuka jalan bagi pembeli untuk kembali.",
+            "sumber": ""
+        },
+        {
+            "id": "E248",
+            "dari_node": "N127",
+            "ke_node": "N166",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-3 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Transfer tunai dan beras menambah daya beli kebutuhan pokok.",
+            "sumber": "https://economy.okezone.com/read/2026/10/22/320/3249616/paket-stimulus-rp31-triliun-cair-pekerja-dapat-bsu-rp900-000"
+        },
+        {
+            "id": "E249",
+            "dari_node": "N166",
+            "ke_node": "N030",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "0-6 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Belanja kebutuhan pokok naik, menopang konsumsi.",
+            "sumber": ""
+        },
+        {
+            "id": "E250",
+            "dari_node": "N003",
+            "ke_node": "N167",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "1-6 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Harga minyak naik sementara harga eceran diatur, sehingga selisih margin menyempit.",
+            "sumber": ""
+        },
+        {
+            "id": "E251",
+            "dari_node": "N167",
+            "ke_node": "N168",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "6-24 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Margin tipis dan skala terbatas menurunkan daya tarik bagi investor asing.",
+            "sumber": "https://katadata.co.id/berita/energi/6af2fb515a305/bp-dan-shell-hengkang-dari-bisnis-spbu-apa-penyebab-investor-asing-mundur"
+        },
+        {
+            "id": "E252",
+            "dari_node": "N168",
+            "ke_node": "N169",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-6 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Pembeli lokal mengambil alih jaringan yang dilepas.",
+            "sumber": "https://ekonomi.bisnis.com/read/20261109/44/2019780/susul-shell-bp-lepas-bisnis-spbu-di-indonesia"
+        },
+        {
+            "id": "E253",
+            "dari_node": "N170",
+            "ke_node": "N102",
+            "arah_dampak": "positif",
+            "keyakinan": "sedang",
+            "jeda_waktu": "0-1 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Kekhawatiran pada pemimpin kunci dan risiko geopolitik menekan saham perusahaan AI.",
+            "sumber": "https://openthemagazine.com/world/quick-take-nvidia-shares-fall-more-than-4-before-the-bell-seven-things-to-know-about-the-jensen-huang-probe"
+        },
+        {
+            "id": "E254",
+            "dari_node": "N128",
+            "ke_node": "N170",
+            "arah_dampak": "positif",
+            "keyakinan": "rendah",
+            "jeda_waktu": "0-12 bulan",
+            "tipe_edge": "causal",
+            "mekanisme": "Persaingan AS-China membuat isu intelijen dan teknologi makin sensitif.",
+            "sumber": ""
         }
     ],
     "sectors": [
@@ -6354,6 +6874,12 @@
             "nama_sektor": "Kawasan industri",
             "deskripsi": "Pengembang kawasan industri dan pergudangan.",
             "sensitivitas_umum": "Relokasi pabrik, investasi manufaktur, suku bunga"
+        },
+        {
+            "id": "S25",
+            "nama_sektor": "Distribusi dan ritel BBM",
+            "deskripsi": "Penyalur BBM dan pengelola SPBU.",
+            "sensitivitas_umum": "Harga minyak, harga eceran yang diatur, margin"
         }
     ],
     "stocks": [
@@ -6734,6 +7260,12 @@
             "nama": "Puradelta Lestari",
             "sektor_id": "S24",
             "eksposur": "Pengembang kawasan industri"
+        },
+        {
+            "ticker": "AKRA",
+            "nama": "AKR Corporindo",
+            "sektor_id": "S25",
+            "eksposur": "Distribusi BBM dan bahan kimia, kini menguasai penuh jaringan SPBU BP-AKR"
         }
     ],
     "impacts": [
@@ -8416,6 +8948,111 @@
             "sumber": "belum ada",
             "diverifikasi_oleh": "",
             "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I114",
+            "node_id": "N161",
+            "target_tipe": "sektor",
+            "target_id": "S01",
+            "arah": "negatif",
+            "saluran": "pendapatan",
+            "horizon": "0-3 bulan",
+            "alasan": "Harga minyak yang turun menekan pendapatan produsen migas hulu.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I115",
+            "node_id": "N161",
+            "target_tipe": "sektor",
+            "target_id": "S20",
+            "arah": "positif",
+            "saluran": "biaya",
+            "horizon": "0-6 bulan",
+            "alasan": "Bahan bakar yang lebih murah meringankan biaya maskapai dan transportasi.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I116",
+            "node_id": "N162",
+            "target_tipe": "saham",
+            "target_id": "BRMS",
+            "arah": "negatif",
+            "saluran": "valuasi",
+            "horizon": "0-1 bulan",
+            "alasan": "Keluar dari indeks global standar memicu penjualan oleh dana pasif pada penutupan 30 November.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I117",
+            "node_id": "N166",
+            "target_tipe": "sektor",
+            "target_id": "S15",
+            "arah": "positif",
+            "saluran": "pendapatan",
+            "horizon": "0-6 bulan",
+            "alasan": "Bantuan tunai dan beras mendorong belanja kebutuhan pokok.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I118",
+            "node_id": "N166",
+            "target_tipe": "sektor",
+            "target_id": "S04",
+            "arah": "positif",
+            "saluran": "pendapatan",
+            "horizon": "0-6 bulan",
+            "alasan": "Belanja makanan dan minuman olahan ikut naik.",
+            "keyakinan": "rendah",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I119",
+            "node_id": "N170",
+            "target_tipe": "sektor",
+            "target_id": "S09",
+            "arah": "negatif",
+            "saluran": "valuasi",
+            "horizon": "0-3 bulan",
+            "alasan": "Saham teknologi dan growth sensitif terhadap sentimen sektor AI.",
+            "keyakinan": "sedang",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
+        },
+        {
+            "id": "I120",
+            "node_id": "N169",
+            "target_tipe": "saham",
+            "target_id": "AKRA",
+            "arah": "campuran",
+            "saluran": "pendapatan dan margin",
+            "horizon": "6-24 bulan",
+            "alasan": "Menguasai penuh jaringan SPBU menambah pendapatan, tetapi margin ritel BBM tipis dan harga diatur.",
+            "keyakinan": "rendah",
+            "status": "draft",
+            "sumber": "belum ada",
+            "diverifikasi_oleh": "",
+            "tanggal_verifikasi": ""
         }
     ],
     "glossary": [],
@@ -8990,17 +9627,6 @@
             "akses": "free"
         },
         {
-            "id": "L03",
-            "node_id": "N003",
-            "status": "mereda",
-            "tanggal_mulai": "2026-02-28",
-            "ringkasan": "Brent turun ke sekitar USD92 per barel pada 11 November, dari USD117,64 pada 30 Oktober, setelah Trump menyatakan serangan baru ke Iran sangat kecil kemungkinannya selama perundingan berjalan. JPMorgan menilai pasokan global telah melampaui permintaan. Pasar masih memantau keamanan pelayaran di Selat Hormuz.",
-            "indikator_pantau": "Harga Brent dan WTI, perundingan AS-Iran, status Selat Hormuz",
-            "sumber": "https://www.jawapos.com/ekonomi/2611110039/harga-minyak-brent-dan-wti-naik-tipis-berikut-sentimen-penggeraknya?page=all | https://investasi.kontan.co.id/news/harga-minyak-dunia-melemah-di-tengah-sinyal-redanya-konflik-as-iran | https://www.antaranews.com/berita/5845367/harga-minyak-anjlok-usai-trump-sebut-serangan-baru-ke-iran-tak-mungkin",
-            "diperbarui": "2026-11-12",
-            "akses": "free"
-        },
-        {
             "id": "L04",
             "node_id": "N009",
             "status": "berlangsung",
@@ -9052,28 +9678,6 @@
             "ringkasan": "Hingga 2 Oktober 2026, investor asing mencatat jual bersih saham Rp82,55 triliun sepanjang tahun.",
             "indikator_pantau": "Data transaksi asing harian BEI, keputusan MSCI",
             "sumber": "https://market.bisnis.com/read/20261003/7/2009404/ihsg-melemah-328-sepekan-net-sell-tembus-rp82-triliun-di-2026",
-            "diperbarui": "2026-11-09",
-            "akses": "premium"
-        },
-        {
-            "id": "L09",
-            "node_id": "N103",
-            "status": "berlangsung",
-            "tanggal_mulai": "2026-10-16",
-            "ringkasan": "MSCI mengusulkan menurunkan Indonesia dari emerging market ke standalone. Perdagangan bursa sempat dihentikan pada 16 Oktober dan IHSG turun 16,70 persen sepanjang Oktober ke 5.057. Konsultasi berjalan hingga 30 April 2027, keputusan paling lambat 30 Juni 2027.",
-            "indikator_pantau": "Langkah reformasi OJK dan BEI, pembaruan sementara dari MSCI",
-            "sumber": "https://www.thejakartapost.com/business/2026/10/16/msci-weighs-downgrading-indonesia-to-standalone-market-status | https://www.industry.co.id/read/158363/analisa-dan-prediksi-ihsg-2-november-2026-oversold-di-atas-5000-efek-hsc-dan-bayangan-msci-jadi-penentu",
-            "diperbarui": "2026-11-09",
-            "akses": "premium"
-        },
-        {
-            "id": "L10",
-            "node_id": "N019",
-            "status": "berlangsung",
-            "tanggal_mulai": "2026-10-19",
-            "ringkasan": "Ekonomi China tumbuh 4,5 persen tahunan pada kuartal III 2026, sedikit di atas perkiraan dan di ujung bawah target pemerintah. Ekspor yang kuat menutupi permintaan domestik yang lemah dan guncangan energi.",
-            "indikator_pantau": "Data ekonomi China Oktober, permintaan komoditas",
-            "sumber": "https://www.semafor.com/article/10/19/2026/chinas-powerful-export-machine-propelled-gdp-growth-beyond-expectations | https://www.qatar-tribune.com/article/259993/business/chinas-third-quarter-growth-narrowly-beats-forecasts",
             "diperbarui": "2026-11-09",
             "akses": "premium"
         },
@@ -9130,6 +9734,127 @@
             "indikator_pantau": "RDG BI November 2026, kurs rupiah",
             "sumber": "https://snips.stockbit.com/snips-terbaru/-bi-rate-dipertahankan-di-575-insentif-hedging-kembali-naik | https://finansial.bisnis.com/read/20261021/11/2014506/bi-rate-ditahan-575-pada-oktober-intip-historis-lengkapnya-sepanjang-2026",
             "diperbarui": "2026-11-12",
+            "akses": "premium"
+        },
+        {
+            "id": "L03",
+            "node_id": "N003",
+            "status": "mereda",
+            "tanggal_mulai": "2026-02-28",
+            "ringkasan": "Brent turun dari USD117,64 (30 Oktober) ke USD97,75 pada 6 November, penurunan mingguan sekitar 17 persen, dan sekitar USD90 pada 10 November. Pemicunya hasil pemilu AS (Brent turun hampir 9 persen pada 4 November), pernyataan Trump bahwa serangan baru ke Iran sangat kecil kemungkinannya, dan harapan kesepakatan AS-Iran. JPMorgan menilai pasokan global telah melampaui permintaan.",
+            "indikator_pantau": "Harga Brent dan WTI, perundingan AS-Iran, status Selat Hormuz",
+            "sumber": "https://www.metrotvnews.com/read/bmRCX301-harga-minyak-brent-turun-0-6-ke-usd97-per-barel | https://www.antaranews.com/berita/5844367/ihsg-selasa-ditutup-menguat-didukung-sentimen-penurunan-harga-minyak | https://www.nationthailand.com/business/trading-investment/40073120",
+            "diperbarui": "2026-11-16",
+            "akses": "free"
+        },
+        {
+            "id": "L09",
+            "node_id": "N103",
+            "status": "berlangsung",
+            "tanggal_mulai": "2026-10-16",
+            "ringkasan": "MSCI mengusulkan menurunkan Indonesia dari emerging market ke standalone. IHSG turun 16,70 persen sepanjang Oktober ke 5.057. Pada 12 November, review indeks berkala MSCI mengeluarkan beberapa saham Indonesia (lihat L18), dan IHSG tetap menguat sekitar 2 persen pada sesi pertama. Jual bersih asing sepanjang 2026 mencapai Rp98,08 triliun per 6 November. Konsultasi reklasifikasi berjalan hingga 30 April 2027, keputusan paling lambat 30 Juni 2027.",
+            "indikator_pantau": "Langkah reformasi OJK dan BEI, penutupan 30 November, aliran dana asing",
+            "sumber": "https://www.thejakartapost.com/business/2026/10/16/msci-weighs-downgrading-indonesia-to-standalone-market-status | https://www.kabarbursa.com/market-hari-ini/perdagangan-bei-lesu-dalam-sepekan-ihsg-hingga-volume-transaksi-harian-menyusut | https://economy.okezone.com/read/2026/11/12/278/3253617/hasil-review-msci-diumumkan-bei-sebut-pasar-modal-ri-masih-kuat",
+            "diperbarui": "2026-11-16",
+            "akses": "premium"
+        },
+        {
+            "id": "L10",
+            "node_id": "N019",
+            "status": "berlangsung",
+            "tanggal_mulai": "2026-10-19",
+            "ringkasan": "PDB China kuartal III 2026 tumbuh 4,5 persen tahunan. Data September: produksi industri 5,5 persen (ditopang ekspor barang teknologi terkait AI) dan penjualan ritel 1,1 persen. Data Oktober dirilis 16 November dengan konsensus ritel +0,8 persen, produksi industri +5,3 persen, dan investasi aset tetap kumulatif -7,0 persen.",
+            "indikator_pantau": "Data ekonomi China Oktober, permintaan komoditas",
+            "sumber": "https://investinglive.com/central-banks/economic-and-event-calendar-in-asia-monday-november-16-2026-boj-china-data-japan-gdp/ | https://www.semafor.com/article/10/19/2026/chinas-powerful-export-machine-propelled-gdp-growth-beyond-expectations",
+            "diperbarui": "2026-11-16",
+            "akses": "premium"
+        },
+        {
+            "id": "L16",
+            "node_id": "N159",
+            "status": "baru_terjadi",
+            "tanggal_mulai": "2026-11-03",
+            "ringkasan": "Partai Demokrat memenangi DPR dan Senat AS pada 3 November (sedikitnya 54 kursi Senat dan 247 kursi DPR menurut penghitungan awal). Pasar saham dan obligasi global menguat pada 4 November karena investor menilai Kongres yang terbelah mengurangi kejutan kebijakan. Utang federal AS baru melampaui USD40 triliun, dan perselisihan anggaran dapat menutup lembaga federal.",
+            "indikator_pantau": "Perundingan anggaran AS, kebijakan tarif, perkembangan AS-Iran",
+            "sumber": "https://www.nationthailand.com/business/trading-investment/40073120 | https://kmph.com/news/nation-world/wall-street-weighs-economic-fallout-from-democrats-midterm-sweep",
+            "diperbarui": "2026-11-16",
+            "akses": "premium"
+        },
+        {
+            "id": "L17",
+            "node_id": "N161",
+            "status": "berlangsung",
+            "tanggal_mulai": "2026-11-04",
+            "ringkasan": "Trump menyatakan serangan baru ke Iran sangat kecil kemungkinannya selama pembicaraan, dan pasar berharap kesepakatan lewat mediasi Qatar. Status Selat Hormuz masih perlu dipantau.",
+            "indikator_pantau": "Perundingan AS-Iran, status Selat Hormuz, harga Brent",
+            "sumber": "https://www.antaranews.com/berita/5845367/harga-minyak-anjlok-usai-trump-sebut-serangan-baru-ke-iran-tak-mungkin | https://www.dupoin.co.id/en/insights/market-analysis/162402?set_lang=en",
+            "diperbarui": "2026-11-16",
+            "akses": "premium"
+        },
+        {
+            "id": "L18",
+            "node_id": "N162",
+            "status": "baru_terjadi",
+            "tanggal_mulai": "2026-11-12",
+            "ringkasan": "MSCI mengumumkan review indeks November: BRPT dan BRMS keluar dari indeks global standar, dan beberapa saham lain keluar dari indeks small cap (media melaporkan total delapan saham). Perubahan berlaku setelah penutupan 30 November. IHSG menguat 2,2 persen ke 5.227 pada sesi pertama hari pengumuman karena pasar sudah mengantisipasi. Pembekuan penambahan saham Indonesia belum dicabut.",
+            "indikator_pantau": "Penutupan 30 November, aliran dana asing, langkah lanjutan OJK dan BEI",
+            "sumber": "https://ekonomi.republika.co.id/berita/tod586490/msci-umumkan-hasil-review-indeks-november-8-saham-indonesia-harus-keluar | https://economy.okezone.com/read/2026/11/12/278/3253617/hasil-review-msci-diumumkan-bei-sebut-pasar-modal-ri-masih-kuat | https://katadata.co.id/finansial/bursa/6af4ed8e37df4/msci-keluarkan-brpt-dan-brms-dari-indeks-global-depak-7-saham-dari-small-cap",
+            "diperbarui": "2026-11-16",
+            "akses": "free"
+        },
+        {
+            "id": "L19",
+            "node_id": "N127",
+            "status": "berlangsung",
+            "tanggal_mulai": "2026-10-01",
+            "ringkasan": "Paket stimulus kuartal IV 2026 sekitar Rp31 triliun: bantuan beras Rp17,55 triliun untuk sekitar 33,2 juta keluarga, dan subsidi upah Rp300.000 per bulan (dibayar sekaligus Rp900.000 untuk Oktober-Desember) bagi 13,3 juta pekerja berpenghasilan rendah. Pencairan berlangsung sejak akhir Oktober.",
+            "indikator_pantau": "Realisasi pencairan, belanja ritel akhir tahun",
+            "sumber": "https://economy.okezone.com/read/2026/10/22/320/3249616/paket-stimulus-rp31-triliun-cair-pekerja-dapat-bsu-rp900-000 | https://www.antaranews.com/berita/5833163/kemnaker-penyaluran-bsu-2026-dalam-tahap-koordinasi-dengan-kemenkeu",
+            "diperbarui": "2026-11-16",
+            "akses": "free"
+        },
+        {
+            "id": "L20",
+            "node_id": "N030",
+            "status": "baru_terjadi",
+            "tanggal_mulai": "2026-11-05",
+            "ringkasan": "Ekonomi RI kuartal III 2026 tumbuh 5,47 persen tahunan, naik dari 5,29 persen pada kuartal II dan di atas perkiraan, dengan pengangguran Agustus turun ke 4,75 persen. Namun pelaku usaha disebut masih wait and see karena daya beli melemah, biaya produksi naik, dan ketidakpastian iklim investasi.",
+            "indikator_pantau": "Penjualan ritel, investasi, indeks keyakinan konsumen",
+            "sumber": "https://nasional.kontan.co.id/news/bps-catat-pertumbuhan-ekonomi-ri-kuartal-iii-2026-mencapai-547 | https://ekonomi.bisnis.com/read/20261109/12/2019555/pertumbuhan-ekonomi-547-dunia-usaha-masih-wait-and-see",
+            "diperbarui": "2026-11-16",
+            "akses": "free"
+        },
+        {
+            "id": "L21",
+            "node_id": "N168",
+            "status": "baru_terjadi",
+            "tanggal_mulai": "2026-11-06",
+            "ringkasan": "Shell menyelesaikan pengalihan bisnis SPBU ke Sefas Group pada 30 Oktober, dan BP menjual seluruh kepemilikannya di jaringan SPBU ke AKR Corporindo pada 6 November (nilai sekitar USD14,2 juta). Merek tetap dipakai lewat lisensi. Pengamat menyebut skala pasar terbatas dan harga yang diatur menekan margin, sementara pemerintah menyebutnya strategi bisnis masing-masing perusahaan.",
+            "indikator_pantau": "Kinerja AKRA, kebijakan harga BBM",
+            "sumber": "https://ekonomi.bisnis.com/read/20261109/44/2019780/susul-shell-bp-lepas-bisnis-spbu-di-indonesia | https://katadata.co.id/berita/energi/6af2fb515a305/bp-dan-shell-hengkang-dari-bisnis-spbu-apa-penyebab-investor-asing-mundur",
+            "diperbarui": "2026-11-16",
+            "akses": "premium"
+        },
+        {
+            "id": "L22",
+            "node_id": "N170",
+            "status": "baru_terjadi",
+            "tanggal_mulai": "2026-11-08",
+            "ringkasan": "Dewan direksi Nvidia membuka penyelidikan independen atas laporan bahwa CEO menjadi sasaran upaya intelijen asing. Tiongkok menyebut tuduhan itu tidak berdasar, dan dewan menyatakan belum menemukan bukti kebocoran. Saham turun sekitar 4 sampai 5 persen pada 9 November. Laporan keuangan Nvidia 17 November, dan pengarahan tertutup dengan komite DPR AS diminta pada 18 November.",
+            "indikator_pantau": "Laporan keuangan Nvidia 17 November, hasil penyelidikan",
+            "sumber": "https://openthemagazine.com/world/quick-take-nvidia-shares-fall-more-than-4-before-the-bell-seven-things-to-know-about-the-jensen-huang-probe | https://www.ibtimes.co.uk/nvidia-shares-fall-jensen-huang-board-investigation-foreign-intelligence-1831112",
+            "diperbarui": "2026-11-16",
+            "akses": "premium"
+        },
+        {
+            "id": "L23",
+            "node_id": "N102",
+            "status": "baru_terjadi",
+            "tanggal_mulai": "2026-11-05",
+            "ringkasan": "Saham AI dan teknologi tertekan: Nvidia mencatat hari terburuk sejak Januari 2025 pada 5 November, disusul penyelidikan di atas. Pada 9 November pasar AS rebound (Nasdaq naik 2,2 persen). Ini belum berarti skenario pendanaan sulit atau pembatalan pesanan di SC12 terjadi. Laporan keuangan 17 November menjadi ujian berikutnya.",
+            "indikator_pantau": "Laporan keuangan Nvidia, belanja modal perusahaan teknologi",
+            "sumber": "https://www.tikr.com/blog/nvidia-slides-5-5-as-board-hires-wachtell-to-investigate-jensen-huang | https://abc7news.com/story/nvidia-stock-falls-company-opens-probe-ceo-jensen-huang-alleged-affair-chinese-spy/20026775/",
+            "diperbarui": "2026-11-16",
             "akses": "premium"
         }
     ]
