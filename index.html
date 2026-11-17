@@ -802,6 +802,97 @@
             color: #936207
         }
 
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            margin: 16px 0 4px
+        }
+
+        .stat {
+            background: var(--card);
+            border-radius: 14px;
+            padding: 10px 14px;
+            box-shadow: 0 1px 0 var(--line), inset 0 0 0 1px #fff
+        }
+
+        .stat b {
+            display: block;
+            font-size: 26px;
+            font-weight: 800;
+            letter-spacing: -.02em;
+            line-height: 1.1
+        }
+
+        .stat span {
+            display: block;
+            font-size: 13px
+        }
+
+        .stat small {
+            color: var(--mute);
+            font-size: 12px
+        }
+
+        .pgr {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin: 12px 0;
+            font-size: 13px;
+            color: var(--mute)
+        }
+
+        .pgr .btn:disabled {
+            opacity: .4;
+            cursor: default
+        }
+
+        .qc {
+            background: var(--card);
+            border-radius: 20px;
+            padding: 20px 22px;
+            margin-bottom: 14px;
+            box-shadow: 0 1px 0 var(--line), inset 0 0 0 1px #fff;
+            border-left: 6px solid var(--ac)
+        }
+
+        .qc blockquote {
+            margin: 0 0 6px;
+            font-size: clamp(19px, 3.2vw, 24px);
+            font-weight: 600;
+            line-height: 1.3;
+            letter-spacing: -.01em
+        }
+
+        .qc blockquote::before {
+            content: "\201C";
+            color: var(--ac);
+            font-size: 1.6em;
+            line-height: 0;
+            vertical-align: -.3em;
+            margin-right: 4px
+        }
+
+        .qc .qt {
+            color: var(--mute);
+            font-style: italic;
+            margin: 0 0 8px;
+            font-size: 14.5px
+        }
+
+        .qc .qa {
+            margin: 0 0 10px;
+            font-size: 14px
+        }
+
+        .qc p {
+            margin: 0 0 8px;
+            font-size: 14.5px
+        }
+
         @media(max-width:900px) {
             .main {
                 grid-template-columns: 1fr
@@ -842,7 +933,8 @@
             <div><button class="btn" id="rf">Muat ulang data</button></div>
         </header>
         <nav class="tabs" id="tabs"><button data-m="home">Beranda</button><button data-m="board">Papan
-                kejadian</button><button data-m="cmp">Bandingkan saham</button></nav>
+                kejadian</button><button data-m="cmp">Bandingkan saham</button><button data-m="quotes">Kutipan</button>
+        </nav>
         <div id="app"></div>
     </div>
     <script>
@@ -870,10 +962,10 @@
         $('#tabs').onclick = e => { const b = e.target.closest('[data-m]'); if (!b) return; mode = b.dataset.m; trail = []; chainId = stockId = null; hist = []; view() };
 
         function init(d) {
-            D = d; for (const k of ['scenarios', 'nodes', 'edges', 'impacts', 'sectors', 'stocks', 'glossary', 'factors', 'stock_profile', 'live_status']) D[k] = D[k] || [];
+            D = d; for (const k of ['scenarios', 'nodes', 'edges', 'impacts', 'sectors', 'stocks', 'glossary', 'factors', 'stock_profile', 'live_status', 'quotes']) D[k] = D[k] || [];
             D.live = D.live_status; D.nm = Object.fromEntries(D.nodes.map(n => [n.id, n])); D.sm = Object.fromEntries(D.sectors.map(s => [s.id, s])); D.tm = Object.fromEntries(D.stocks.map(s => [s.ticker, s])); D.fm = Object.fromEntries(D.factors.map(f => [f.id, f])); trail = []; chainId = stockId = null; hist = []; view()
         }
-        const view = () => { trail.length ? graph() : stockId ? stockCard() : chainId ? chain() : mode === 'board' ? board() : mode === 'cmp' ? cmp() : home(); document.querySelectorAll('#tabs [data-m]').forEach(b => b.classList.toggle('on', b.dataset.m === mode && !trail.length && !chainId && !stockId)) };
+        const view = () => { trail.length ? graph() : stockId ? stockCard() : chainId ? chain() : mode === 'board' ? board() : mode === 'cmp' ? cmp() : mode === 'quotes' ? quotes() : home(); document.querySelectorAll('#tabs [data-m]').forEach(b => b.classList.toggle('on', b.dataset.m === mode && !trail.length && !chainId && !stockId)) };
         function go(c, d) {
             if (!trail.length && !c.map && c.t !== 's') { snap(); chainId = c.t === 'n' ? c.id : null; stockId = c.t === 'k' ? c.id : null; forced = []; view(); scrollTo(0, 0); return }
             if (!trail.length) snap();
@@ -892,27 +984,58 @@
             const ks = [...new Set(D.scenarios.map(x => x.siklus_besar).filter(Boolean))]; if (!ks.length) return '';
             return `<div class="chips"><button class="chip ${sf === 'all' ? 'on' : ''}" data-sf="all">Semua</button>${ks.map(k => `<button class="chip ${sf === k ? 'on' : ''}" data-sf="${E(k)}">${E(SB[k] || k)}</button>`).join('')}</div>`
         };
+        const pg = { res: 0, sc: 0, bd: 0, qt: 0 }, PS = { res: 8, sc: 6, bd: 6, qt: 5 }; let qq = '', qty = 'saham', qg = 'all';
+        const pager = (k, n, p, ps) => {
+            if (n <= ps) return n ? `<p class="mu">${n} data</p>` : ''; const m = Math.ceil(n / ps);
+            return `<div class="pgr"><button class="btn" data-pg="${k}:-1" ${p <= 0 ? 'disabled' : ''}>‹ Sebelumnya</button><span>${p * ps + 1}–${Math.min(n, p * ps + ps)} dari ${n} · hal ${p + 1}/${m}</span><button class="btn" data-pg="${k}:1" ${p >= m - 1 ? 'disabled' : ''}>Berikutnya ›</button></div>`
+        };
         function scGrid() {
-            const L = D.scenarios.filter(x => sf === 'all' || x.siklus_besar === sf);
-            $('#scg').innerHTML = L.length ? L.map(x => `<button class="card" data-t="n" data-id="${E(x.node_pembuka)}" data-d="R"><span class="tag">${E(x.jenis || 'skenario')}</span>${x.siklus_besar ? `<span class="tag t">${E(SB[x.siklus_besar] || x.siklus_besar)}</span>` : ''}<b>${E(x.judul)}</b><p>${E(x.ringkasan)}</p></button>`).join('') : '<p class="note">Tidak ada skenario pada filter ini.</p>'
+            const L = D.scenarios.filter(x => sf === 'all' || x.siklus_besar === sf), ps = PS.sc; pg.sc = Math.min(pg.sc, Math.max(0, Math.ceil(L.length / ps) - 1));
+            $('#sct').textContent = sf === 'all' ? L.length : L.length + ' dari ' + D.scenarios.length;
+            $('#scg').innerHTML = L.length ? L.slice(pg.sc * ps, pg.sc * ps + ps).map(x => `<button class="card" data-t="n" data-id="${E(x.node_pembuka)}" data-d="R"><span class="tag">${E(x.jenis || 'skenario')}</span>${x.siklus_besar ? `<span class="tag t">${E(SB[x.siklus_besar] || x.siklus_besar)}</span>` : ''}<b>${E(x.judul)}</b><p>${E(x.ringkasan)}</p></button>`).join('') : '<p class="note">Tidak ada skenario pada filter ini.</p>';
+            $('#sp').innerHTML = pager('sc', L.length, pg.sc, ps)
+        }
+        function stats() {
+            const ts = new Set(D.stock_profile.map(p => p.ticker).filter(t => D.tm[t])).size, run = D.scenarios.filter(x => x.jenis === 'berjalan').length;
+            const t = [[D.stocks.length, 'saham', ts + ' punya profil eksposur'], [D.scenarios.length, 'skenario', run + ' sedang berjalan'], [D.nodes.length, 'kejadian', D.edges.length + ' hubungan sebab-akibat'], [D.sectors.length, 'sektor', D.live.length + ' kejadian dipantau']];
+            return `<div class="stats">${t.map(x => `<div class="stat"><b>${x[0]}</b><span>${x[1]}</span><small>${x[2]}</small></div>`).join('')}</div>`
+        }
+        const rcard = x => `<button class="card" data-t="${x.t}" data-id="${E(x.id)}" data-d="R"><span class="tag">${x.k}</span><b>${E(x.l)}</b></button>`;
+        function resRender() {
+            const v = qq.trim().toLowerCase(), has = z => !v || z.toLowerCase().includes(v);
+            const L = {
+                saham: D.stocks.filter(x => has(x.ticker + ' ' + x.nama)).map(x => ({ t: 'k', id: x.ticker, l: x.ticker + ' · ' + x.nama, k: 'Saham' })),
+                sektor: D.sectors.filter(x => has(x.nama_sektor)).map(x => ({ t: 's', id: x.id, l: x.nama_sektor, k: 'Sektor' })),
+                kejadian: D.nodes.filter(x => has(x.judul)).map(x => ({ t: 'n', id: x.id, l: x.judul, k: 'Kejadian' }))
+            };
+            if (v && !L[qty].length) { const o = Object.keys(L).find(k => L[k].length); if (o) qty = o }
+            const nm = { saham: 'Saham', sektor: 'Sektor', kejadian: 'Kejadian' }, a = L[qty], ps = PS.res; pg.res = Math.min(pg.res, Math.max(0, Math.ceil(a.length / ps) - 1));
+            $('#rt').innerHTML = Object.keys(L).map(k => `<button class="chip ${k === qty ? 'on' : ''}" data-qty="${k}">${nm[k]} (${L[k].length})</button>`).join('');
+            $('#res').innerHTML = a.length ? a.slice(pg.res * ps, pg.res * ps + ps).map(rcard).join('') : '<p class="note">Tidak ada hasil.</p>';
+            $('#rp').innerHTML = pager('res', a.length, pg.res, ps)
         }
         function home() {
-            const live = D.live.filter(l => D.nm[l.node_id]);
-            $('#app').innerHTML = `<input id="q" placeholder="Cari saham, sektor, atau kejadian… (contoh: BBCA, properti, harga minyak)" aria-label="Cari"><div id="res" class="grid" style="margin-top:12px"></div>
- <h2>Jika ini terjadi: kejadian yang sedang dipantau</h2><div class="grid">${live.length ? live.map(l => `<button class="card" data-t="n" data-id="${E(l.node_id)}" data-d="R"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span>${l.akses === 'premium' ? '<span class="tag">Premium</span>' : ''}<b>${E(D.nm[l.node_id].judul)}</b><p class="${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}</p></button>`).join('') : '<p class="note">Belum ada kejadian yang dipantau.</p>'}</div>
- <h2>Skenario belajar</h2>${sbChips()}<div class="grid" id="scg"></div><p class="note">${DISC}</p>`;
-            scGrid();
-            const q = $('#q'), run = () => {
-                const v = q.value.trim().toLowerCase(); let r = [];
-                if (!v) r = D.stocks.slice(0, 8).map(s => ({ t: 'k', id: s.ticker, l: s.ticker + ' · ' + s.nama, k: 'Saham' }));
-                else {
-                    r = [...D.stocks.filter(s => (s.ticker + s.nama).toLowerCase().includes(v)).map(s => ({ t: 'k', id: s.ticker, l: s.ticker + ' · ' + s.nama, k: 'Saham' })),
-                    ...D.sectors.filter(s => s.nama_sektor.toLowerCase().includes(v)).map(s => ({ t: 's', id: s.id, l: s.nama_sektor, k: 'Sektor' })),
-                    ...D.nodes.filter(n => n.judul.toLowerCase().includes(v)).map(n => ({ t: 'n', id: n.id, l: n.judul, k: 'Kejadian' }))].slice(0, 12)
-                }
-                $('#res').innerHTML = r.length ? r.map(x => `<button class="card" data-t="${x.t}" data-id="${E(x.id)}" data-d="R"><span class="tag">${x.k}</span><b>${E(x.l)}</b></button>`).join('') : '<p class="note">Tidak ada hasil.</p>'
-            };
-            q.oninput = run; run()
+            const live = D.live.filter(l => D.nm[l.node_id]).sort((a, b) => (FS[a.status] ?? 3) - (FS[b.status] ?? 3) || String(b.diperbarui).localeCompare(String(a.diperbarui)));
+            $('#app').innerHTML = `${stats()}<input id="q" placeholder="Cari saham, sektor, atau kejadian… (contoh: BBCA, properti, harga minyak)" aria-label="Cari"><div id="rt" class="chips"></div><div id="res" class="grid"></div><div id="rp"></div>
+ <h2>Jika ini terjadi: kejadian yang sedang dipantau (${live.length})</h2><div class="grid">${live.length ? live.slice(0, 4).map(l => `<button class="card" data-t="n" data-id="${E(l.node_id)}" data-d="R"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span>${l.akses === 'premium' ? '<span class="tag">Premium</span>' : ''}<b>${E(D.nm[l.node_id].judul)}</b><p class="${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}</p></button>`).join('') : '<p class="note">Belum ada kejadian yang dipantau.</p>'}</div>${live.length > 4 ? `<p class="mu"><button class="lk" data-m2="board">Lihat semua ${live.length} kejadian di Papan kejadian</button></p>` : ''}
+ <h2>Skenario belajar (<span id="sct"></span>)</h2>${sbChips()}<div class="grid" id="scg"></div><div id="sp"></div><p class="note">${DISC}</p>`;
+            scGrid(); const q = $('#q'); q.value = qq; q.oninput = () => { qq = q.value; pg.res = 0; resRender() }; resRender()
+        }
+
+        const qcard = x => {
+            const ps = String(x.penjelasan || '').split('||').map(z => z.trim()).filter(Boolean), nd = String(x.node_terkait || '').split(/[,|]/).map(z => z.trim()).filter(id => D.nm[id]), tm = String(x.tema || '').split(',').map(z => z.trim()).filter(Boolean);
+            return `<article class="qc"><blockquote>${E(x.kutipan)}</blockquote>${x.terjemahan ? `<p class="qt">${E(x.terjemahan)}</p>` : ''}<p class="qa"><b>${E(x.tokoh)}</b>${x.peran ? ' · ' + E(x.peran) : ''}</p>
+ <div class="${x.akses === 'premium' ? 'lock' : ''}">${ps.map(z => `<p>${E(z)}</p>`).join('')}</div>
+ <div>${tm.map(z => `<span class="tag">${E(z)}</span>`).join('')}${dr(x)}</div>
+ ${nd.length ? `<p class="mu">Terkait kejadian: ${nd.map(id => bt('n', id, 'R', D.nm[id].judul, 'tag')).join(' ')}</p>` : ''}
+ ${/^http/.test(x.sumber || '') ? `<p class="mu"><a href="${E(x.sumber)}" target="_blank" rel="noopener">Sumber</a></p>` : x.sumber ? `<p class="mu">Sumber: ${E(x.sumber)}</p>` : ''}</article>`
+        };
+        function quotes() {
+            const Q = D.quotes.filter(x => x.kutipan), ts = [...new Set(Q.map(x => x.tokoh))]; if (qg !== 'all' && !ts.includes(qg)) qg = 'all';
+            const F = Q.filter(x => qg === 'all' || x.tokoh === qg), ps = PS.qt; pg.qt = Math.min(pg.qt, Math.max(0, Math.ceil(F.length / ps) - 1));
+            $('#app').innerHTML = `<h2>Kutipan investor (${Q.length})</h2><p class="mu">Kalimat singkat dari para investor beserta konteksnya. Bahan belajar, bukan saran investasi.</p>
+ <div class="chips"><button class="chip ${qg === 'all' ? 'on' : ''}" data-qg="all">Semua (${Q.length})</button>${ts.map(t => `<button class="chip ${qg === t ? 'on' : ''}" data-qg="${E(t)}">${E(t)} (${Q.filter(x => x.tokoh === t).length})</button>`).join('')}</div>
+ ${F.slice(pg.qt * ps, pg.qt * ps + ps).map(qcard).join('') || '<p class="note">Belum ada kutipan. Tambahkan di sheet quotes.</p>'}${pager('qt', F.length, pg.qt, ps)}`
         }
 
         function sides(c) {
@@ -966,7 +1089,7 @@
         function panel(c, R) {
             if (c.t === 'n') {
                 const n = D.nm[c.id], imp = D.impacts.filter(i => i.node_id === c.id), prem = n.akses === 'premium', eff = D.edges.filter(e => e.dari_node === c.id && D.nm[e.ke_node]),
-                terms = (n.istilah_kunci || '').split(',').map(s => s.trim()).filter(Boolean), lv = D.live.filter(l => l.node_id === c.id);
+                    terms = (n.istilah_kunci || '').split(',').map(s => s.trim()).filter(Boolean), lv = D.live.filter(l => l.node_id === c.id);
                 return `<p><button class="btn" data-chain="1" data-id="${E(c.id)}">Baca sebagai alur</button></p><h2>${E(n.judul)}</h2>${n.fase_siklus ? `<span class="tag t">${E(n.fase_siklus)}</span>` : ''}${n.kategori ? `<span class="tag">${E(n.kategori)}</span>` : ''}<span class="tag">Skala dampak ${E(n.skala_dampak || '-')}/5</span>
   <p style="margin-top:10px">${E(n.deskripsi)}</p>${n.contoh_historis ? `<p><small>Contoh: ${E(n.contoh_historis)}</small></p>` : ''}
   ${lv.map(l => { const u = (l.sumber || '').split(' | ')[0]; return `<div class="lv"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span><span class="${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}<small>Pantau: ${E(l.indikator_pantau)}. Diperbarui ${E(l.diperbarui)}.${u.startsWith('http') ? ` <a href="${E(u)}" target="_blank" rel="noopener">Sumber</a>` : ''}</small></span></div>` }).join('')}
@@ -992,11 +1115,12 @@
         const FS = { berlangsung: 0, baru_terjadi: 1, mereda: 2 }, SZ = { besar: 3, sedang: 2, kecil: 1 };
         function board() {
             const L = D.live.filter(l => D.nm[l.node_id] && (bf === 'all' || l.status === bf)).sort((a, b) => (FS[a.status] ?? 3) - (FS[b.status] ?? 3) || String(b.diperbarui).localeCompare(String(a.diperbarui)));
-            $('#app').innerHTML = `<h2>Papan kejadian</h2><div class="chips">${[['all', 'Semua'], ['berlangsung', 'Berlangsung'], ['baru_terjadi', 'Baru terjadi'], ['mereda', 'Mereda']].map(([k, t]) => `<button class="chip ${bf === k ? 'on' : ''}" data-bf="${k}">${t}</button>`).join('')}</div>` +
-                (L.length ? L.map(l => {
+            pg.bd = Math.min(pg.bd, Math.max(0, Math.ceil(L.length / PS.bd) - 1));
+            $('#app').innerHTML = `<h2>Papan kejadian (${L.length})</h2><div class="chips">${[['all', 'Semua'], ['berlangsung', 'Berlangsung'], ['baru_terjadi', 'Baru terjadi'], ['mereda', 'Mereda']].map(([k, t]) => `<button class="chip ${bf === k ? 'on' : ''}" data-bf="${k}">${t}</button>`).join('')}</div>` +
+                (L.length ? L.slice(pg.bd * PS.bd, pg.bd * PS.bd + PS.bd).map(l => {
                     const n = D.nm[l.node_id], pr = l.akses === 'premium', u = (l.sumber || '').split(' | ')[0], nx = D.edges.filter(e => e.dari_node === l.node_id && D.nm[e.ke_node]).slice(0, 2);
                     return `<article class="bd"><span class="tag ${'st-' + l.status}">${E(ST[l.status] || l.status)}</span>${pr ? '<span class="tag">Premium</span>' : ''}<span class="tag">Diperbarui ${E(l.diperbarui)}</span><h3>${E(n.judul)}</h3><p class="${pr ? 'lock' : ''}">${E(l.ringkasan)}</p><p class="mu">Pantau: ${E(l.indikator_pantau)}</p>${nx.length ? `<p class="mu">Kemungkinan berikutnya: ${nx.map(e => E(D.nm[e.ke_node].judul) + ' (' + E(e.jeda_waktu) + ')').join('; ')}</p>` : ''}<div>${bt('n', l.node_id, 'R', 'Lihat rantai', 'btn')} ${/^http/.test(u) ? `<a href="${E(u)}" target="_blank" rel="noopener">Sumber</a>` : ''}</div></article>`
-                }).join('') : '<p class="note">Tidak ada kejadian pada filter ini.</p>') + `<p class="note">${DISC}</p>`
+                }).join('') : '<p class="note">Tidak ada kejadian pada filter ini.</p>') + pager('bd', L.length, pg.bd, PS.bd) + `<p class="note">${DISC}</p>`
         }
 
         function cmp() {
@@ -1075,13 +1199,17 @@
         }
 
         document.addEventListener('click', e => {
-            const sfb = e.target.closest('[data-sf]'); if (sfb) { sf = sfb.dataset.sf; scGrid(); document.querySelectorAll('[data-sf]').forEach(b => b.classList.toggle('on', b.dataset.sf === sf)); return }
+            const pgb = e.target.closest('[data-pg]'); if (pgb) { const [k, d] = pgb.dataset.pg.split(':'); pg[k] = Math.max(0, pg[k] + +d); ({ res: resRender, sc: scGrid, bd: board, qt: quotes })[k](); if (k === 'bd' || k === 'qt') scrollTo(0, 0); return }
+            const qtb = e.target.closest('[data-qty]'); if (qtb) { qty = qtb.dataset.qty; pg.res = 0; resRender(); return }
+            const qgb = e.target.closest('[data-qg]'); if (qgb) { qg = qgb.dataset.qg; pg.qt = 0; quotes(); return }
+            const m2 = e.target.closest('[data-m2]'); if (m2) { mode = m2.dataset.m2; trail = []; chainId = stockId = null; hist = []; view(); scrollTo(0, 0); return }
+            const sfb = e.target.closest('[data-sf]'); if (sfb) { sf = sfb.dataset.sf; pg.sc = 0; scGrid(); document.querySelectorAll('[data-sf]').forEach(b => b.classList.toggle('on', b.dataset.sf === sf)); return }
             const bkb = e.target.closest('[data-back]'); if (bkb) { const h = hist.pop(); if (h) { mode = h.mode; chainId = h.chainId; stockId = h.stockId; trail = h.trail; forced = h.forced; view(); scrollTo(0, 0) } return }
             const fk = e.target.closest('[data-fork]'); if (fk) { const [i, id] = fk.dataset.fork.split('|'); forced = [...curP.slice(0, +i).map(x => x.id), id]; chain(); return }
             const chb = e.target.closest('[data-chain]'); if (chb) { snap(); trail = []; chainId = chb.dataset.id; stockId = null; forced = []; view(); scrollTo(0, 0); return }
             const cdb = e.target.closest('[data-card]'); if (cdb) { snap(); trail = []; stockId = cdb.dataset.id; chainId = null; view(); scrollTo(0, 0); return }
             const cgb = e.target.closest('[data-cmpg]'); if (cgb) { mode = 'cmp'; cg = cgb.dataset.cmpg; cc = cf = null; trail = []; chainId = stockId = null; hist = []; view(); return }
-            const a1 = e.target.closest('[data-bf]'); if (a1) { bf = a1.dataset.bf; board(); return }
+            const a1 = e.target.closest('[data-bf]'); if (a1) { bf = a1.dataset.bf; pg.bd = 0; board(); return }
             const a2 = e.target.closest('[data-cg]'); if (a2) { cg = a2.dataset.cg; cc = cf = null; cmp(); return }
             const a3 = e.target.closest('[data-cf],[data-cell]'); if (a3) { cf = a3.dataset.cf || null; cc = a3.dataset.cell || null; $('#cd').innerHTML = cdet(); $('#cd').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); return }
             const ix = e.target.closest('[data-ix]'); if (ix) { trail = trail.slice(0, +ix.dataset.ix + 1); view(); return }
