@@ -9857,5 +9857,111 @@
             "diperbarui": "2026-11-16",
             "akses": "premium"
         }
+    ],
+    "quotes": [
+        {
+            "id": "Q01",
+            "tokoh": "Warren Buffett",
+            "peran": "Investor, CEO Berkshire Hathaway",
+            "kutipan": "Be fearful when others are greedy, and be greedy when others are fearful.",
+            "terjemahan": "Berhati-hatilah saat orang lain serakah, dan beranilah saat orang lain takut.",
+            "penjelasan": "Kalimat ini muncul dalam artikel opini Buffett di New York Times pada Oktober 2008, ketika pasar global panik akibat krisis keuangan. Maksudnya, suasana hati kerumunan memengaruhi harga: saat semua orang optimis harga cenderung mahal, dan saat semua orang takut harga cenderung murah. || Kutipan ini bukan perintah untuk selalu melawan pasar, dan bukan jaminan harga akan segera naik. Ia mengingatkan kita memeriksa dua hal sebelum bertindak: seberapa jauh harga dari nilai wajar, dan seberapa kuat emosi yang menggerakkan pasar. Di database ini, node euforia dan rasa takut mendominasi menggambarkan dua ujung ayunan itu.",
+            "tema": "psikologi pasar, siklus",
+            "node_terkait": "N142,N144,N145",
+            "sumber": "https://www.nytimes.com/2008/10/17/opinion/17buffett.html",
+            "status": "draft",
+            "akses": "free"
+        },
+        {
+            "id": "Q02",
+            "tokoh": "Warren Buffett",
+            "peran": "Investor, CEO Berkshire Hathaway",
+            "kutipan": "Price is what you pay; value is what you get.",
+            "terjemahan": "Harga adalah yang Anda bayar, nilai adalah yang Anda dapatkan.",
+            "penjelasan": "Buffett menuliskannya dalam surat tahunan Berkshire Hathaway 2008 dan menyebut gurunya, Benjamin Graham, sebagai sumber ajaran ini. Harga adalah angka di layar pada hari tertentu, sedangkan nilai adalah kemampuan sebuah usaha menghasilkan laba dan arus kas dalam jangka panjang. || Keduanya bisa menyimpang jauh, terutama saat pasar euforia atau panik. Selisih itulah yang membuat orang menimbang ruang pengaman: harga jauh di atas nilai berarti risiko lebih besar, harga di bawah nilai memberi ruang. Menaksir nilai tetap butuh asumsi, jadi hasilnya perkiraan, bukan kepastian.",
+            "tema": "valuasi, nilai wajar",
+            "node_terkait": "N142,N145",
+            "sumber": "https://www.berkshirehathaway.com/letters/2008ltr.pdf",
+            "status": "draft",
+            "akses": "free"
+        },
+        {
+            "id": "Q03",
+            "tokoh": "Charlie Munger",
+            "peran": "Wakil Ketua Berkshire Hathaway",
+            "kutipan": "Invert, always invert.",
+            "terjemahan": "Balikkan, selalu balikkan.",
+            "penjelasan": "Munger sering mengutip ahli matematika Carl Jacobi dengan ungkapan ini: untuk memecahkan masalah sulit, balik cara pandangnya. Alih-alih bertanya bagaimana mendapat hasil bagus, tanyakan apa yang akan membuat kita gagal, lalu hindari hal itu. || Dalam investasi, ini berarti memeriksa dulu risiko yang bisa menghancurkan: utang yang terlalu besar, harga yang terlalu mahal, atau bergantung pada satu asumsi. Rantai siklus kredit di database ini memperlihatkannya, dari kredit longgar dan utang berisiko sampai gagal bayar.",
+            "tema": "cara berpikir, risiko",
+            "node_terkait": "N148,N149,N150",
+            "sumber": "Poor Charlie's Almanack (buku)",
+            "status": "draft",
+            "akses": "free"
+        },
+        {
+            "id": "Q04",
+            "tokoh": "Peter Lynch",
+            "peran": "Mantan manajer Fidelity Magellan Fund",
+            "kutipan": "Know what you own, and know why you own it.",
+            "terjemahan": "Ketahui apa yang Anda miliki, dan mengapa Anda memilikinya.",
+            "penjelasan": "Lynch dikenal mendorong investor biasa memakai pengetahuan dari pekerjaan dan kehidupan sehari-hari untuk memilih usaha yang mereka pahami. Kuncinya: mampu menjelaskan dalam beberapa kalimat bagaimana perusahaan itu menghasilkan uang dan apa yang bisa merusaknya. || Kartu saham empat jalur di aplikasi ini cocok untuk latihan itu: dari mana pendapatan datang, apa biayanya, seberapa besar utangnya, dan bagaimana pasar menilainya. Kalau keempatnya belum bisa dijelaskan, mungkin pemahaman belum cukup untuk memegang saham tersebut.",
+            "tema": "riset, disiplin",
+            "node_terkait": "",
+            "sumber": "Dikaitkan dengan Peter Lynch (mis. One Up on Wall Street, 1989); kalimat persisnya belum dikonfirmasi",
+            "status": "draft",
+            "akses": "free"
+        },
+        {
+            "id": "Q05",
+            "tokoh": "Ray Dalio",
+            "peran": "Pendiri Bridgewater Associates",
+            "kutipan": "Pain + Reflection = Progress.",
+            "terjemahan": "Rasa sakit + refleksi = kemajuan.",
+            "penjelasan": "Dalio menulis rumus ini dalam bukunya, Principles. Kerugian dan kesalahan terasa menyakitkan, tetapi bila diikuti refleksi jujur tentang penyebabnya, keduanya bisa diubah menjadi prinsip yang memperbaiki keputusan berikutnya. || Rumus ini menggarisbawahi kebiasaan mencatat: apa asumsi saya, apa yang terjadi, dan mengapa berbeda. Skenario sejarah di database ini, seperti 1998, 2008, dan 2020, bisa dibaca sebagai refleksi kolektif atas kesalahan sebelumnya, bukan sekadar cerita lama.",
+            "tema": "belajar, disiplin",
+            "node_terkait": "",
+            "sumber": "Dalio, Principles (2017)",
+            "status": "draft",
+            "akses": "free"
+        },
+        {
+            "id": "Q06",
+            "tokoh": "Howard Marks",
+            "peran": "Pendiri Oaktree Capital",
+            "kutipan": "You can't predict. You can prepare.",
+            "terjemahan": "Anda tak bisa meramal, tetapi bisa bersiap.",
+            "penjelasan": "Ini judul salah satu memo Marks pada 2001. Intinya, hampir tak ada yang konsisten bisa meramal kapan siklus berbalik, tetapi kita bisa memahami posisi kita: apakah valuasi mahal, apakah kredit longgar, dan apakah suasana hati pasar terlalu optimis. || Dengan begitu, sikap bisa disesuaikan dengan kondisi tanpa bertaruh pada satu ramalan. Karena itu skenario di database ini disajikan sebagai pola dan kemungkinan, lengkap dengan tingkat keyakinan, bukan prediksi.",
+            "tema": "siklus, risiko",
+            "node_terkait": "N142,N144,N147",
+            "sumber": "Memo Howard Marks (Oaktree), You Can't Predict. You Can Prepare. (2001)",
+            "status": "draft",
+            "akses": "free"
+        },
+        {
+            "id": "Q07",
+            "tokoh": "John Templeton",
+            "peran": "Investor global, pendiri Templeton Funds",
+            "kutipan": "The four most dangerous words in investing are: this time it's different.",
+            "terjemahan": "Empat kata paling berbahaya dalam investasi: kali ini berbeda.",
+            "penjelasan": "Kalimat ini dikaitkan dengan Sir John Templeton. Setiap ledakan harga biasanya disertai alasan mengapa kali ini aturan lama tidak berlaku, misalnya teknologi baru atau pasar baru. Ketika alasan itu dipakai untuk membenarkan harga yang jauh di atas nilai wajar, ia sering menjadi tanda euforia. || Bukan berarti tak ada perubahan nyata. Bedanya, klaim berbeda perlu bukti: apakah laba dan arus kas ikut naik, atau hanya harganya? Skenario gelembung teknologi akhir 1990-an dan pembiayaan melingkar AI di database ini bisa dipakai untuk membandingkan klaim dengan bukti.",
+            "tema": "euforia, skeptisisme",
+            "node_terkait": "N142,N093",
+            "sumber": "Dikaitkan dengan Sir John Templeton; rujukan primer belum dikonfirmasi",
+            "status": "draft",
+            "akses": "free"
+        },
+        {
+            "id": "Q08",
+            "tokoh": "Benjamin Graham",
+            "peran": "Penulis The Intelligent Investor, guru Warren Buffett",
+            "kutipan": "The investor's chief problem, and even his worst enemy, is likely to be himself.",
+            "terjemahan": "Masalah utama investor, bahkan musuh terburuknya, kemungkinan adalah dirinya sendiri.",
+            "penjelasan": "Graham menekankan bahwa kesalahan terbesar jarang berasal dari pasar, melainkan dari reaksi kita: membeli karena ikut-ikutan, menjual karena panik, atau menolak mengakui kesalahan. || Graham juga mengenalkan perumpamaan Mr. Market, yang menawarkan harga berbeda setiap hari mengikuti suasana hatinya, dan kita bebas menerima atau mengabaikannya. Pendulum psikologi investor pada skenario SC18 menggambarkan ayunan suasana hati itu.",
+            "tema": "psikologi, disiplin",
+            "node_terkait": "N140,N141,N144",
+            "sumber": "Graham, The Intelligent Investor (1949), bab 8",
+            "status": "draft",
+            "akses": "free"
+        }
     ]
 }
