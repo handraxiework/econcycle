@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <base target="_top">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Peta Siklus Ekonomi</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">/** @type {import('tailwindcss').Config} */
+        globalThis.tailwind = globalThis.tailwind || {};
+        globalThis.tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'pastel-mint': '#D1FAE5',
+                        'on-pastel-mint': '#065F46',
+                        'pastel-rose': '#FFE4E6',
+                        'on-pastel-rose': '#9F1239',
+                        'pastel-amber': '#FEF3C7',
+                        'on-pastel-amber': '#92400E',
+                        'pastel-sky': '#E0F2FE',
+                        'on-pastel-sky': '#075985',
+                        'pastel-lavender': '#47B1E6',
+                        'on-pastel-lavender': '#151599',
+                        'light-primary': '#685CD6',
+                        'light-on-primary': '#FFFFFF',
+                        'light-primary-container': '#5346C2',
+                        'light-on-primary-container': '#FFFFFF',
+                        'light-secondary': '#006A61',
+                        'light-on-secondary': '#FFFFFF',
+                        'light-secondary-container': '#86F2E4',
+                        'light-on-secondary-container': '#003732',
+                        'light-tertiary': '#950029',
+                        'light-on-tertiary': '#FFFFFF',
+                        'light-tertiary-container': '#FFDADA',
+                        'light-on-tertiary-container': '#68001A',
+                        'light-error': '#BA1A1A',
+                        'light-on-error': '#FFFFFF',
+                        'light-error-container': '#FFDAD6',
+                        'light-on-error-container': '#93000A',
+                        'light-background': '#E0F2FE',
+                        'light-on-background': '#151599',
+                        'light-surface': '#E0F2FE',
+                        'light-surface-dim': '#DCD8E5',
+                        'light-surface-bright': '#FFFFFF',
+                        'light-surface-container-lowest': '#F1E4E4',
+                        'light-surface-container-low': '#F5F2FF',
+                        'light-surface-container': '#F0ECF9',
+                        'light-surface-container-high': '#EAE6F4',
+                        'light-surface-container-highest': '#E4E1EE',
+                        'light-on-surface': '#151599',
+                        'light-surface-variant': '#E3E0F4',
+                        'light-on-surface-variant': '#1E1B4B',
+                        'light-outline': '#777587',
+                        'light-outline-variant': '#C7C4D8',
+                        'light-inverse-surface': '#302F39',
+                        'light-inverse-on-surface': '#F3EFFC',
+                        'light-inverse-primary': '#C3C0FF',
+                        'dark-primary': '#C3C0FF',
+                        'dark-on-primary': '#1D00A5',
+                        'dark-primary-container': '#4F46E5',
+                        'dark-on-primary-container': '#DAD7FF',
+                        'dark-secondary': '#6BD8CB',
+                        'dark-on-secondary': '#003732',
+                        'dark-secondary-container': '#29A195',
+                        'dark-on-secondary-container': '#001D1A',
+                        'dark-tertiary': '#FFB3B6',
+                        'dark-on-tertiary': '#68001A',
+                        'dark-tertiary-container': '#C20038',
+                        'dark-on-tertiary-container': '#FFD0D2',
+                        'dark-error': '#FFB4AB',
+                        'dark-on-error': '#690005',
+                        'dark-error-container': '#93000A',
+                        'dark-on-error-container': '#FFDAD6',
+                        'dark-background': '#13121B',
+                        'dark-on-background': '#E4E1EE',
+                        'dark-surface': '#13121B',
+                        'dark-surface-dim': '#13121B',
+                        'dark-surface-bright': '#393842',
+                        'dark-surface-container-lowest': '#0E0D16',
+                        'dark-surface-container-low': '#1B1B24',
+                        'dark-surface-container': '#1F1F28',
+                        'dark-surface-container-high': '#2A2933',
+                        'dark-surface-container-highest': '#35343E',
+                        'dark-on-surface': '#E4E1EE',
+                        'dark-surface-variant': '#464555',
+                        'dark-on-surface-variant': '#C7C4D8',
+                        'dark-outline': '#918FA1',
+                        'dark-outline-variant': '#464555',
+                        'dark-inverse-surface': '#E4E1EE',
+                        'dark-inverse-on-surface': '#302F39',
+                        'dark-inverse-primary': '#4D44E3',
+                    },
+                    borderRadius: {
+                        'sm': '6px',
+                        'DEFAULT': '10px',
+                        'md': '12px',
+                        'lg': '16px',
+                        'xl': '24px',
+                        'full': '9999px',
+                    },
+                    spacing: {
+                        'gutter-xs': '4px',
+                        'gutter-sm': '8px',
+                        'gutter-md': '16px',
+                        'gutter-lg': '24px',
+                        'gutter-xl': '32px',
+                        'section': '40px',
+                        'page-margin': '20px',
+                    },
+                    fontFamily: {
+                        'display': ['"Wix Madefor Display"', 'sans-serif'],
+                        'headline': ['"Wix Madefor Display"', 'sans-serif'],
+                        'title': ['"Instrument Sans"', 'sans-serif'],
+                        'body': ['"Instrument Sans"', 'sans-serif'],
+                        'label': ['"Instrument Sans"', 'sans-serif'],
+                        'mono': ['"Source Code Pro"', 'monospace'],
+                    },
+                    fontSize: {
+                        'display-lg': ['40px', { lineHeight: '46px', letterSpacing: '-0.75px', fontWeight: '800' }],
+                        'display-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.5px', fontWeight: '800' }],
+                        'headline-lg': ['34px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+                        'headline-lg-mobile': ['24px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '700' }],
+                        'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.25px', fontWeight: '700' }],
+                        'title-lg': ['18px', { lineHeight: '24px', letterSpacing: '-0.15px', fontWeight: '700' }],
+                        'title-md': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+                        'body-lg': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '400' }],
+                        'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+                        'label-lg': ['13px', { lineHeight: '18px', letterSpacing: '0.1px', fontWeight: '600' }],
+                        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '600' }],
+                        'mono-md': ['13px', { lineHeight: '18px', letterSpacing: '0.2px', fontWeight: '600' }],
+                    },
+                    transitionDuration: {
+                        'state-change': '150ms',
+                        'surface-enter': '240ms',
+                        'surface-exit': '150ms',
+                    },
+                    transitionDelay: {
+                        'state-change': '0ms',
+                        'surface-enter': '0ms',
+                        'surface-exit': '0ms',
+                    },
+                    transitionTimingFunction: {
+                        'state-change': 'ease-out',
+                        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+                        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+                    },
+                },
+            },
+        };
+        if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+    </script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@700;800&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Source+Code+Pro:wght@600&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block"
+        rel="stylesheet">
+    <style>
+        .material-symbols-outlined,
+        .material-symbols-rounded,
+        .material-symbols-sharp,
+        .material-icons {
+            display: inline-block;
+            width: 1em;
+            height: 1em;
+            line-height: 1 !important;
+            box-sizing: content-box;
+            overflow: hidden;
+            white-space: nowrap;
+            direction: ltr;
+            vertical-align: middle;
+        }
+
+        .tech-grid-bg {
+            background-image: radial-gradient(rgba(53, 37, 205, 0.08) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        .bub {
+            --t1: #EDE9FE;
+            --t2: #C3C0FF;
+            --t3: rgba(53, 37, 205, 0.22);
+            --t4: rgba(53, 37, 205, 0.25);
+            position: relative;
+            width: var(--s);
+            height: var(--s);
+            border-radius: 9999px;
+            border: 0;
+            padding: 14px;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            color: #1B1B24;
+            overflow: hidden;
+            background: radial-gradient(circle at 38% 32%, #FFFFFF 0%, var(--t1) 48%, var(--t2) 100%);
+            box-shadow: inset 0 -10px 20px var(--t3), inset 0 0 0 1.5px rgba(255, 255, 255, 0.9), 0 14px 28px -10px var(--t4);
+            animation: float 7s ease-in-out var(--d, 0s) infinite;
+            transition: transform 150ms ease-out, box-shadow 150ms ease-out;
+        }
+
+        .bub::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 9999px;
+            background: conic-gradient(from 200deg, rgba(255, 160, 210, 0.16), rgba(134, 242, 228, 0.22), rgba(224, 242, 254, 0.2), rgba(254, 243, 199, 0.16), rgba(255, 160, 210, 0.16));
+            mix-blend-mode: soft-light;
+            pointer-events: none;
+        }
+
+        .bub span {
+            position: relative;
+            z-index: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            hyphens: auto;
+        }
+
+        .bub:hover,
+        .bub:focus-visible {
+            transform: scale(1.06);
+            outline: none;
+            box-shadow: inset 0 -10px 20px var(--t3), inset 0 0 0 2.5px #3525CD, 0 18px 34px -10px var(--t4);
+        }
+
+        .bub.pos {
+            --t1: #D1FAE5;
+            --t2: #6EE7B7;
+            --t3: rgba(6, 95, 70, 0.22);
+            --t4: rgba(0, 106, 97, 0.28);
+        }
+
+        .bub.neg {
+            --t1: #FFE4E6;
+            --t2: #FDA4AF;
+            --t3: rgba(159, 18, 57, 0.20);
+            --t4: rgba(149, 0, 41, 0.26);
+        }
+
+        .bub.mix {
+            --t1: #FEF3C7;
+            --t2: #FCD34D;
+            --t3: rgba(146, 64, 14, 0.20);
+            --t4: rgba(180, 83, 9, 0.24);
+        }
+
+        .bub.me {
+            cursor: default;
+            animation: none;
+            box-shadow: inset 0 -12px 24px var(--t3), inset 0 0 0 2px #FFFFFF, 0 0 0 10px rgba(53, 37, 205, 0.08), 0 0 0 22px rgba(134, 242, 228, 0.18), 0 22px 38px -12px var(--t4);
+        }
+
+        .bub.me:hover {
+            transform: none;
+        }
+
+        @keyframes float {
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .bub {
+                animation: none;
+            }
+        }
+
+        .lock {
+            filter: blur(5px);
+            user-select: none;
+            pointer-events: none;
+        }
+
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-light-surface text-light-on-surface font-body antialiased selection:bg-pastel-lavender selection:text-on-pastel-lavender">
+
+    <div class="min-h-[1024px] w-full relative overflow-x-clip" data-stitch-vh="min-h-[1024px]===min-h-screen">
+        <!-- Subtle Pastel Ambient Glows -->
+        <div class="pointer-events-none fixed inset-0 overflow-hidden z-0" aria-hidden="true">
+            <div class="absolute -top-32 -left-24 w-96 h-96 rounded-full bg-pastel-lavender/60 blur-3xl"></div>
+            <div class="absolute top-24 -right-24 w-80 h-80 rounded-full bg-pastel-mint/50 blur-3xl"></div>
+            <div class="absolute bottom-0 left-1/3 w-96 h-96 rounded-full bg-pastel-sky/40 blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-7 flex flex-col gap-6">
+            <!-- App Shell Header -->
+            <header class="flex flex-wrap items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="w-11 h-11 rounded-sm bg-light-primary text-light-on-primary grid place-items-center shadow-sm">
+                        <span class="material-symbols-outlined text-[24px]" aria-hidden="true">hub</span>
+                    </div>
+                    <div>
+                        <h1 class="font-headline text-display-lg-mobile lg:text-display-lg text-light-on-surface text-balance"
+                            data-design-text-token="display-lg">Peta siklus ekonomi</h1>
+                        <p class="text-body-md text-light-on-surface-variant" data-design-text-token="body-md">
+                            Eksplorasi transmisi makroekonomi ke sektor &amp; saham</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-2">
+                    <span id="sync-badge"
+                        class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-sm bg-pastel-mint text-on-pastel-mint font-mono text-label-sm tabular-nums">
+                        <span class="w-2 h-2 rounded-full bg-on-pastel-mint" aria-hidden="true"></span>
+                        <span data-design-text-token="label-sm">LIVE MODEL</span>
+                    </span>
+                    <button id="rf" data-component-id="button-with-icon" data-component-type="button"
+                        data-component-variant="with-icon" type="button"
+                        class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-sm bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface font-label text-label-lg hover:border-light-primary hover:bg-pastel-lavender hover:text-on-pastel-lavender focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary transition-colors duration-state-change ease-state-change cursor-pointer shadow-sm">
+                        <span class="material-symbols-outlined text-[18px] text-light-primary"
+                            aria-hidden="true">sync</span>
+                        <span data-design-text-token="label-lg">Muat ulang data</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Navigation Tabs -->
+            <nav aria-label="Navigasi utama">
+                <div id="tabs" role="tablist" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+                    <button role="tab" data-m="home"
+                        class="flex-none inline-flex items-center gap-2 px-4 py-2.5 min-h-[40px] rounded-sm bg-light-primary text-light-on-primary font-label text-label-lg shadow-sm cursor-pointer transition-colors duration-state-change ease-state-change">
+                        <span class="material-symbols-outlined text-[18px]" aria-hidden="true">home</span>
+                        <span data-design-text-token="label-lg">Beranda</span>
+                    </button>
+                    <button role="tab" data-m="board"
+                        class="flex-none inline-flex items-center gap-2 px-4 py-2.5 min-h-[40px] rounded-sm bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface font-label text-label-lg hover:border-light-primary hover:bg-pastel-lavender hover:text-on-pastel-lavender cursor-pointer transition-colors duration-state-change ease-state-change">
+                        <span class="material-symbols-outlined text-[18px]" aria-hidden="true">radar</span>
+                        <span data-design-text-token="label-lg">Papan kejadian</span>
+                    </button>
+                    <button role="tab" data-m="cmp"
+                        class="flex-none inline-flex items-center gap-2 px-4 py-2.5 min-h-[40px] rounded-sm bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface font-label text-label-lg hover:border-light-primary hover:bg-pastel-lavender hover:text-on-pastel-lavender cursor-pointer transition-colors duration-state-change ease-state-change">
+                        <span class="material-symbols-outlined text-[18px]" aria-hidden="true">compare_arrows</span>
+                        <span data-design-text-token="label-lg">Bandingkan saham</span>
+                    </button>
+                    <button role="tab" data-m="quotes"
+                        class="flex-none inline-flex items-center gap-2 px-4 py-2.5 min-h-[40px] rounded-sm bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface font-label text-label-lg hover:border-light-primary hover:bg-pastel-lavender hover:text-on-pastel-lavender cursor-pointer transition-colors duration-state-change ease-state-change">
+                        <span class="material-symbols-outlined text-[18px]" aria-hidden="true">format_quote</span>
+                        <span data-design-text-token="label-lg">Kutipan</span>
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Main Dynamic Content -->
+            <main id="app" class="flex flex-col gap-6"></main>
+        </div>
+    </div>
+
+    <!-- Loading Overlay (hidden by default, shown only during manual refresh) -->
+    <div id="ld" role="status" aria-live="polite"
+        class="hidden fixed inset-0 z-50 place-content-center justify-items-center gap-3 bg-light-surface/80 backdrop-blur-sm">
+        <div
+            class="w-12 h-12 rounded-sm bg-pastel-lavender border border-light-primary/30 grid place-items-center shadow-md">
+            <span class="material-symbols-outlined text-[26px] text-light-primary animate-spin"
+                aria-hidden="true">progress_activity</span>
+        </div>
+        <p id="ldm" class="font-label text-label-lg text-light-on-surface">Memuat data…</p>
+    </div>
+
+    <script>
+        const DEMO = {
+            scenarios: [
+                { id: 'SC01', judul: 'Kenaikan harga minyak global', node_pembuka: 'N003', jenis: 'berjalan', siklus_besar: 'pasar', ringkasan: 'Menelusuri transmisi dari gangguan pasokan energi hingga HPP manufaktur dan laba emiten migas.' },
+                { id: 'SC02', judul: 'Suku bunga acuan bertahan tinggi', node_pembuka: 'N006', jenis: 'berjalan', siklus_besar: 'utang', ringkasan: 'Dampak biaya pinjaman terhadap margin laba bersih, daya beli properti, dan valuasi saham.' }
+            ],
+            nodes: [
+                { id: 'N002', judul: 'Pasokan minyak terganggu', skala_dampak: '4', deskripsi: 'Penurunan produksi atau hambatan distribusi di negara eksportir utama menekan suplai global.', akses: 'free', kategori: 'Komoditas' },
+                { id: 'N003', judul: 'Harga minyak naik', skala_dampak: '4', deskripsi: 'Lonjakan harga minyak mentah Brent mendorong pendapatan produsen hulu sekaligus menaikkan ongkos energi.', fase_siklus: 'Puncak', istilah_kunci: 'HPP', akses: 'free', kategori: 'Energi', contoh_historis: '2022: Brent menembus USD 110/barel.' },
+                { id: 'N006', judul: 'HPP manufaktur naik', skala_dampak: '3', deskripsi: 'Kenaikan tarif energi dan bahan baku petrokimia menekan margin kotor produsen barang konsumsi.', akses: 'free', kategori: 'Industri' }
+            ],
+            edges: [
+                { dari_node: 'N002', ke_node: 'N003', jeda_waktu: '1-4 minggu', keyakinan: 'tinggi', tipe_edge: 'causal', mekanisme: 'Defisit pasokan langsung mengerek harga spot minyak.' },
+                { dari_node: 'N003', ke_node: 'N006', jeda_waktu: '1-3 bulan', keyakinan: 'tinggi', tipe_edge: 'causal', mekanisme: 'Biaya logistik dan bahan baku turunan minyak ikut terkerek.' }
+            ],
+            impacts: [
+                { node_id: 'N003', target_tipe: 'sektor', target_id: 'S01', arah: 'positif', saluran: 'pendapatan', horizon: '1-6 bulan', alasan: 'Harga jual rata-rata minyak dan gas meningkat.', status: 'verified' },
+                { node_id: 'N003', target_tipe: 'sektor', target_id: 'S02', arah: 'negatif', saluran: 'biaya', horizon: '3-6 bulan', alasan: 'Ongkos bahan bakar dan kemasan plastik naik.', status: 'draft' }
+            ],
+            sectors: [
+                { id: 'S01', nama_sektor: 'Migas hulu', deskripsi: 'Produsen minyak bumi dan gas alam.', sensitivitas_umum: 'Harga Brent & volume lifting' },
+                { id: 'S02', nama_sektor: 'Konsumer & manufaktur', deskripsi: 'Produsen barang kebutuhan harian dan kemasan.', sensitivitas_umum: 'HPP energi & daya beli' }
+            ],
+            stocks: [
+                { ticker: 'MEDC', nama: 'Medco Energi Internasional', sektor_id: 'S01', eksposur: 'Produsen migas hulu dengan porsi kontrak harga pasar.' },
+                { ticker: 'ELSA', nama: 'Elnusa Tbk', sektor_id: 'S01', eksposur: 'Jasa penunjang hulu migas dan distribusi energi.' },
+                { ticker: 'ICBP', nama: 'Indofood CBP Sukses Makmur', sektor_id: 'S02', eksposur: 'Produk konsumen bermerek dengan kebutuhan kemasan plastik.' }
+            ],
+            glossary: [{ istilah: 'HPP', definisi: 'Harga Pokok Produksi: total biaya langsung untuk menghasilkan barang atau jasa.' }],
+            factors: [
+                { id: 'harga_komoditas', label: 'Harga komoditas', penjelasan: 'Sensitivitas pendapatan terhadap fluktuasi harga komoditas global.' },
+                { id: 'energi_intensif', label: 'Intensitas energi', penjelasan: 'Porsi biaya bahan bakar dan listrik terhadap total biaya operasional.' }
+            ],
+            stock_profile: [
+                { ticker: 'MEDC', faktor: 'harga_komoditas', besar: 'besar', keterangan: 'Pendapatan berkorelasi langsung dengan harga minyak Brent.', keyakinan: 'tinggi', status: 'verified' },
+                { ticker: 'ELSA', faktor: 'harga_komoditas', besar: 'sedang', keterangan: 'Belanja modal kontraktor migas meningkat saat harga minyak tinggi.', keyakinan: 'sedang', status: 'draft' },
+                { ticker: 'ICBP', faktor: 'energi_intensif', besar: 'sedang', keterangan: 'Biaya resin kemasan dan distribusi terdampak harga minyak.', keyakinan: 'tinggi', status: 'draft' }
+            ],
+            live_status: [
+                { id: 'L01', node_id: 'N003', status: 'berlangsung', ringkasan: 'Volatilitas harga Brent memengaruhi ekspektasi inflasi energi kuartalan.', indikator_pantau: 'Harga Brent', diperbarui: '2026-11-09', akses: 'free' },
+                { id: 'L02', node_id: 'N006', status: 'baru_terjadi', ringkasan: 'Indeks biaya input manufaktur mulai menunjukkan penyesuaian bertahap.', indikator_pantau: 'PMI Input Cost', diperbarui: '2026-11-18', akses: 'free' }
+            ],
+            quotes: [
+                { tokoh: 'Howard Marks', peran: 'Co-Chairman Oaktree Capital', kutipan: 'We may never know where we are going, but we ought to know where we are.', terjemahan: 'Kita mungkin tidak selalu tahu ke mana arah pasar bergerak, tetapi kita harus tahu di fase siklus mana kita berada.', penjelasan: 'Memahami posisi siklus membantu investor menakar risiko tanpa harus menebak titik puncak atau dasar secara presisi.', tema: 'Siklus pasar, Manajemen risiko', node_terkait: 'N003', status: 'verified', akses: 'free' }
+            ]
+        };
+
+        const $ = s => document.querySelector(s), E = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        const FASE = ['Ekspansi', 'Puncak', 'Kontraksi', 'Pemulihan'], CL = { positif: 'text-on-pastel-mint', negatif: 'text-on-pastel-rose', campuran: 'text-on-pastel-amber' }, ST = { berlangsung: 'Berlangsung', baru_terjadi: 'Baru terjadi', mereda: 'Mereda' };
+        const ST_CLS = { berlangsung: 'bg-pastel-rose text-on-pastel-rose', baru_terjadi: 'bg-pastel-amber text-on-pastel-amber', mereda: 'bg-light-surface-container text-light-on-surface-variant' };
+        const DISC = 'Konten edukasi, bukan rekomendasi beli atau jual saham.';
+        let D, trail = [], busyN = 0;
+
+        const busy = (d, m) => { busyN += d; if (m) $('#ldm').textContent = m; const el = $('#ld'); el.classList.toggle('hidden', busyN <= 0); el.classList.toggle('grid', busyN > 0); };
+        async function load(msg, fresh) {
+            busy(1, msg);
+            try {
+                const opts = fresh ? { cache: 'reload' } : {};
+                let r = await fetch('data.json', opts).catch(() => null);
+                if (!r || !r.ok) r = await fetch('../../uploads/data-b08e60.json', opts).catch(() => null);
+                if (!r || !r.ok) throw new Error('Data tidak ditemukan');
+                return await r.json();
+            } finally { busy(-1); }
+        }
+
+        let sf = 'all', mode = 'home', bf = 'all', cg = null, cf = null, cc = null, chainId = null, stockId = null, forced = [], hist = [], curP = [];
+        const FS = { berlangsung: 0, baru_terjadi: 1, mereda: 2 }, SZ = { besar: 3, sedang: 2, kecil: 1 };
+
+        $('#rf').onclick = () => load('Memperbarui data…', true).then(init).catch(() => init(DEMO));
+        $('#tabs').onclick = e => {
+            const b = e.target.closest('[data-m]');
+            if (!b) return;
+            mode = b.dataset.m; trail = []; chainId = stockId = null; hist = []; view();
+        };
+
+        function init(d) {
+            D = d;
+            for (const k of ['scenarios', 'nodes', 'edges', 'impacts', 'sectors', 'stocks', 'glossary', 'factors', 'stock_profile', 'live_status', 'quotes']) D[k] = D[k] || [];
+            D.live = D.live_status;
+            D.nm = Object.fromEntries(D.nodes.map(n => [n.id, n]));
+            D.sm = Object.fromEntries(D.sectors.map(s => [s.id, s]));
+            D.tm = Object.fromEntries(D.stocks.map(s => [s.ticker, s]));
+            D.fm = Object.fromEntries(D.factors.map(f => [f.id, f]));
+            trail = []; chainId = stockId = null; hist = [];
+            view();
+        }
+
+        function updateTabs() {
+            const activeHome = !trail.length && !chainId && !stockId;
+            document.querySelectorAll('#tabs [data-m]').forEach(b => {
+                const on = activeHome && b.dataset.m === mode;
+                b.setAttribute('aria-selected', on ? 'true' : 'false');
+                b.className = on
+                    ? 'flex-none inline-flex items-center gap-2 px-4 py-2.5 min-h-[40px] rounded-sm bg-light-primary text-light-on-primary font-label text-label-lg shadow-sm cursor-pointer transition-colors duration-state-change ease-state-change'
+                    : 'flex-none inline-flex items-center gap-2 px-4 py-2.5 min-h-[40px] rounded-sm bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface font-label text-label-lg hover:border-light-primary hover:bg-pastel-lavender hover:text-on-pastel-lavender cursor-pointer transition-colors duration-state-change ease-state-change';
+            });
+        }
+
+        const view = () => {
+            trail.length ? graph() : stockId ? stockCard() : chainId ? chain() : mode === 'board' ? board() : mode === 'cmp' ? cmp() : mode === 'quotes' ? quotes() : home();
+            updateTabs();
+        };
+
+        function go(c, d) {
+            if (!trail.length && !c.map && c.t !== 's') { snap(); chainId = c.t === 'n' ? c.id : null; stockId = c.t === 'k' ? c.id : null; forced = []; view(); scrollTo(0, 0); return; }
+            if (!trail.length) snap();
+            chainId = stockId = null;
+            const i = trail.findIndex(x => x.t === c.t && x.id === c.id);
+            trail = i < 0 ? [...trail, { ...c, d }] : trail.slice(0, i + 1);
+            view(); scrollTo(0, 0);
+        }
+
+        const tn = a => { if (!a.length) return ''; const p = a.includes('positif'), n = a.includes('negatif'), m = a.includes('campuran'); return (p && n) || m ? 'mix' : p ? 'pos' : n ? 'neg' : ''; };
+        const nTone = id => tn(D.impacts.filter(i => i.node_id === id).map(i => i.arah));
+        const sTone = id => tn(D.impacts.filter(i => i.target_tipe === 'sektor' && i.target_id === id).map(i => i.arah));
+        const dr = r => r.status === 'verified'
+            ? '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-sm bg-pastel-mint text-on-pastel-mint font-label text-label-sm">Terverifikasi</span>'
+            : '<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-sm bg-light-surface-container text-light-on-surface-variant border border-dashed border-light-outline font-label text-label-sm">Draft</span>';
+        const lab = c => c.t === 'n' ? D.nm[c.id].judul : c.t === 's' ? D.sm[c.id].nama_sektor : c.id + (D.tm[c.id] ? ' · ' + D.tm[c.id].nama : '');
+        const bt = (t, id, d, txt, cls = 'text-light-primary font-semibold hover:underline cursor-pointer text-left') => `<button type="button" class="${cls}" data-t="${t}" data-id="${E(id)}" data-d="${d}">${E(txt)}</button>`;
+
+        const SB = { utang: 'Siklus utang', internal: 'Tatanan internal', eksternal: 'Tatanan eksternal', inovasi: 'Inovasi', alam: 'Peristiwa alam', pasar: 'Siklus pasar' };
+        const sbChips = () => {
+            const ks = [...new Set(D.scenarios.map(x => x.siklus_besar).filter(Boolean))];
+            if (!ks.length) return '';
+            return `<div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">${[['all', 'Semua'], ...ks.map(k => [k, SB[k] || k])].map(([k, lbl]) =>
+                `<button type="button" data-sf="${E(k)}" class="flex-none px-4 py-2 min-h-[40px] rounded-sm font-label text-label-lg transition-colors duration-state-change ease-state-change cursor-pointer ${sf === k ? 'bg-light-primary text-light-on-primary shadow-sm' : 'bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface hover:border-light-primary hover:bg-pastel-lavender hover:text-on-pastel-lavender'}">${E(lbl)}</button>`
+            ).join('')}</div>`;
+        };
+
+        const pg = { res: 0, sc: 0, bd: 0, qt: 0 }, PS = { res: 8, sc: 6, bd: 6, qt: 5 };
+        let qq = '', qty = 'saham', qg = 'all';
+
+        const pager = (k, n, p, ps) => {
+            if (n <= ps) return n ? `<p class="font-mono text-label-sm text-light-on-surface-variant tabular-nums">${n} data</p>` : '';
+            const m = Math.ceil(n / ps);
+            return `<div class="flex flex-wrap items-center justify-between gap-3 pt-2 font-mono text-label-sm text-light-on-surface-variant tabular-nums">
+        <button type="button" data-pg="${k}:-1" ${p <= 0 ? 'disabled' : ''} class="px-4 py-2 rounded-sm bg-light-surface-container-lowest border border-light-outline-variant font-label text-label-lg text-light-on-surface hover:border-light-primary disabled:opacity-40 disabled:cursor-default cursor-pointer">‹ Sebelumnya</button>
+        <span>${p * ps + 1}–${Math.min(n, p * ps + ps)} dari ${n} · hal ${p + 1}/${m}</span>
+        <button type="button" data-pg="${k}:1" ${p >= m - 1 ? 'disabled' : ''} class="px-4 py-2 rounded-sm bg-light-surface-container-lowest border border-light-outline-variant font-label text-label-lg text-light-on-surface hover:border-light-primary disabled:opacity-40 disabled:cursor-default cursor-pointer">Berikutnya ›</button>
+      </div>`;
+        };
+
+        function scGrid() {
+            const L = D.scenarios.filter(x => sf === 'all' || x.siklus_besar === sf), ps = PS.sc;
+            pg.sc = Math.min(pg.sc, Math.max(0, Math.ceil(L.length / ps) - 1));
+            $('#sct').textContent = sf === 'all' ? L.length : L.length + ' dari ' + D.scenarios.length;
+            $('#scg').innerHTML = L.length ? L.slice(pg.sc * ps, pg.sc * ps + ps).map(x => `
+        <button type="button" data-component-id="card-interactive-2" data-component-type="card" data-component-variant="interactive" data-t="n" data-id="${E(x.node_pembuka)}" data-d="R"
+          class="text-left h-full bg-pastel-lavender border border-light-outline-variant/70 rounded-sm p-5 flex flex-col gap-2.5 hover:border-light-primary hover:bg-light-surface-container-low focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary transition-colors duration-state-change ease-state-change cursor-pointer shadow-sm">
+          <div class="flex flex-wrap items-center gap-1.5">
+            <span class="px-2.5 py-0.5 rounded-sm bg-pastel-sky text-on-pastel-sky font-label text-label-sm">${E(x.jenis || 'skenario')}</span>
+            ${x.siklus_besar ? `<span class="px-2.5 py-0.5 rounded-sm bg-pastel-lavender text-on-pastel-lavender font-label text-label-sm">${E(SB[x.siklus_besar] || x.siklus_besar)}</span>` : ''}
+          </div>
+          <b class="font-headline text-title-md text-light-on-surface">${E(x.judul)}</b>
+          <p class="text-body-md text-light-on-surface-variant line-clamp-3 text-pretty">${E(x.ringkasan)}</p>
+        </button>`).join('') : '<p class="text-body-md text-light-on-surface-variant">Tidak ada skenario pada filter ini.</p>';
+            $('#sp').innerHTML = pager('sc', L.length, pg.sc, ps);
+        }
+
+        function stats() {
+            const ts = new Set(D.stock_profile.map(p => p.ticker).filter(t => D.tm[t])).size;
+            const run = D.scenarios.filter(x => x.jenis === 'berjalan').length;
+            const t = [
+                [D.stocks.length, 'Saham', ts + ' punya profil eksposur', 'bg-pastel-mint', 'border-on-pastel-mint/30', 'trending_up'],
+                [D.scenarios.length, 'Skenario', run + ' sedang berjalan', 'bg-pastel-lavender', 'border-on-pastel-lavender/30', 'auto_graph'],
+                [D.nodes.length, 'Kejadian', D.edges.length + ' hubungan sebab-akibat', 'bg-pastel-sky', 'border-on-pastel-sky/30', 'schema'],
+                [D.sectors.length, 'Sektor', D.live.length + ' kejadian dipantau', 'bg-pastel-amber', 'border-on-pastel-amber/30', 'monitoring']
+            ];
+            return `<section class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">${t.map(x => `
+        <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-pastel-lavender border border-light-outline-variant/60 rounded-sm p-4 sm:p-5 flex flex-col gap-2 shadow-sm">
+          <div class="flex items-center justify-between gap-2">
+            <span class="font-mono text-label-sm uppercase tracking-wider text-light-on-surface-variant">${x[1]}</span>
+            <span class="w-7 h-7 rounded-full ${x[3]} border ${x[4]} grid place-items-center" aria-hidden="true">
+              <span class="material-symbols-outlined text-[16px]">${x[5]}</span>
+            </span>
+          </div>
+          <b class="font-headline text-headline-lg-mobile sm:text-headline-lg text-light-on-surface tabular-nums">${x[0]}</b>
+          <small class="text-label-sm text-light-on-surface-variant">${x[2]}</small>
+        </article>`).join('')}</section>`;
+        }
+
+        const rcard = x => `
+      <button type="button" data-t="${x.t}" data-id="${E(x.id)}" data-d="R"
+        class="text-left h-full bg-pastel-lavender border border-light-outline-variant/70 rounded-sm p-4 flex flex-col gap-2 hover:border-light-primary hover:bg-light-surface-container-low focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary transition-colors duration-state-change ease-state-change cursor-pointer shadow-sm">
+        <span class="self-start px-2.5 py-0.5 rounded-sm bg-pastel-lavender text-on-pastel-lavender font-label text-label-sm">${x.k}</span>
+        <b class="font-headline text-title-md text-light-on-surface">${E(x.l)}</b>
+      </button>`;
+
+        function resRender() {
+            const v = qq.trim().toLowerCase(), has = z => !v || z.toLowerCase().includes(v);
+            const L = {
+                saham: D.stocks.filter(x => has(x.ticker + ' ' + x.nama)).map(x => ({ t: 'k', id: x.ticker, l: x.ticker + ' · ' + x.nama, k: 'Saham' })),
+                sektor: D.sectors.filter(x => has(x.nama_sektor)).map(x => ({ t: 's', id: x.id, l: x.nama_sektor, k: 'Sektor' })),
+                kejadian: D.nodes.filter(x => has(x.judul)).map(x => ({ t: 'n', id: x.id, l: x.judul, k: 'Kejadian' }))
+            };
+            if (v && !L[qty].length) { const o = Object.keys(L).find(k => L[k].length); if (o) qty = o; }
+            const nm = { saham: 'Saham', sektor: 'Sektor', kejadian: 'Kejadian' }, a = L[qty], ps = PS.res;
+            pg.res = Math.min(pg.res, Math.max(0, Math.ceil(a.length / ps) - 1));
+            $('#rt').innerHTML = Object.keys(L).map(k =>
+                `<button type="button" data-qty="${k}" class="flex-none px-4 py-2 min-h-[40px] rounded-sm font-label text-label-lg transition-colors duration-state-change ease-state-change cursor-pointer ${k === qty ? 'bg-light-primary text-light-on-primary shadow-sm' : 'bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface hover:border-light-primary hover:bg-light-surface-container-lowest hover:text-on-pastel-lavender'}">${nm[k]} (${L[k].length})</button>`
+            ).join('');
+            $('#res').innerHTML = a.length ? a.slice(pg.res * ps, pg.res * ps + ps).map(rcard).join('') : '<p class="text-body-md text-light-on-surface-variant">Tidak ada hasil.</p>';
+            $('#rp').innerHTML = pager('res', a.length, pg.res, ps);
+        }
+
+        function home() {
+            const live = D.live.filter(l => D.nm[l.node_id]).sort((a, b) => (FS[a.status] ?? 3) - (FS[b.status] ?? 3) || String(b.diperbarui).localeCompare(String(a.diperbarui)));
+            $('#app').innerHTML = `
+        ${stats()}
+        <section class="flex flex-col gap-3">
+          <div data-component-id="searchbar-standard" data-component-type="searchbar" data-component-variant="standard" role="search" class="relative flex items-center w-full">
+            <span class="material-symbols-outlined absolute left-4 text-[20px] text-light-primary pointer-events-none" aria-hidden="true">search</span>
+            <input id="q" type="search" placeholder="Cari saham, sektor, atau kejadian… (contoh: MEDC, migas, harga minyak)" aria-label="Cari"
+              class="w-full pl-11 pr-4 py-3.5 rounded-sm bg-light-surface-container-lowest border border-light-outline-variant text-body-lg text-light-on-surface placeholder:text-light-outline focus:outline-none focus:ring-2 focus:ring-light-primary focus:border-light-primary shadow-sm transition-colors duration-state-change ease-state-change" />
+          </div>
+          <div id="rt" class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1"></div>
+          <div id="res" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-stretch"></div>
+          <div id="rp"></div>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <h2 class="font-headline text-title-lg text-light-on-surface">Jika ini terjadi: kejadian yang sedang dipantau (${live.length})</h2>
+            ${live.length > 4 ? `<button type="button" class="text-label-lg font-label text-light-primary hover:underline cursor-pointer" data-m2="board">Lihat semua ${live.length} kejadian →</button>` : ''}
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 items-stretch">
+            ${live.length ? live.slice(0, 4).map(l => `
+              <button type="button" data-t="n" data-id="${E(l.node_id)}" data-d="R"
+                class="text-left h-full bg-pastel-lavender border border-light-outline-variant/70 rounded-sm p-5 flex flex-col gap-2 hover:border-light-primary hover:bg-light-surface-container-low focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-light-primary transition-colors duration-state-change ease-state-change cursor-pointer shadow-sm">
+                <div class="flex flex-wrap items-center gap-1.5">
+                  <span class="px-2.5 py-0.5 rounded-sm font-label text-label-sm ${ST_CLS[l.status] || 'bg-light-surface-container text-light-on-surface-variant'}">${E(ST[l.status] || l.status)}</span>
+                  ${l.akses === 'premium' ? '<span class="px-2.5 py-0.5 rounded-sm bg-pastel-lavender text-on-pastel-lavender font-label text-label-sm">Premium</span>' : ''}
+                </div>
+                <b class="font-headline text-title-md text-light-on-surface">${E(D.nm[l.node_id].judul)}</b>
+                <p class="text-body-md text-light-on-surface-variant line-clamp-3 ${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}</p>
+              </button>`).join('') : '<p class="text-body-md text-light-on-surface-variant">Belum ada kejadian yang dipantau.</p>'}
+          </div>
+        </section>
+
+        <section class="flex flex-col gap-3">
+          <h2 class="font-headline text-title-lg text-light-on-surface">Skenario belajar (<span id="sct" class="tabular-nums"></span>)</h2>
+          ${sbChips()}
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 items-stretch" id="scg"></div>
+          <div id="sp"></div>
+        </section>
+        <p class="text-label-sm text-light-on-surface-variant pt-2 border-t border-light-outline-variant/50">${DISC}</p>`;
+            scGrid();
+            const q = $('#q'); q.value = qq;
+            q.oninput = () => { qq = q.value; pg.res = 0; resRender(); };
+            resRender();
+        }
+
+        const qcard = x => {
+            const ps = String(x.penjelasan || '').split('||').map(z => z.trim()).filter(Boolean);
+            const nd = String(x.node_terkait || '').split(/[,|]/).map(z => z.trim()).filter(id => D.nm[id]);
+            const tm = String(x.tema || '').split(',').map(z => z.trim()).filter(Boolean);
+            return `<article class="bg-pastel-lavender border border-light-outline-variant/70 rounded-sm p-6 flex flex-col gap-3 shadow-sm">
+        <blockquote class="font-headline text-headline-md text-light-on-surface text-balance">“${E(x.kutipan)}”</blockquote>
+        ${x.terjemahan ? `<p class="text-body-lg italic text-light-on-surface-variant">${E(x.terjemahan)}</p>` : ''}
+        <p class="text-body-md"><b class="text-light-primary">${E(x.tokoh)}</b>${x.peran ? ' · <span class="text-light-on-surface-variant">' + E(x.peran) + '</span>' : ''}</p>
+        <div class="flex flex-col gap-1.5 text-body-md text-light-on-surface ${x.akses === 'premium' ? 'lock' : ''}">${ps.map(z => `<p>${E(z)}</p>`).join('')}</div>
+        <div class="flex flex-wrap items-center gap-1.5">${tm.map(z => `<span class="px-2.5 py-0.5 rounded-sm bg-pastel-sky text-on-pastel-sky font-label text-label-sm">${E(z)}</span>`).join('')}${dr(x)}</div>
+        ${nd.length ? `<p class="text-label-sm text-light-on-surface-variant flex flex-wrap items-center gap-1.5">Terkait kejadian: ${nd.map(id => bt('n', id, 'R', D.nm[id].judul, 'px-2.5 py-0.5 rounded-sm bg-pastel-lavender text-on-pastel-lavender font-label text-label-sm hover:bg-light-primary hover:text-light-on-primary cursor-pointer')).join(' ')}</p>` : ''}
+        ${/^http/.test(x.sumber || '') ? `<p class="text-label-sm"><a href="${E(x.sumber)}" target="_blank" rel="noopener" class="text-light-primary hover:underline">Sumber ↗</a></p>` : x.sumber ? `<p class="text-label-sm text-light-on-surface-variant">Sumber: ${E(x.sumber)}</p>` : ''}
+      </article>`;
+        };
+
+        function quotes() {
+            const Q = D.quotes.filter(x => x.kutipan), ts = [...new Set(Q.map(x => x.tokoh))];
+            if (qg !== 'all' && !ts.includes(qg)) qg = 'all';
+            const F = Q.filter(x => qg === 'all' || x.tokoh === qg), ps = PS.qt;
+            pg.qt = Math.min(pg.qt, Math.max(0, Math.ceil(F.length / ps) - 1));
+            $('#app').innerHTML = `
+        <div class="flex flex-col gap-1">
+          <h2 class="font-headline text-headline-md text-light-on-surface">Kutipan investor (${Q.length})</h2>
+          <p class="text-body-md text-light-on-surface-variant">Kalimat singkat dari para investor beserta konteksnya. Bahan belajar, bukan saran investasi.</p>
+        </div>
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">
+          <button type="button" data-qg="all" class="flex-none px-4 py-2 min-h-[40px] rounded-sm font-label text-label-lg cursor-pointer ${qg === 'all' ? 'bg-light-primary text-light-on-primary shadow-sm' : 'bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface hover:border-light-primary'}">Semua (${Q.length})</button>
+          ${ts.map(t => `<button type="button" data-qg="${E(t)}" class="flex-none px-4 py-2 min-h-[40px] rounded-sm font-label text-label-lg cursor-pointer ${qg === t ? 'bg-light-primary text-light-on-primary shadow-sm' : 'bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface hover:border-light-primary'}">${E(t)} (${Q.filter(x => x.tokoh === t).length})</button>`).join('')}
+        </div>
+        <div class="flex flex-col gap-4">${F.slice(pg.qt * ps, pg.qt * ps + ps).map(qcard).join('') || '<p class="text-body-md text-light-on-surface-variant">Belum ada kutipan.</p>'}</div>
+        ${pager('qt', F.length, pg.qt, ps)}`;
+        }
+
+        function sides(c) {
+            const N = id => ({ t: 'n', id, l: D.nm[id].judul, s: +D.nm[id].skala_dampak || 2, k: nTone(id) });
+            const S = id => ({ t: 's', id, l: D.sm[id].nama_sektor, s: 2, k: sTone(id) }), uniq = a => [...new Set(a)];
+            if (c.t === 'n') {
+                const imp = D.impacts.filter(i => i.node_id === c.id);
+                return {
+                    L: D.edges.filter(e => e.ke_node === c.id && D.nm[e.dari_node]).map(e => ({ ...N(e.dari_node), e })),
+                    R: [
+                        ...D.edges.filter(e => e.dari_node === c.id && D.nm[e.ke_node]).map(e => ({ ...N(e.ke_node), e })),
+                        ...uniq(imp.filter(i => i.target_tipe === 'sektor').map(i => i.target_id)).filter(x => D.sm[x]).map(S),
+                        ...imp.filter(i => i.target_tipe === 'saham' && D.tm[i.target_id]).map(i => ({ t: 'k', id: i.target_id, l: i.target_id, s: 1, k: tn([i.arah]) }))
+                    ]
+                };
+            }
+            if (c.t === 's') return {
+                L: uniq(D.impacts.filter(i => i.target_tipe === 'sektor' && i.target_id === c.id).map(i => i.node_id)).filter(x => D.nm[x]).map(N),
+                R: D.stocks.filter(s => s.sektor_id === c.id).map(s => ({ t: 'k', id: s.ticker, l: s.ticker, s: 1, k: '' }))
+            };
+            const st = D.tm[c.id] || {};
+            return { L: [...(D.sm[st.sektor_id] ? [S(st.sektor_id)] : []), ...uniq(D.impacts.filter(i => i.target_tipe === 'saham' && i.target_id === c.id).map(i => i.node_id)).filter(x => D.nm[x]).map(N)], R: [] };
+        }
+
+        function graph() {
+            const c = trail[trail.length - 1], { L, R } = sides(c), n = c.t === 'n' ? D.nm[c.id] : null, lim = a => a.slice(0, 7);
+            const it = (x, s, i) => `<button type="button" class="bub ${x.k} font-label text-label-sm" style="--s:${88 + x.s * 14}px;--d:${(i * .8).toFixed(1)}s" data-i="${s}${i}" data-t="${x.t}" data-id="${E(x.id)}" data-d="${s}" title="${E(x.l)}"><span>${E(x.l)}</span></button>`;
+            const col = (a, s, e) => a.length ? lim(a).map((x, i) => it(x, s, i)).join('') + (a.length > 7 ? `<p class="text-label-sm text-light-on-surface-variant text-center">+${a.length - 7} lainnya di panel</p>` : '') : `<p class="text-label-sm text-light-on-surface-variant text-center max-w-[160px]">${e}</p>`;
+            const tone = c.t === 'n' ? nTone(c.id) : c.t === 's' ? sTone(c.id) : '';
+            $('#app').innerHTML = `
+        <div class="flex flex-wrap items-center gap-3 text-body-md text-light-on-surface-variant">
+          ${bk()}
+          <div class="flex flex-wrap items-center gap-1.5">${trail.map((x, i) => i === trail.length - 1 ? `<b class="text-light-on-surface">${E(lab(x))}</b>` : `<button type="button" class="text-light-primary hover:underline cursor-pointer" data-ix="${i}">${E(lab(x))}</button> <span>›</span>`).join('')}</div>
+          ${n ? `<div class="flex flex-wrap gap-1.5 lg:ml-auto">${FASE.map(f => `<span class="px-3 py-0.5 rounded-sm font-label text-label-sm ${f === n.fase_siklus ? 'bg-light-primary text-light-on-primary' : 'bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface-variant'}">${f}</span>`).join('')}</div>` : ''}
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_360px] gap-5 items-start">
+          <div class="relative rounded-sm p-6 sm:p-8 min-h-[460px] bg-light-surface-container-lowest tech-grid-bg border border-light-outline-variant/70 shadow-sm grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] gap-8 md:gap-12 items-center" id="stage">
+            <svg id="links" class="hidden md:block absolute inset-0 w-full h-full pointer-events-none"></svg>
+            <div class="flex flex-col gap-5 items-center relative z-10">${col(L, 'L', c.t === 'k' ? 'Ujung bawah: saham.' : 'Titik awal rantai ini.')}</div>
+            <div class="flex flex-col items-center relative z-10"><div class="bub me ${tone} font-headline text-title-md" style="--s:196px"><span>${E(lab(c))}</span></div></div>
+            <div class="flex flex-col gap-5 items-center relative z-10">${col(R, 'R', 'Ujung rantai. Belum ada efek lanjutan.')}</div>
+          </div>
+          <aside class="bg-pastel-lavender border border-light-outline-variant/70 rounded-sm p-5 shadow-sm lg:sticky lg:top-4 lg:max-h-[calc(100vh-32px)] overflow-auto flex flex-col gap-3" id="panel"></aside>
+        </div>`;
+            $('#panel').innerHTML = panel(c, R);
+            requestAnimationFrame(() => links(L, R));
+        }
+
+        function links(L, R) {
+            const st = $('#stage'), svg = $('#links');
+            if (!svg || getComputedStyle(svg).display === 'none') return;
+            const B = st.getBoundingClientRect(), me = st.querySelector('.me');
+            const pt = b => { const r = b.getBoundingClientRect(); return { x: r.left - B.left + r.width / 2, y: r.top - B.top + r.height / 2, r: r.width / 2 }; };
+            let h = '<defs><marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M2 1L8 5L2 9" fill="none" stroke="#777587" stroke-width="1.6"/></marker></defs>';
+            const dw = (a, b, e) => {
+                if (!a || !b) return;
+                const p = pt(a), q = pt(b), dx = q.x - p.x, dy = q.y - p.y, l = Math.hypot(dx, dy) || 1, ux = dx / l, uy = dy / l;
+                const sx = p.x + ux * p.r, sy = p.y + uy * p.r, ex = q.x - ux * (q.r + 6), ey = q.y - uy * (q.r + 6), m = (ex - sx) / 2;
+                h += `<path fill="none" stroke="${e && e.tipe_edge === 'feedback' ? '#3525CD' : '#C7C4D8'}" stroke-width="1.8" ${e && e.tipe_edge === 'feedback' ? 'stroke-dasharray="6 5"' : ''} d="M${sx},${sy}C${sx + m},${sy} ${ex - m},${ey} ${ex},${ey}" marker-end="url(#ar)"/>`;
+                if (e && e.jeda_waktu) h += `<text x="${(sx + ex) / 2}" y="${(sy + ey) / 2 - 6}" font-size="11" font-family="Source Code Pro, monospace" fill="#464555" text-anchor="middle" paint-order="stroke" stroke="#FFFFFF" stroke-width="4px">${E((e.tipe_edge === 'feedback' ? 'loop: ' : '') + e.jeda_waktu)}</text>`;
+            };
+            const el = k => st.querySelector(`[data-i="${k}"]`);
+            L.slice(0, 7).forEach((x, i) => dw(el('L' + i), me, x.e));
+            R.slice(0, 7).forEach((x, i) => dw(me, el('R' + i), x.e));
+            svg.setAttribute('viewBox', `0 0 ${B.width} ${B.height}`);
+            svg.innerHTML = h;
+        }
+        addEventListener('resize', () => { if (D && trail.length) graph(); });
+
+        const tgt = i => i.target_tipe === 'saham' ? bt('k', i.target_id, 'R', i.target_id) : bt('s', i.target_id, 'R', (D.sm[i.target_id] || {}).nama_sektor || i.target_id);
+        const row = (lbl, i) => `<div class="border-t border-light-outline-variant/50 py-2.5 flex flex-col gap-1 text-body-md"><div class="flex flex-wrap items-center gap-2"><b>${lbl}</b> <span class="font-label text-label-sm ${CL[i.arah] || ''}">${E(i.arah)}</span> ${dr(i)}</div><small class="text-label-sm text-light-on-surface-variant">Lewat ${E(i.saluran)}, ${E(i.horizon)}. ${E(i.alasan)}</small></div>`;
+
+        function panel(c, R) {
+            if (c.t === 'n') {
+                const n = D.nm[c.id], imp = D.impacts.filter(i => i.node_id === c.id), prem = n.akses === 'premium';
+                const eff = D.edges.filter(e => e.dari_node === c.id && D.nm[e.ke_node]), terms = (n.istilah_kunci || '').split(',').map(s => s.trim()).filter(Boolean), lv = D.live.filter(l => l.node_id === c.id);
+                return `<div><button type="button" data-chain="1" data-id="${E(c.id)}" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-sm bg-light-primary text-light-on-primary font-label text-label-lg cursor-pointer hover:bg-light-primary-container transition-colors duration-state-change">Baca sebagai alur</button></div>
+          <h2 class="font-headline text-headline-md text-light-on-surface">${E(n.judul)}</h2>
+          <div class="flex flex-wrap gap-1.5">${n.fase_siklus ? `<span class="px-2.5 py-0.5 rounded-sm bg-light-on-surface text-light-surface font-label text-label-sm">${E(n.fase_siklus)}</span>` : ''}${n.kategori ? `<span class="px-2.5 py-0.5 rounded-sm bg-pastel-sky text-on-pastel-sky font-label text-label-sm">${E(n.kategori)}</span>` : ''}<span class="px-2.5 py-0.5 rounded-sm bg-pastel-lavender text-on-pastel-lavender font-mono text-label-sm tabular-nums">Skala ${E(n.skala_dampak || '-')}/5</span></div>
+          <p class="text-body-md text-light-on-surface text-pretty">${E(n.deskripsi)}</p>
+          ${n.contoh_historis ? `<p class="text-label-sm text-light-on-surface-variant">Contoh: ${E(n.contoh_historis)}</p>` : ''}
+          ${lv.map(l => { const u = (l.sumber || '').split(' | ')[0]; return `<div class="rounded-md bg-pastel-amber/60 p-3 flex flex-col gap-1"><span class="self-start px-2.5 py-0.5 rounded-sm font-label text-label-sm ${ST_CLS[l.status] || ''}">${E(ST[l.status] || l.status)}</span><span class="text-body-md ${l.akses === 'premium' ? 'lock' : ''}">${E(l.ringkasan)}<small class="block text-label-sm text-light-on-surface-variant mt-1">Pantau: ${E(l.indikator_pantau)}. Diperbarui ${E(l.diperbarui)}.${u.startsWith('http') ? ` <a href="${E(u)}" target="_blank" rel="noopener" class="text-light-primary underline">Sumber</a>` : ''}</small></span></div>`; }).join('')}
+          ${terms.length ? `<div class="flex flex-col gap-1.5"><h3 class="font-label text-label-lg text-light-on-surface-variant">Istilah</h3><div class="flex flex-wrap gap-1.5">${terms.map(t => `<button type="button" data-term="${E(t)}" class="px-3 py-1 rounded-sm bg-light-surface-container hover:bg-pastel-lavender text-light-on-surface font-label text-label-sm cursor-pointer">${E(t)}</button>`).join('')}</div><div id="def"></div></div>` : ''}
+          <div><h3 class="font-label text-label-lg text-light-on-surface-variant mb-1">Saham dan sektor terpapar</h3>${prem ? '<p class="text-label-sm text-light-on-surface-variant">Konten premium.</p>' : ''}<div class="${prem ? 'lock' : ''}">${imp.length ? imp.map(i => row(tgt(i), i)).join('') : '<p class="text-label-sm text-light-on-surface-variant">Belum ada pemetaan.</p>'}</div></div>
+          <div><h3 class="font-label text-label-lg text-light-on-surface-variant mb-1">Kemungkinan berikutnya</h3>${eff.length ? eff.map(e => `<button type="button" class="w-full text-left py-2 border-t border-light-outline-variant/50 text-body-md hover:text-light-primary cursor-pointer" data-t="n" data-id="${E(e.ke_node)}" data-d="R"><b>${E(D.nm[e.ke_node].judul)}</b><small class="block text-label-sm text-light-on-surface-variant">keyakinan ${E(e.keyakinan)}, jeda ${E(e.jeda_waktu)}</small></button>`).join('') : '<p class="text-label-sm text-light-on-surface-variant">Tidak ada lanjutan tercatat.</p>'}</div>
+          <p class="text-label-sm text-light-on-surface-variant pt-2 border-t border-light-outline-variant/50">${DISC}</p>`;
+            }
+            if (c.t === 's') {
+                const s = D.sm[c.id], imp = D.impacts.filter(i => i.target_tipe === 'sektor' && i.target_id === c.id && D.nm[i.node_id]);
+                return `<h2 class="font-headline text-headline-md text-light-on-surface">${E(s.nama_sektor)}</h2>
+          <p class="text-body-md text-light-on-surface">${E(s.deskripsi)}</p>
+          ${s.sensitivitas_umum ? `<p class="text-label-sm text-light-on-surface-variant">Sensitif terhadap: ${E(s.sensitivitas_umum)}</p>` : ''}
+          <div><h3 class="font-label text-label-lg text-light-on-surface-variant mb-2">Saham di sektor ini</h3><div class="flex flex-wrap gap-1.5">${D.stocks.filter(x => x.sektor_id === c.id).map(x => bt('k', x.ticker, 'R', x.ticker, 'px-3 py-1 rounded-sm bg-pastel-mint text-on-pastel-mint font-mono text-label-sm cursor-pointer')).join('') || '<p class="text-label-sm text-light-on-surface-variant">Belum ada.</p>'}</div></div>
+          <div><h3 class="font-label text-label-lg text-light-on-surface-variant mb-1">Faktor yang memengaruhi</h3>${imp.map(i => row(bt('n', i.node_id, 'L', D.nm[i.node_id].judul), i)).join('') || '<p class="text-label-sm text-light-on-surface-variant">Belum ada pemetaan.</p>'}</div>
+          <p class="text-label-sm text-light-on-surface-variant pt-2 border-t border-light-outline-variant/50">${DISC}</p>`;
+            }
+            const s = D.tm[c.id] || { ticker: c.id, nama: '' }, pf = D.stock_profile.filter(p => p.ticker === c.id);
+            const imp = D.impacts.filter(i => ((i.target_tipe === 'sektor' && i.target_id === s.sektor_id) || (i.target_tipe === 'saham' && i.target_id === c.id)) && D.nm[i.node_id]);
+            return `<div><button type="button" data-card="1" data-id="${E(c.id)}" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-sm bg-light-primary text-light-on-primary font-label text-label-lg cursor-pointer">Lihat kartu saham</button></div>
+        <h2 class="font-headline text-headline-md text-light-on-surface font-mono">${E(s.ticker)}</h2>
+        <p class="text-body-md text-light-on-surface">${E(s.nama)}</p>
+        ${D.sm[s.sektor_id] ? `<p class="text-label-sm text-light-on-surface-variant">Sektor: ${bt('s', s.sektor_id, 'L', D.sm[s.sektor_id].nama_sektor)}</p>` : ''}
+        ${s.eksposur ? `<p class="text-label-sm text-light-on-surface-variant">${E(s.eksposur)}</p>` : ''}
+        <div><h3 class="font-label text-label-lg text-light-on-surface-variant mb-1">Ciri eksposur</h3>${pf.map(p => `<div class="border-t border-light-outline-variant/50 py-2.5 flex flex-col gap-1"><div class="flex flex-wrap items-center gap-2"><b>${E((D.fm[p.faktor] || {}).label || p.faktor)}</b> <span class="px-2 py-0.5 rounded-sm bg-pastel-sky text-on-pastel-sky font-label text-label-sm">${E(p.besar)}</span> ${dr(p)}</div><small class="text-label-sm text-light-on-surface-variant">${E(p.keterangan)} Keyakinan ${E(p.keyakinan)}.</small></div>`).join('') || '<p class="text-label-sm text-light-on-surface-variant">Belum ada profil.</p>'}</div>
+        <div><h3 class="font-label text-label-lg text-light-on-surface-variant mb-1">Faktor yang memengaruhi</h3>${imp.map(i => row(bt('n', i.node_id, 'L', D.nm[i.node_id].judul), i)).join('') || '<p class="text-label-sm text-light-on-surface-variant">Belum ada pemetaan.</p>'}</div>
+        <p class="text-label-sm text-light-on-surface-variant pt-2 border-t border-light-outline-variant/50">${DISC}</p>`;
+        }
+
+        function board() {
+            const L = D.live.filter(l => D.nm[l.node_id] && (bf === 'all' || l.status === bf)).sort((a, b) => (FS[a.status] ?? 3) - (FS[b.status] ?? 3) || String(b.diperbarui).localeCompare(String(a.diperbarui)));
+            pg.bd = Math.min(pg.bd, Math.max(0, Math.ceil(L.length / PS.bd) - 1));
+            $('#app').innerHTML = `
+        <h2 class="font-headline text-headline-md text-light-on-surface">Papan kejadian (${L.length})</h2>
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">${[['all', 'Semua'], ['berlangsung', 'Berlangsung'], ['baru_terjadi', 'Baru terjadi'], ['mereda', 'Mereda']].map(([k, t]) =>
+                `<button type="button" data-bf="${k}" class="flex-none px-4 py-2 min-h-[40px] rounded-sm font-label text-label-lg cursor-pointer ${bf === k ? 'bg-light-primary text-light-on-primary shadow-sm' : 'bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface hover:border-light-primary'}">${t}</button>`
+            ).join('')}</div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">
+          ${L.length ? L.slice(pg.bd * PS.bd, pg.bd * PS.bd + PS.bd).map(l => {
+                const n = D.nm[l.node_id], pr = l.akses === 'premium', u = (l.sumber || '').split(' | ')[0], nx = D.edges.filter(e => e.dari_node === l.node_id && D.nm[e.ke_node]).slice(0, 2);
+                return `<article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-pastel-lavender border border-light-outline-variant/70 rounded-sm p-5 flex flex-col justify-between gap-3 shadow-sm">
+              <div class="flex flex-col gap-2">
+                <div class="flex flex-wrap items-center gap-2">
+                  <span class="px-2.5 py-0.5 rounded-sm font-label text-label-sm ${ST_CLS[l.status] || ''}">${E(ST[l.status] || l.status)}</span>
+                  ${pr ? '<span class="px-2.5 py-0.5 rounded-sm bg-pastel-lavender text-on-pastel-lavender font-label text-label-sm">Premium</span>' : ''}
+                  <span class="px-2.5 py-0.5 rounded-sm bg-light-surface-container text-light-on-surface-variant font-mono text-label-sm tabular-nums">${E(l.diperbarui)}</span>
+                </div>
+                <h3 class="font-headline text-title-lg text-light-on-surface">${E(n.judul)}</h3>
+                <p class="text-body-md text-light-on-surface-variant ${pr ? 'lock' : ''}">${E(l.ringkasan)}</p>
+                <p class="text-label-sm text-light-on-surface-variant">Pantau: <b>${E(l.indikator_pantau)}</b></p>
+                ${nx.length ? `<p class="text-label-sm text-light-on-surface-variant">Berikutnya: ${nx.map(e => E(D.nm[e.ke_node].judul) + ' (' + E(e.jeda_waktu) + ')').join('; ')}</p>` : ''}
+              </div>
+              <footer class="flex items-center gap-3 pt-1">
+                ${bt('n', l.node_id, 'R', 'Lihat rantai →', 'inline-flex items-center gap-1.5 px-4 py-2 rounded-sm bg-pastel-lavender text-on-pastel-lavender font-label text-label-lg hover:bg-light-primary hover:text-light-on-primary transition-colors duration-state-change cursor-pointer')}
+                ${/^http/.test(u) ? `<a href="${E(u)}" target="_blank" rel="noopener" class="text-label-lg text-light-primary hover:underline">Sumber ↗</a>` : ''}
+              </footer>
+            </article>`;
+            }).join('') : '<p class="text-body-md text-light-on-surface-variant">Tidak ada kejadian pada filter ini.</p>'}
+        </div>
+        ${pager('bd', L.length, pg.bd, PS.bd)}
+        <p class="text-label-sm text-light-on-surface-variant pt-2 border-t border-light-outline-variant/50">${DISC}</p>`;
+        }
+
+        function cmp() {
+            const pm = {}; D.stock_profile.forEach(p => { if (D.tm[p.ticker]) (pm[p.ticker] = pm[p.ticker] || {})[p.faktor] = p; });
+            const gs = D.sectors.map(s => ({ s, t: D.stocks.filter(x => x.sektor_id === s.id && pm[x.ticker]).map(x => x.ticker) })).filter(g => g.t.length > 0);
+            if (!gs.length) { $('#app').innerHTML = '<p class="text-body-md text-light-on-surface-variant">Belum cukup data profil saham untuk dibandingkan.</p>'; return; }
+            if (!gs.find(g => g.s.id === cg)) cg = gs[0].s.id;
+            const g = gs.find(x => x.s.id === cg), fc = {}; g.t.forEach(t => Object.keys(pm[t]).forEach(f => fc[f] = (fc[f] || 0) + 1));
+            const rows = Object.keys(fc).sort((a, b) => fc[b] - fc[a]), fl = f => (D.fm[f] || {}).label || f;
+            const dotSz = { besar: 'w-4 h-4', sedang: 'w-3 h-3', kecil: 'w-2 h-2' };
+            $('#app').innerHTML = `
+        <h2 class="font-headline text-headline-md text-light-on-surface">Bandingkan saham sejenis</h2>
+        <div class="flex items-center gap-2 overflow-x-auto no-scrollbar pb-1">${gs.map(x => `<button type="button" data-cg="${E(x.s.id)}" class="flex-none px-4 py-2 min-h-[40px] rounded-sm font-label text-label-lg cursor-pointer ${x.s.id === cg ? 'bg-light-primary text-light-on-primary shadow-sm' : 'bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface'}">${E(x.s.nama_sektor)}</button>`).join('')}</div>
+        <div class="overflow-x-auto rounded-sm bg-light-surface-container-lowest border border-light-outline-variant/70 shadow-sm">
+          <table class="w-full border-collapse text-body-md">
+            <thead>
+              <tr class="border-b border-light-outline-variant/50">
+                <th class="sticky left-0 z-10 bg-light-surface-container-lowest text-left p-3.5 font-label text-label-sm text-light-on-surface-variant border-r border-light-outline-variant/50">Faktor</th>
+                ${g.t.map(t => `<th class="p-3.5 text-center font-mono text-mono-md">${bt('k', t, 'R', t)}</th>`).join('')}
+              </tr>
+            </thead>
+            <tbody>
+              ${rows.map(f => `<tr class="border-b border-light-outline-variant/40 last:border-0">
+                <th class="sticky left-0 z-10 bg-light-surface-container-lowest text-left p-3.5 border-r border-light-outline-variant/50 font-label text-label-lg"><button type="button" class="text-light-primary hover:underline cursor-pointer text-left" data-cf="${E(f)}">${E(fl(f))}</button></th>
+                ${g.t.map(t => {
+                const p = pm[t][f];
+                return p ? `<td class="p-2 text-center"><button type="button" data-cell="${E(t)}|${E(f)}" class="inline-flex flex-col items-center gap-1 px-3 py-1.5 rounded-md hover:bg-pastel-lavender cursor-pointer"><span class="block rounded-full ${dotSz[p.besar] || 'w-3 h-3'} ${p.status === 'verified' ? 'bg-light-primary' : 'border-2 border-dashed border-light-primary'}"></span><span class="text-label-sm text-light-on-surface-variant">${E(p.besar)}</span></button></td>` : '<td class="p-2 text-center text-light-outline">–</td>';
+            }).join('')}
+              </tr>`).join('')}
+            </tbody>
+          </table>
+        </div>
+        <div class="bg-pastel-lavender border border-light-outline-variant/70 rounded-sm p-5 shadow-sm" id="cd">${cdet()}</div>
+        <p class="text-label-sm text-light-on-surface-variant">${DISC}</p>`;
+        }
+
+        function cdet() {
+            if (cc) {
+                const [t, f] = cc.split('|'), p = D.stock_profile.find(x => x.ticker === t && x.faktor === f); if (!p) return '';
+                return `<div class="flex flex-wrap items-center gap-2 mb-2"><b class="font-mono text-title-md">${E(t)} · ${E((D.fm[f] || {}).label || f)}</b> <span class="px-2.5 py-0.5 rounded-sm bg-pastel-sky text-on-pastel-sky font-label text-label-sm">${E(p.besar)}</span> ${dr(p)}</div><p class="text-body-md text-light-on-surface">${E(p.keterangan)}</p><p class="text-label-sm text-light-on-surface-variant mt-1">Keyakinan ${E(p.keyakinan)}.</p>`;
+            }
+            if (cf) {
+                const fx = D.fm[cf] || {}, r = D.stock_profile.filter(x => x.faktor === cf && D.tm[x.ticker]).sort((a, b) => (SZ[b.besar] || 0) - (SZ[a.besar] || 0));
+                return `<b class="font-headline text-title-md">${E(fx.label || cf)}</b><p class="text-body-md text-light-on-surface-variant mt-1">${E(fx.penjelasan || '')}</p><div class="mt-3 flex flex-col gap-2">${r.map(x => `<div class="border-t border-light-outline-variant/50 pt-2 flex flex-wrap items-center gap-2">${bt('k', x.ticker, 'R', x.ticker)} <span class="px-2.5 py-0.5 rounded-sm bg-pastel-sky text-on-pastel-sky font-label text-label-sm">${E(x.besar)}</span> ${dr(x)} <small class="text-label-sm text-light-on-surface-variant">${E(D.tm[x.ticker].nama)}</small></div>`).join('')}</div>`;
+            }
+            return '<p class="text-body-md text-light-on-surface-variant">Ketuk sel untuk melihat alasannya, atau ketuk nama faktor untuk melihat semua saham yang terkena.</p>';
+        }
+
+        const snap = () => { hist.push({ mode, chainId, stockId, trail: trail.slice(), forced: forced.slice() }); if (hist.length > 30) hist.shift(); };
+        const bk = () => hist.length ? '<button type="button" data-back="1" class="inline-flex items-center gap-1 px-3.5 py-1.5 rounded-sm bg-light-surface-container-lowest border border-light-outline-variant font-label text-label-lg text-light-on-surface hover:border-light-primary cursor-pointer">← Kembali</button>' : '';
+        const fl = f => (D.fm[f] || {}).label || f, KY = { tinggi: 3, sedang: 2, rendah: 1 }, TC = { pos: 'bg-pastel-mint text-on-pastel-mint', neg: 'bg-pastel-rose text-on-pastel-rose', mix: 'bg-pastel-amber text-on-pastel-amber' };
+        const nextOf = id => D.edges.filter(e => e.dari_node === id && e.tipe_edge !== 'feedback' && D.nm[e.ke_node]).sort((a, b) => (KY[b.keyakinan] || 0) - (KY[a.keyakinan] || 0));
+
+        function buildPath(start, fo) {
+            const p = [{ id: start }], seen = new Set([start]);
+            while (p.length < 9) {
+                const o = nextOf(p[p.length - 1].id).filter(e => !seen.has(e.ke_node)); if (!o.length) break;
+                const k = o.find(e => e.ke_node === fo[p.length]) || o[0]; p.push({ id: k.ke_node, e: k, alt: o.filter(x => x !== k) }); seen.add(k.ke_node);
+            }
+            return p;
+        }
+
+        function chain() {
+            if (!D.nm[chainId]) { chainId = null; return home(); }
+            const P = curP = buildPath(chainId, forced), W = ['maka', 'sehingga', 'akibatnya', 'lalu', 'kemudian', 'pada akhirnya', 'dan akhirnya', 'berikutnya'], liv = new Set(D.live.filter(l => l.status !== 'mereda').map(l => l.node_id));
+            const rs = D.scenarios.filter(x => x.node_pembuka === chainId || (D.scenario_nodes || []).some(y => y.scenario_id === x.id && y.node_id === chainId));
+            let h = `<div class="flex flex-wrap items-center gap-3">${bk()}<h2 class="font-headline text-headline-md text-light-on-surface">Alur sebab-akibat</h2></div>
+        <p class="text-body-md text-light-on-surface-variant">Dibaca dari atas ke bawah. Ketuk judul untuk memulai alur dari titik itu.</p>
+        ${rs.length ? `<p class="text-label-sm text-light-on-surface-variant flex flex-wrap items-center gap-1.5">Bagian dari skenario: ${rs.map(x => `<button type="button" data-t="n" data-id="${E(x.node_pembuka)}" data-d="R" class="px-3 py-1 rounded-sm bg-pastel-lavender text-on-pastel-lavender font-label text-label-sm cursor-pointer hover:bg-light-primary hover:text-light-on-primary">${E(x.judul)}${x.siklus_besar ? ' · ' + E(SB[x.siklus_besar] || x.siklus_besar) : ''}</button>`).join(' ')}</p>` : ''}
+        <div class="flex flex-col gap-2">`;
+            P.forEach((x, i) => {
+                const n = D.nm[x.id];
+                if (i) { const e = x.e; h += `<div class="ml-4 pl-5 py-2 border-l-2 border-dashed border-light-primary/40 flex flex-col gap-0.5"><div class="flex flex-wrap items-center gap-2"><b class="font-mono text-label-sm uppercase text-light-primary">${W[Math.min(i - 1, W.length - 1)]}</b>${e.arah_dampak === 'negatif' ? '<span class="px-2 py-0.5 rounded-sm bg-pastel-rose text-on-pastel-rose font-label text-label-sm">arah berlawanan</span>' : ''}</div><p class="text-body-md text-light-on-surface">${E(e.mekanisme)}</p><small class="text-label-sm text-light-on-surface-variant">Jeda ${E(e.jeda_waktu)} · keyakinan ${E(e.keyakinan)}</small></div>`; }
+                const nx = P[i + 1];
+                h += `<div class="bg-pastel-lavender border border-light-outline-variant/70 rounded-sm p-4 shadow-sm flex flex-col gap-1.5"><div class="flex flex-wrap items-center gap-2"><span class="font-mono text-label-sm text-light-on-surface-variant">${i ? 'LANGKAH ' + (i + 1) : 'KARENA'}</span>${n.fase_siklus ? `<span class="px-2.5 py-0.5 rounded-sm bg-light-on-surface text-light-surface font-label text-label-sm">${E(n.fase_siklus)}</span>` : ''}${liv.has(x.id) ? '<span class="px-2.5 py-0.5 rounded-sm bg-pastel-rose text-on-pastel-rose font-label text-label-sm">Sedang berlangsung</span>' : ''}</div><div>${bt('n', x.id, 'R', n.judul, 'font-headline text-title-md text-light-primary hover:underline cursor-pointer text-left')}</div><p class="text-body-md text-light-on-surface-variant">${E(n.deskripsi)}</p>${nx && nx.alt.length ? `<p class="text-label-sm text-light-on-surface-variant flex flex-wrap items-center gap-1.5 pt-1">Kemungkinan lain: ${nx.alt.map(o => `<button type="button" data-fork="${i + 1}|${E(o.ke_node)}" class="px-2.5 py-0.5 rounded-sm bg-pastel-sky text-on-pastel-sky font-label text-label-sm cursor-pointer hover:bg-light-primary hover:text-light-on-primary">${E(D.nm[o.ke_node].judul)}</button>`).join(' ')}</p>` : ''}</div>`;
+            });
+            const last = P[P.length - 1].id, fb = D.edges.filter(e => e.dari_node === last && e.tipe_edge === 'feedback' && D.nm[e.ke_node]);
+            const ids = P.map(x => x.id), ag = {}; D.impacts.filter(i => ids.includes(i.node_id)).forEach(i => { const k = i.target_tipe + '|' + i.target_id; (ag[k] = ag[k] || []).push(i.arah); });
+            const ch = Object.entries(ag).slice(0, 16).map(([k, a]) => { const [t, id] = k.split('|'), l = t === 'saham' ? id : (D.sm[id] || {}).nama_sektor; return l ? bt(t === 'saham' ? 'k' : 's', id, 'R', l, 'px-3 py-1 rounded-sm font-label text-label-sm cursor-pointer ' + (TC[tn(a)] || 'bg-light-surface-container')) : ''; }).join(' ');
+            h += `</div>${fb.length ? `<p class="text-body-md text-light-primary font-medium">↺ Lingkaran umpan balik: ${fb.map(e => E(e.mekanisme)).join(' ')}</p>` : ''}
+        <div class="flex flex-col gap-2 pt-2"><h3 class="font-headline text-title-lg text-light-on-surface">Sektor dan saham yang terpapar di alur ini</h3><p class="text-label-sm text-light-on-surface-variant">Hijau menguntungkan, merah menekan, kuning campuran.</p><div class="flex flex-wrap gap-2">${ch || '<p class="text-body-md text-light-on-surface-variant">Belum ada pemetaan.</p>'}</div><div><button type="button" data-t="n" data-id="${E(chainId)}" data-d="R" data-map="1" class="mt-2 px-5 py-2.5 rounded-sm bg-light-primary text-light-on-primary font-label text-label-lg cursor-pointer hover:bg-light-primary-container transition-colors duration-state-change">Buka di peta bubble</button></div><p class="text-label-sm text-light-on-surface-variant pt-2 border-t border-light-outline-variant/50">${DISC}</p></div>`;
+            $('#app').innerHTML = h;
+        }
+
+        const LANES = [['pendapatan', 'Pendapatan', 'Dari mana uang masuk, dan apa yang bisa mengubahnya?', /pendapatan|volume|permintaan/], ['biaya', 'Biaya', 'Apa yang membuat ongkos produksi dan operasional naik atau turun?', /biaya|margin|hpp/], ['utang', 'Utang', 'Seberapa besar beban bunga, kurs, dan pinjaman?', /utang|bunga|kredit|rekapitalisasi/], ['valuasi', 'Valuasi', 'Bagaimana pasar menilai saham ini?', /valuasi/], ['lain', 'Lainnya', '', null]];
+        const FL = { kemasan_plastik: ['biaya'], bahan_baku_impor: ['biaya'], bahan_kimia_petrokimia: ['biaya'], energi_intensif: ['biaya'], tenaga_kerja: ['biaya'], pass_through_terbatas: ['biaya'], pendapatan_usd: ['pendapatan'], harga_komoditas: ['pendapatan'], konsumsi_domestik: ['pendapatan'], belanja_negara: ['pendapatan'], cuaca_musiman: ['pendapatan'], utang_usd: ['utang'], sensitif_bunga: ['utang', 'valuasi'], valuasi_growth: ['valuasi'] };
+        function stockCard() {
+            const s = D.tm[stockId]; if (!s) { stockId = null; return home(); }
+            const sec = D.sm[s.sektor_id], liv = new Set(D.live.filter(l => l.status !== 'mereda').map(l => l.node_id)), L = {}, put = (k, x) => (L[k] = L[k] || []).push(x);
+            const imp = D.impacts.filter(i => D.nm[i.node_id] && ((i.target_tipe === 'saham' && i.target_id === s.ticker) || (i.target_tipe === 'sektor' && i.target_id === s.sektor_id))), pf = D.stock_profile.filter(p => p.ticker === s.ticker);
+            const JL = j => { const a = String(j || '').toLowerCase().split(/[,|]/).map(x => x.trim()).filter(x => LANES.some(l => l[0] === x)); return a.length ? a : null; };
+            pf.forEach(p => (JL(p.jalur) || FL[p.faktor] || ['lain']).forEach(k => put(k, { p })));
+            imp.forEach(i => { const ks = JL(i.jalur) || LANES.filter(l => l[3] && l[3].test(i.saluran || '')).map(l => l[0]); (ks.length ? ks : ['lain']).forEach(k => put(k, { i })); });
+            const it = x => x.p
+                ? `<div class="border-t border-light-outline-variant/50 py-2.5 flex flex-col gap-1"><div class="flex flex-wrap items-center gap-2"><b>${E(fl(x.p.faktor))}</b> <span class="px-2 py-0.5 rounded-sm bg-pastel-sky text-on-pastel-sky font-label text-label-sm">Eksposur ${E(x.p.besar)}</span> ${dr(x.p)}</div><small class="text-label-sm text-light-on-surface-variant">${E(x.p.keterangan)}</small></div>`
+                : `<div class="border-t border-light-outline-variant/50 py-2.5 flex flex-col gap-1"><div class="flex flex-wrap items-center gap-2"><span class="font-bold ${x.i.arah === 'positif' ? 'text-on-pastel-mint' : x.i.arah === 'negatif' ? 'text-on-pastel-rose' : 'text-on-pastel-amber'}">${x.i.arah === 'positif' ? '▲' : x.i.arah === 'negatif' ? '▼' : '◆'}</span>${bt('n', x.i.node_id, 'R', D.nm[x.i.node_id].judul)} ${liv.has(x.i.node_id) ? '<span class="px-2 py-0.5 rounded-sm bg-pastel-rose text-on-pastel-rose font-label text-label-sm">Sedang berlangsung</span>' : ''} ${dr(x.i)}</div><small class="text-label-sm text-light-on-surface-variant ${D.nm[x.i.node_id].akses === 'premium' ? 'lock' : ''}">${x.i.arah === 'positif' ? 'Menguntungkan' : x.i.arah === 'negatif' ? 'Menekan' : 'Campuran'}. ${E(x.i.alasan)} (${E(x.i.horizon)})</small></div>`;
+            const peers = D.stocks.filter(x => x.sektor_id === s.sektor_id && x.ticker !== s.ticker);
+            $('#app').innerHTML = `
+        <div class="flex flex-wrap items-center gap-3">${bk()}<h2 class="font-headline text-headline-md text-light-on-surface font-mono">${E(s.ticker)} <span class="font-body text-title-md text-light-on-surface-variant">${E(s.nama)}</span></h2></div>
+        <p class="text-body-md text-light-on-surface-variant">${sec ? bt('s', sec.id, 'R', sec.nama_sektor) + ' · ' : ''}${E(s.eksposur || '')}</p>
+        <p class="text-label-sm text-light-on-surface-variant">▲ menguntungkan · ▼ menekan · ◆ campuran · tanda "Draft" = belum diverifikasi</p>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 items-stretch">${LANES.filter(l => l[0] !== 'lain' || (L.lain || []).length).map(l => `<section class="bg-pastel-lavender border border-light-outline-variant/70 rounded-sm p-5 shadow-sm flex flex-col gap-2"><h3 class="font-headline text-title-md text-light-on-surface">${l[1]}</h3>${l[2] ? `<p class="text-label-sm text-light-on-surface-variant">${l[2]}</p>` : ''}${(L[l[0]] || []).map(it).join('') || '<p class="text-label-sm text-light-on-surface-variant">Belum ada faktor tercatat.</p>'}</section>`).join('')}</div>
+        ${peers.length ? `<div class="flex flex-wrap items-center gap-2 text-label-sm text-light-on-surface-variant"><span>Saham sejenis:</span> ${peers.map(x => bt('k', x.ticker, 'R', x.ticker, 'px-3 py-1 rounded-sm bg-pastel-mint text-on-pastel-mint font-mono text-label-sm cursor-pointer')).join(' ')} <button type="button" data-cmpg="${E(s.sektor_id)}" class="px-4 py-1.5 rounded-sm bg-light-surface-container-lowest border border-light-outline-variant font-label text-label-sm text-light-on-surface hover:border-light-primary cursor-pointer">Bandingkan</button></div>` : ''}
+        <div><button type="button" data-t="k" data-id="${E(s.ticker)}" data-d="R" data-map="1" class="px-5 py-2.5 rounded-sm bg-light-primary text-light-on-primary font-label text-label-lg cursor-pointer hover:bg-light-primary-container transition-colors duration-state-change">Lihat di peta bubble</button></div>
+        <p class="text-label-sm text-light-on-surface-variant pt-2 border-t border-light-outline-variant/50">Menampilkan efek positif dan negatif tanpa skor atau peringkat. ${pf.concat(imp).some(r => r.status !== 'verified') ? 'Sebagian data sedang diverifikasi. ' : ''}${DISC}</p>`;
+        }
+
+        document.addEventListener('click', e => {
+            const pgb = e.target.closest('[data-pg]'); if (pgb) { const [k, d] = pgb.dataset.pg.split(':'); pg[k] = Math.max(0, pg[k] + +d); ({ res: resRender, sc: scGrid, bd: board, qt: quotes })[k](); if (k === 'bd' || k === 'qt') scrollTo(0, 0); return; }
+            const qtb = e.target.closest('[data-qty]'); if (qtb) { qty = qtb.dataset.qty; pg.res = 0; resRender(); return; }
+            const qgb = e.target.closest('[data-qg]'); if (qgb) { qg = qgb.dataset.qg; pg.qt = 0; quotes(); return; }
+            const m2 = e.target.closest('[data-m2]'); if (m2) { mode = m2.dataset.m2; trail = []; chainId = stockId = null; hist = []; view(); scrollTo(0, 0); return; }
+            const sfb = e.target.closest('[data-sf]'); if (sfb) { sf = sfb.dataset.sf; pg.sc = 0; scGrid(); $('#app').querySelectorAll('[data-sf]').forEach(b => { const on = b.dataset.sf === sf; b.className = 'flex-none px-4 py-2 min-h-[40px] rounded-sm font-label text-label-lg transition-colors duration-state-change ease-state-change cursor-pointer ' + (on ? 'bg-light-primary text-light-on-primary shadow-sm' : 'bg-light-surface-container-lowest border border-light-outline-variant text-light-on-surface hover:border-light-primary hover:bg-pastel-lavender hover:text-on-pastel-lavender'); }); return; }
+            const bkb = e.target.closest('[data-back]'); if (bkb) { const h = hist.pop(); if (h) { mode = h.mode; chainId = h.chainId; stockId = h.stockId; trail = h.trail; forced = h.forced; view(); scrollTo(0, 0); } return; }
+            const fk = e.target.closest('[data-fork]'); if (fk) { const [i, id] = fk.dataset.fork.split('|'); forced = [...curP.slice(0, +i).map(x => x.id), id]; chain(); return; }
+            const chb = e.target.closest('[data-chain]'); if (chb) { snap(); trail = []; chainId = chb.dataset.id; stockId = null; forced = []; view(); scrollTo(0, 0); return; }
+            const cdb = e.target.closest('[data-card]'); if (cdb) { snap(); trail = []; stockId = cdb.dataset.id; chainId = null; view(); scrollTo(0, 0); return; }
+            const cgb = e.target.closest('[data-cmpg]'); if (cgb) { mode = 'cmp'; cg = cgb.dataset.cmpg; cc = cf = null; trail = []; chainId = stockId = null; hist = []; view(); return; }
+            const a1 = e.target.closest('[data-bf]'); if (a1) { bf = a1.dataset.bf; pg.bd = 0; board(); return; }
+            const a2 = e.target.closest('[data-cg]'); if (a2) { cg = a2.dataset.cg; cc = cf = null; cmp(); return; }
+            const a3 = e.target.closest('[data-cf],[data-cell]'); if (a3) { cf = a3.dataset.cf || null; cc = a3.dataset.cell || null; $('#cd').innerHTML = cdet(); $('#cd').scrollIntoView({ behavior: 'smooth', block: 'nearest' }); return; }
+            const ix = e.target.closest('[data-ix]'); if (ix) { trail = trail.slice(0, +ix.dataset.ix + 1); view(); return; }
+            const tm = e.target.closest('[data-term]'); if (tm) { const g = D.glossary.find(x => x.istilah.toLowerCase() === tm.dataset.term.toLowerCase()); $('#def').innerHTML = `<div class="mt-2 p-3 rounded-md bg-pastel-sky/60 text-body-md"><b>${E(tm.dataset.term)}</b>: ${E(g ? g.definisi : 'Definisi belum ditambahkan.')}</div>`; return; }
+            const b = e.target.closest('[data-t]'); if (b && !b.classList.contains('me')) go({ t: b.dataset.t, id: b.dataset.id, map: b.dataset.map }, b.dataset.d || 'R');
+        });
+
+        init(DEMO);
+        fetch('data.json').then(r => r.ok ? r.json() : fetch('../../uploads/data-b08e60.json').then(r2 => r2.ok ? r2.json() : null)).then(d => { if (d && d.nodes) init(d); }).catch(() => { });
+    </script>
+
+</body>
+
+</html>
